@@ -1,0 +1,105 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+  type?: 'website' | 'article';
+  publishedTime?: Date;
+  author?: string;
+}
+
+const {
+  title,
+  description = 'Your Dedicated Marketer: AI-Powered Growth for the Modern Brand. Expert digital marketing services including SEO, paid media, content marketing, and analytics.',
+  image = '/og-image.png',
+  canonicalUrl = Astro.url.href,
+  type = 'website',
+  publishedTime,
+  author,
+} = Astro.props;
+
+const siteName = 'Your Dedicated Marketer';
+const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+
+// JSON-LD structured data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': type === 'article' ? 'Article' : 'Organization',
+  name: siteName,
+  url: Astro.site?.toString() || 'https://yourdedicatedmarketer.com',
+  logo: `${Astro.site?.toString() || ''}/logo.png`,
+  description,
+  ...(type === 'article' && {
+    headline: title,
+    author: {
+      '@type': 'Person',
+      name: author || 'Your Dedicated Marketer',
+    },
+    datePublished: publishedTime?.toISOString(),
+    image: `${Astro.site?.toString() || ''}${image}`,
+  }),
+  ...(type === 'website' && {
+    sameAs: [
+      'https://twitter.com/yourdedicatedmarketer',
+      'https://linkedin.com/company/yourdedicatedmarketer',
+    ],
+  }),
+};
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Primary Meta Tags -->
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content={siteName} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalUrl} />
+    <meta property="twitter:title" content={fullTitle} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Preload critical assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#000000" />
+  </head>
+  <body class="min-h-screen bg-dark-900 text-white">
+    <div class="fixed inset-0 grid-pattern pointer-events-none opacity-50" />
+    <Header />
+    <main class="relative">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

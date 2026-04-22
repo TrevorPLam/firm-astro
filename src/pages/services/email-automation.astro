@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import ProcessStep from '../../components/ProcessStep.astro';
+
+const benefits = [
+  'Nurture leads automatically 24/7',
+  'Personalize messaging at scale',
+  'Increase customer lifetime value',
+  'Reduce manual marketing effort',
+  'Improve conversion rates',
+  'Build lasting customer relationships',
+];
+
+const features = [
+  { name: 'Welcome Sequences', desc: 'First impressions matter' },
+  { name: 'Lead Nurturing', desc: 'Guide prospects to purchase' },
+  { name: 'Re-engagement', desc: 'Win back inactive users' },
+  { name: 'Transactional', desc: 'Order & shipping updates' },
+  { name: 'Segmentation', desc: 'Targeted messaging' },
+  { name: 'A/B Testing', desc: 'Optimize performance' },
+];
+
+const processSteps = [
+  { number: '01', title: 'Strategy & Mapping', description: 'Define customer journeys and automation triggers aligned with business goals.' },
+  { number: '02', title: 'Setup & Integration', description: 'Configure email platforms and integrate with your existing tech stack.' },
+  { number: '03', title: 'Content Creation', description: 'Craft compelling email copy and design templates that convert.' },
+  { number: '04', title: 'Testing & Launch', description: 'Thorough testing, launch, and ongoing optimization for maximum performance.' },
+];
+---
+
+<BaseLayout title="Email Automation Services" description="Nurture leads and drive conversions with intelligent email sequences and automation. List building, segmentation, and personalized campaigns.">
+  <section class="section relative overflow-hidden">
+    <div class="absolute inset-0 radial-glow" />
+    <div class="container-custom relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6">
+            <span class="text-sm text-electric-400 font-medium">Marketing Automation</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+            <span class="text-electric-400 neon-text">Email Automation</span> Services
+          </h1>
+          <p class="text-lg text-gray-400 leading-relaxed mb-8">
+            Nurture leads and drive conversions with intelligent email sequences that work 24/7. Build relationships at scale with personalized, automated campaigns.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <Button href="/contact" variant="primary">Get Started</Button>
+            <Button href="/work" variant="secondary">View Case Studies</Button>
+          </div>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Automation Features</h3>
+          <div class="grid grid-cols-2 gap-4">
+            {features.map((feature) => (
+              <div class="p-4 rounded-lg bg-white/5 hover:bg-electric-500/10 transition-colors">
+                <h4 class="font-semibold text-white">{feature.name}</h4>
+                <p class="text-sm text-gray-400">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Benefits of <span class="text-electric-400">Email Automation</span></h2>
+          <ul class="space-y-4">
+            {benefits.map((benefit) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-300">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Quick Stats</h3>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">42:1</div>
+              <div class="text-sm text-gray-500 mt-1">Avg. ROI</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">+50%</div>
+              <div class="text-sm text-gray-500 mt-1">Open Rate Lift</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">2x</div>
+              <div class="text-sm text-gray-500 mt-1">Click Rate</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">85%</div>
+              <div class="text-sm text-gray-500 mt-1">Deliverability</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Our Automation <span class="text-electric-400">Process</span></h2>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        {processSteps.map((step, index) => (
+          <ProcessStep number={step.number} title={step.title} description={step.description} isLast={index === processSteps.length - 1} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-custom">
+      <div class="glass-card p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 radial-glow" />
+        <div class="relative">
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Ready to Automate Your Marketing?</h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">Let's discuss how email automation can nurture leads and drive conversions on autopilot.</p>
+          <Button href="/contact" variant="primary" size="lg">Start Automating Today</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

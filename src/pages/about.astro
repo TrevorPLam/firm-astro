@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import TeamCard from '../components/TeamCard.astro';
+
+const team = [
+  {
+    name: 'Alex Chen',
+    role: 'Founder & CEO',
+    bio: '15+ years in digital marketing. Former Head of Growth at Fortune 500 companies.',
+    expertise: ['Strategy', 'Growth', 'AI'],
+    social: { twitter: 'alexchen', linkedin: 'alexchen' },
+  },
+  {
+    name: 'Sarah Mitchell',
+    role: 'Head of SEO',
+    bio: 'SEO specialist with 10+ years experience. Helped 100+ brands achieve top rankings.',
+    expertise: ['SEO', 'Content', 'Analytics'],
+    social: { linkedin: 'sarahmitchell' },
+  },
+  {
+    name: 'Marcus Johnson',
+    role: 'Head of Paid Media',
+    bio: 'Managed $50M+ in ad spend. Expert in multi-channel campaign optimization.',
+    expertise: ['PPC', 'Meta Ads', 'Google Ads'],
+    social: { twitter: 'marcusj' },
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Head of Content',
+    bio: 'Content strategist and storyteller. Created 1000+ pieces of high-performing content.',
+    expertise: ['Content', 'Copywriting', 'Video'],
+    social: { linkedin: 'emilyrodriguez' },
+  },
+];
+
+const awards = [
+  'Google Partner',
+  'Meta Business Partner',
+  'HubSpot Certified',
+  'Semrush Certified',
+  'Top Marketing Agency 2024',
+  'Best SEO Agency',
+];
+
+const values = [
+  { title: 'Data-Driven', description: 'Every decision backed by metrics and insights, not assumptions.' },
+  { title: 'Transparent', description: 'Full visibility into strategies, spend, and results at all times.' },
+  { title: 'Innovative', description: 'Constantly exploring new technologies and methodologies.' },
+  { title: 'Results-Focused', description: 'Your success is our only metric that matters.' },
+];
+---
+
+<BaseLayout title="About Us" description="Your Dedicated Marketer is a full-service digital marketing agency specializing in AI-powered growth strategies for modern brands.">
+  <!-- Hero -->
+  <section class="section relative overflow-hidden">
+    <div class="absolute inset-0 radial-glow" />
+    <div class="container-custom relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+            About <span class="text-electric-400 neon-text">Us</span>
+          </h1>
+          <p class="text-lg text-gray-400 leading-relaxed mb-8">
+            We're a team of marketing experts, data scientists, and creative strategists united by one mission: helping modern brands achieve extraordinary growth through AI-powered marketing.
+          </p>
+          <Button href="/contact" variant="primary">Work With Us</Button>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Our Story</h3>
+          <p class="text-gray-400 leading-relaxed">
+            Founded in 2020, Your Dedicated Marketer emerged from a simple observation: most marketing agencies were stuck in outdated playbooks while the digital landscape evolved rapidly. We set out to build something different.
+          </p>
+          <p class="text-gray-400 leading-relaxed mt-4">
+            Today, we combine cutting-edge AI technology with human expertise to deliver marketing strategies that actually work. Our data-driven approach has helped 150+ brands transform their digital presence and achieve measurable growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why We're Different -->
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Why We're <span class="text-electric-400">Different</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          We're not just another marketing agency. We're your dedicated growth partners.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {values.map((value) => (
+          <div class="glass-card p-6 text-center">
+            <div class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-6 h-6 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="font-display font-semibold text-white mb-2">{value.title}</h3>
+            <p class="text-sm text-gray-400">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Our <span class="text-electric-400">Team</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          Meet the experts behind your growth.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {team.map((member) => (
+          <TeamCard {...member} />
+        ))}
+      </div>
+      
+      <div class="text-center mt-8">
+        <Button href="/team" variant="ghost">View Full Team</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Awards & <span class="text-electric-400">Certifications</span>
+        </h2>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        {awards.map((award) => (
+          <div class="px-6 py-3 glass-card text-sm font-medium text-gray-300 hover:text-electric-400 transition-colors">
+            {award}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="glass-card p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 radial-glow" />
+        <div class="relative">
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+            Ready to Work Together?
+          </h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            Let's discuss how our team can help your brand achieve extraordinary growth.
+          </p>
+          <Button href="/contact" variant="primary" size="lg">
+            Get in Touch
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

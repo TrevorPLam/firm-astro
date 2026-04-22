@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import fonts */
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+@import '@fontsource/space-grotesk/400.css';
+@import '@fontsource/space-grotesk/500.css';
+@import '@fontsource/space-grotesk/600.css';
+@import '@fontsource/space-grotesk/700.css';
+
+@layer base {
+  /* Dark mode by default */
+  html {
+    @apply bg-dark-900 text-white;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply font-sans antialiased;
+  }
+
+  /* Headings use display font */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-electric-500/30 text-white;
+  }
+}
+
+@layer components {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+  }
+
+  /* Neon text glow */
+  .neon-text {
+    text-shadow: 
+      0 0 5px theme('colors.electric.500'),
+      0 0 10px theme('colors.electric.500'),
+      0 0 20px theme('colors.electric.500');
+  }
+
+  /* Neon text glow on hover */
+  .hover\:neon-text:hover {
+    text-shadow: 
+      0 0 5px theme('colors.electric.500'),
+      0 0 10px theme('colors.electric.500'),
+      0 0 20px theme('colors.electric.500');
+  }
+
+  /* Electric blue gradient */
+  .electric-gradient {
+    @apply bg-gradient-to-r from-electric-400 to-electric-600;
+  }
+
+  /* Animated underline */
+  .animated-underline {
+    @apply relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-electric-500 transition-all duration-300;
+  }
+
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-electric-500 text-white hover:bg-electric-600 hover:shadow-neon-md active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply btn glass-card hover:bg-white/10 hover:border-electric-500/50 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply btn text-electric-400 hover:text-electric-300 hover:bg-electric-500/10;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  /* Container with max width */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-glass-lg;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply animate-pulse bg-white/10 rounded;
+  }
+
+  /* Grid patterns for backgrounds */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 85, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 85, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Radial gradient background */
+  .radial-glow {
+    background: radial-gradient(ellipse at center, theme('colors.electric.500/10') 0%, transparent 70%);
+  }
+}
+
+@layer utilities {
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-electric-400 to-electric-600;
+  }
+
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Focus ring */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-electric-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+  }
+}

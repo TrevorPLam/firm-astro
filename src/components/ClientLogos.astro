@@ -1,0 +1,46 @@
+---
+// Client logos carousel - static display with CSS animation
+const clients = [
+  { name: 'TechCorp', logo: 'TC' },
+  { name: 'InnovateLabs', logo: 'IL' },
+  { name: 'GrowthCo', logo: 'GC' },
+  { name: 'DataDriven', logo: 'DD' },
+  { name: 'ScaleUp', logo: 'SU' },
+  { name: 'NexGen', logo: 'NG' },
+  { name: 'CloudFirst', logo: 'CF' },
+  { name: 'DigitalEdge', logo: 'DE' },
+];
+---
+
+<div class="relative overflow-hidden">
+  <div class="flex animate-scroll gap-12">
+    {[...clients, ...clients].map((client, index) => (
+      <div
+        class="flex-shrink-0 w-32 h-16 flex items-center justify-center glass-card hover:border-electric-500/30 transition-colors"
+      >
+        <span class="text-2xl font-display font-bold text-gray-400 group-hover:text-electric-400 transition-colors">
+          {client.logo}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover {
+    animation-play-state: paused;
+  }
+</style>

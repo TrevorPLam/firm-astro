@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TeamCard from '../components/TeamCard.astro';
+
+const team = [
+  {
+    name: 'Alex Chen',
+    role: 'Founder & CEO',
+    bio: '15+ years in digital marketing. Former Head of Growth at Fortune 500 companies. Passionate about leveraging AI to transform marketing strategies.',
+    expertise: ['Strategy', 'Growth', 'AI', 'Leadership'],
+    social: { twitter: 'alexchen', linkedin: 'alexchen' },
+  },
+  {
+    name: 'Sarah Mitchell',
+    role: 'Head of SEO',
+    bio: 'SEO specialist with 10+ years experience. Helped 100+ brands achieve top rankings. Speaker at major marketing conferences.',
+    expertise: ['SEO', 'Content', 'Analytics', 'Technical SEO'],
+    social: { linkedin: 'sarahmitchell' },
+  },
+  {
+    name: 'Marcus Johnson',
+    role: 'Head of Paid Media',
+    bio: 'Managed $50M+ in ad spend. Expert in multi-channel campaign optimization. Google and Meta certified professional.',
+    expertise: ['PPC', 'Meta Ads', 'Google Ads', 'Programmatic'],
+    social: { twitter: 'marcusj' },
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Head of Content',
+    bio: 'Content strategist and storyteller. Created 1000+ pieces of high-performing content. Former journalist with a passion for brand narratives.',
+    expertise: ['Content', 'Copywriting', 'Video', 'Storytelling'],
+    social: { linkedin: 'emilyrodriguez' },
+  },
+  {
+    name: 'David Kim',
+    role: 'Head of Analytics',
+    bio: 'Data scientist with background in machine learning. Transforms complex data into actionable marketing insights.',
+    expertise: ['Analytics', 'Data Science', 'BI', 'Python'],
+    social: { linkedin: 'davidkim' },
+  },
+  {
+    name: 'Lisa Thompson',
+    role: 'Head of Email Marketing',
+    bio: 'Email automation expert. Built campaigns generating $10M+ in revenue. Specialist in lifecycle marketing and segmentation.',
+    expertise: ['Email', 'Automation', 'CRM', 'Lifecycle'],
+    social: { twitter: 'lisathompson' },
+  },
+  {
+    name: 'James Wilson',
+    role: 'Senior SEO Strategist',
+    bio: 'Technical SEO expert with 8+ years experience. Specializes in enterprise SEO and international markets.',
+    expertise: ['Technical SEO', 'Enterprise', 'International'],
+    social: { linkedin: 'jameswilson' },
+  },
+  {
+    name: 'Rachel Green',
+    role: 'Creative Director',
+    bio: 'Award-winning creative professional. Leads visual identity and brand design projects for enterprise clients.',
+    expertise: ['Design', 'Branding', 'Video', 'UI/UX'],
+    social: { linkedin: 'rachelgreen' },
+  },
+];
+---
+
+<BaseLayout title="Our Team" description="Meet the expert team behind Your Dedicated Marketer. Marketing professionals, data scientists, and creative strategists.">
+  <!-- Hero -->
+  <section class="section relative overflow-hidden">
+    <div class="absolute inset-0 radial-glow" />
+    <div class="container-custom relative">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+          Our <span class="text-electric-400 neon-text">Team</span>
+        </h1>
+        <p class="text-lg text-gray-400 leading-relaxed">
+          Meet the experts behind your growth. Our team combines decades of experience with cutting-edge AI expertise to deliver exceptional results.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {team.map((member) => (
+          <TeamCard {...member} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us -->
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="glass-card p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 radial-glow" />
+        <div class="relative">
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+            Join Our Team
+          </h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            We're always looking for talented individuals who share our passion for data-driven marketing. Check out our open positions.
+          </p>
+          <a href="/careers" class="btn-secondary inline-flex items-center justify-center px-8 py-4 text-base">
+            View Open Positions
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

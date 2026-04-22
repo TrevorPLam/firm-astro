@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  client: string;
+  industry: string;
+  results: Array<{ metric: string; value: string; improvement?: string }>;
+  image?: string;
+  slug: string;
+  featured?: boolean;
+}
+
+const { title, client, industry, results, image, slug, featured = false } = Astro.props;
+---
+
+<a
+  href={`/work/${slug}`}
+  class:list={[
+    'glass-card overflow-hidden card-hover group block',
+    featured && 'md:col-span-2 lg:col-span-2',
+  ]}
+>
+  {image && (
+    <div class:list={['aspect-video bg-white/5 overflow-hidden', featured && 'md:aspect-[21/9]']}>
+      <img
+        src={image}
+        alt={title}
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+        loading="lazy"
+      />
+    </div>
+  )}
+  <div class="p-6 md:p-8">
+    <div class="flex items-center gap-3 mb-4">
+      <span class="text-xs text-electric-400 font-medium uppercase tracking-wider">{industry}</span>
+      {featured && (
+        <span class="px-2 py-1 text-xs bg-electric-500/20 text-electric-400 rounded">Featured</span>
+      )}
+    </div>
+    <h3 class="font-display text-xl md:text-2xl font-semibold text-white mb-2 group-hover:text-electric-400 transition-colors">
+      {title}
+    </h3>
+    <p class="text-gray-400 text-sm mb-6">{client}</p>
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      {results.slice(0, 3).map((result) => (
+        <div class="text-center">
+          <div class="text-2xl md:text-3xl font-display font-bold text-electric-400 neon-text">
+            {result.value}
+          </div>
+          <div class="text-xs text-gray-500 mt-1">{result.metric}</div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="mt-6 pt-6 border-t border-white/5 flex items-center justify-between">
+      <span class="text-sm text-electric-400 font-medium group-hover:neon-text">View Case Study</span>
+      <svg class="w-5 h-5 text-electric-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </div>
+  </div>
+</a>

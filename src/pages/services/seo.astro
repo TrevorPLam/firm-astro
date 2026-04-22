@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import ProcessStep from '../../components/ProcessStep.astro';
+
+const benefits = [
+  'Increased organic traffic and visibility',
+  'Higher search rankings for target keywords',
+  'Improved domain authority and credibility',
+  'Better user experience and site performance',
+  'Long-term, sustainable growth',
+  'Higher conversion rates from qualified traffic',
+];
+
+const processSteps = [
+  { number: '01', title: 'Technical Audit', description: 'Comprehensive analysis of your website\'s technical SEO health, identifying issues and opportunities.' },
+  { number: '02', title: 'Keyword Research', description: 'AI-powered keyword discovery to find high-value search terms your audience is using.' },
+  { number: '03', title: 'On-Page Optimization', description: 'Strategic optimization of content, meta tags, and site structure for maximum visibility.' },
+  { number: '04', title: 'Authority Building', description: 'Strategic link building and content marketing to build domain authority.' },
+  { number: '05', title: 'Monitoring & Optimization', description: 'Continuous tracking, reporting, and refinement to maintain and improve rankings.' },
+];
+---
+
+<BaseLayout 
+  title="SEO Services" 
+  description="Dominate search rankings with AI-powered SEO strategies. Technical optimization, content strategy, and authority building for sustainable organic growth."
+>
+  <!-- Hero -->
+  <section class="section relative overflow-hidden">
+    <div class="absolute inset-0 radial-glow" />
+    <div class="container-custom relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6">
+            <span class="text-sm text-electric-400 font-medium">Search Engine Optimization</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+            <span class="text-electric-400 neon-text">SEO</span> Services
+          </h1>
+          <p class="text-lg text-gray-400 leading-relaxed mb-8">
+            Dominate search rankings with AI-powered optimization strategies. We combine technical expertise, content strategy, and authority building to drive sustainable organic growth.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <Button href="/contact" variant="primary">
+              Get Started
+            </Button>
+            <Button href="/work" variant="secondary">
+              View Case Studies
+            </Button>
+          </div>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Quick Stats</h3>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">156%</div>
+              <div class="text-sm text-gray-500 mt-1">Avg. Traffic Increase</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">Top 3</div>
+              <div class="text-sm text-gray-500 mt-1">Rankings Achieved</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">85%</div>
+              <div class="text-sm text-gray-500 mt-1">First Page Rankings</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">6mo</div>
+              <div class="text-sm text-gray-500 mt-1">Avg. Time to Results</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+            Benefits of <span class="text-electric-400">SEO</span>
+          </h2>
+          <p class="text-gray-400 mb-8 leading-relaxed">
+            SEO is the foundation of sustainable digital growth. Unlike paid advertising, organic traffic compounds over time, delivering lasting results and higher ROI.
+          </p>
+          
+          <ul class="space-y-4">
+            {benefits.map((benefit) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-300">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Pricing Indicator</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center py-3 border-b border-white/5">
+              <span class="text-gray-400">SEO Audit</span>
+              <span class="text-electric-400 font-semibold">Starting at $1,500</span>
+            </div>
+            <div class="flex justify-between items-center py-3 border-b border-white/5">
+              <span class="text-gray-400">Monthly SEO</span>
+              <span class="text-electric-400 font-semibold">$2,500 - $10,000/mo</span>
+            </div>
+            <div class="flex justify-between items-center py-3">
+              <span class="text-gray-400">Enterprise SEO</span>
+              <span class="text-electric-400 font-semibold">Custom Pricing</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-500 mt-6">*Final pricing based on project scope and requirements</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Our SEO <span class="text-electric-400">Process</span>
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">
+          A proven methodology that delivers consistent, measurable results.
+        </p>
+      </div>
+      
+      <div class="max-w-2xl mx-auto">
+        {processSteps.map((step, index) => (
+          <ProcessStep
+            number={step.number}
+            title={step.title}
+            description={step.description}
+            isLast={index === processSteps.length - 1}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section">
+    <div class="container-custom">
+      <div class="glass-card p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 radial-glow" />
+        <div class="relative">
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+            Ready to Dominate Search Rankings?
+          </h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            Let's discuss how our SEO services can drive sustainable organic growth for your business.
+          </p>
+          <Button href="/contact" variant="primary" size="lg">
+            Schedule a Free SEO Audit
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

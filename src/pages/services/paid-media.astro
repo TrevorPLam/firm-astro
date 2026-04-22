@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import ProcessStep from '../../components/ProcessStep.astro';
+
+const benefits = [
+  'Immediate traffic and lead generation',
+  'Precise audience targeting',
+  'Measurable ROI and performance tracking',
+  'Scalable advertising spend',
+  'Multi-channel campaign management',
+  'Real-time optimization and adjustments',
+];
+
+const platforms = [
+  { name: 'Google Ads', icon: 'G' },
+  { name: 'Meta (Facebook/Instagram)', icon: 'M' },
+  { name: 'LinkedIn Ads', icon: 'Li' },
+  { name: 'TikTok Ads', icon: 'T' },
+  { name: 'YouTube Ads', icon: 'Yt' },
+  { name: 'Programmatic', icon: 'Pr' },
+];
+
+const processSteps = [
+  { number: '01', title: 'Strategy Development', description: 'Define goals, target audiences, and budget allocation across channels.' },
+  { number: '02', title: 'Campaign Setup', description: 'Create compelling ad copy, visuals, and landing pages optimized for conversion.' },
+  { number: '03', title: 'Launch & Monitor', description: 'Deploy campaigns with careful monitoring and initial optimization.' },
+  { number: '04', title: 'Optimize & Scale', description: 'Continuous A/B testing, bid optimization, and budget scaling for maximum ROI.' },
+];
+---
+
+<BaseLayout 
+  title="Paid Media Services" 
+  description="Maximize ROI with data-driven paid advertising across Google, Meta, LinkedIn, and more. Expert campaign strategy and optimization."
+>
+  <section class="section relative overflow-hidden">
+    <div class="absolute inset-0 radial-glow" />
+    <div class="container-custom relative">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6">
+            <span class="text-sm text-electric-400 font-medium">Paid Advertising</span>
+          </div>
+          <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
+            <span class="text-electric-400 neon-text">Paid Media</span> Services
+          </h1>
+          <p class="text-lg text-gray-400 leading-relaxed mb-8">
+            Maximize ROI with data-driven paid advertising across all major platforms. We combine strategic planning with continuous optimization to deliver measurable results.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <Button href="/contact" variant="primary">Get Started</Button>
+            <Button href="/work" variant="secondary">View Case Studies</Button>
+          </div>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Platforms We Manage</h3>
+          <div class="grid grid-cols-3 gap-4">
+            {platforms.map((platform) => (
+              <div class="aspect-square rounded-xl bg-white/5 flex flex-col items-center justify-center hover:bg-electric-500/10 transition-colors">
+                <span class="text-2xl font-display font-bold text-electric-400">{platform.icon}</span>
+                <span class="text-xs text-gray-400 mt-2">{platform.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-dark-800/50">
+    <div class="container-custom">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+            Benefits of <span class="text-electric-400">Paid Media</span>
+          </h2>
+          <ul class="space-y-4">
+            {benefits.map((benefit) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span class="text-gray-300">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="glass-card p-8">
+          <h3 class="font-display text-xl font-semibold text-white mb-6">Quick Stats</h3>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">4.2x</div>
+              <div class="text-sm text-gray-500 mt-1">Avg. ROAS</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">-40%</div>
+              <div class="text-sm text-gray-500 mt-1">CPA Reduction</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">$10M+</div>
+              <div class="text-sm text-gray-500 mt-1">Ad Spend Managed</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">24hr</div>
+              <div class="text-sm text-gray-500 mt-1">Campaign Launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-custom">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Our Paid Media <span class="text-electric-400">Process</span></h2>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        {processSteps.map((step, index) => (
+          <ProcessStep number={step.number} title={step.title} description={step.description} isLast={index === processSteps.length - 1} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-custom">
+      <div class="glass-card p-12 text-center relative overflow-hidden">
+        <div class="absolute inset-0 radial-glow" />
+        <div class="relative">
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Ready to Scale Your Advertising?</h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">Let's discuss how our paid media services can drive immediate growth for your business.</p>
+          <Button href="/contact" variant="primary" size="lg">Get a Free Campaign Audit</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
