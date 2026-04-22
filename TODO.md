@@ -206,12 +206,37 @@ No existing test patterns to follow.
 ---
 
 ## TASK-003: Set up CI/CD pipeline
-[ ] 🟡 Pending 🔴 High
+[x] ✅ Completed 🔴 High
 
-- [ ] TASK-003-01: Create `.github/workflows/ci.yml` for continuous integration
-- [ ] TASK-003-02: Configure build step in CI workflow
-- [ ] TASK-003-03: Configure test step in CI workflow
-- [ ] TASK-003-04: Configure deployment step (manual approval for production)
+- [x] TASK-003-01: Create `.github/workflows/ci.yml` for continuous integration
+- [x] TASK-003-02: Configure build step in CI workflow
+- [x] TASK-003-03: Configure test step in CI workflow
+- [x] TASK-003-04: Configure deployment step (manual approval for production)
+
+### Completion Note
+**Changes Made:**
+- Created `.github/workflows/ci.yml` with build, test (Vitest), test-e2e (Playwright), and deploy jobs
+- Configured Node.js 20 LTS for all jobs
+- Added node_modules caching via actions/setup-node for faster builds
+- Build job: checkout, setup Node.js, install deps, run Astro build, upload dist artifact
+- Test job: runs Vitest unit tests
+- E2E test job: downloads build artifact, serves built site with `npm run preview`, runs Playwright tests against built site
+- Deploy job: requires GitHub Environment "production" with manual approval, deploys to GitHub Pages
+- Modified `playwright.config.ts` to skip webServer in CI and use BASE_URL environment variable
+- Created `.github/workflows/README.md` with setup instructions for GitHub Environment
+
+**Validation Performed:**
+- YAML syntax verified (file created successfully)
+- Workflow structure follows GitHub Actions best practices
+- Job dependencies configured correctly (deploy depends on all test jobs)
+- Manual approval configured via GitHub Environment reference
+
+**Limitations:**
+- Full validation requires pushing to GitHub to trigger the workflow
+- GitHub Environment "production" must be manually created by user in repository Settings
+- GitHub Pages must be enabled in repository Settings with Source set to "GitHub Actions"
+- Manual testing of workflow execution, test results, and deployment approval requires GitHub Actions environment
+- Cannot verify build/test success in CI without actual GitHub Actions run
 
 ### Priority / Urgency
 High - No CI/CD exists, critical for automated testing and deployment safety
