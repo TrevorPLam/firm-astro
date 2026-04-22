@@ -48,7 +48,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           <select
             value={selectedIndustry}
             onChange={(e) => setSelectedIndustry(e.target.value)}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors appearance-none cursor-pointer"
+            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus-ring transition-colors appearance-none cursor-pointer select-arrow"
           >
             {industries.map((industry) => (
               <option key={industry} value={industry} className="bg-dark-800">
@@ -63,7 +63,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           <select
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value)}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors appearance-none cursor-pointer"
+            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus-ring transition-colors appearance-none cursor-pointer select-arrow"
           >
             {services.map((service) => (
               <option key={service} value={service} className="bg-dark-800">
@@ -85,7 +85,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           <a
             key={study.slug}
             href={`/work/${study.slug}`}
-            className="glass-card overflow-hidden card-hover group block"
+            className="glass-card overflow-hidden card-hover group block focus-ring"
           >
             {study.image && (
               <div className="aspect-video bg-white/5 overflow-hidden">
@@ -153,7 +153,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
               setSelectedIndustry('all');
               setSelectedService('all');
             }}
-            className="mt-4 text-electric-400 hover:text-electric-300 transition-colors"
+            className="mt-4 text-electric-400 hover:text-electric-300 transition-colors focus-ring"
           >
             Clear filters
           </button>

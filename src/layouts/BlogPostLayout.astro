@@ -79,7 +79,7 @@ const readingTime = post.data.readingTime || `${Math.ceil(post.body?.split(/\s+/
 
     <!-- Article Content -->
     <div class="max-w-3xl mx-auto prose prose-invert prose-lg prose-headings:font-display prose-headings:text-white prose-a:text-electric-400 hover:prose-a:text-electric-300 prose-code:text-electric-400">
-      <Content />
+      <slot />
     </div>
 
     <!-- Author Bio -->

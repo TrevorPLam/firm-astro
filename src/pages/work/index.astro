@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CaseStudyFilter from '../../components/CaseStudyFilter';
+import ErrorBoundary from '../../components/ErrorBoundary';
 import { getCollection } from 'astro:content';
 
 const caseStudies = await getCollection('caseStudies');
@@ -41,7 +42,9 @@ const caseStudiesData = caseStudies.map((cs) => ({
   <section class="section">
     <div class="container-custom">
       {caseStudiesData.length > 0 ? (
-        <CaseStudyFilter caseStudies={caseStudiesData} client:load />
+        <ErrorBoundary>
+          <CaseStudyFilter caseStudies={caseStudiesData} client:load />
+        </ErrorBoundary>
       ) : (
         <div class="glass-card p-12 text-center">
           <div class="w-16 h-16 rounded-full bg-electric-500/20 flex items-center justify-center mx-auto mb-6">

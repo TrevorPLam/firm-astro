@@ -1,0 +1,55 @@
+[
+  {
+    "id": "blog-ai-powered-seo-strategies",
+    "type": "blog",
+    "title": "AI-Powered SEO Strategies for 2024",
+    "description": "Discover how artificial intelligence is transforming SEO strategies and how you can leverage these tools to improve your search rankings.",
+    "category": "SEO",
+    "tags": [
+      "SEO",
+      "AI",
+      "Digital Marketing"
+    ],
+    "url": "/blog/ai-powered-seo-strategies"
+  },
+  {
+    "id": "blog-paid-media-optimization",
+    "type": "blog",
+    "title": "Maximizing ROI: A Guide to Paid Media Optimization",
+    "description": "Learn proven strategies for optimizing your paid media campaigns across Google, Meta, and LinkedIn to maximize return on ad spend.",
+    "category": "Paid Media",
+    "tags": [
+      "Paid Media",
+      "PPC",
+      "Google Ads",
+      "Meta Ads"
+    ],
+    "url": "/blog/paid-media-optimization"
+  },
+  {
+    "id": "case-ecommerce-revenue-growth",
+    "type": "case",
+    "title": "StyleHouse E-commerce: $2.4M Revenue Growth",
+    "client": "StyleHouse",
+    "industry": "E-commerce",
+    "services": [
+      "Paid Media",
+      "Email Automation",
+      "Analytics"
+    ],
+    "url": "/work/ecommerce-revenue-growth"
+  },
+  {
+    "id": "case-techflow-saas-growth",
+    "type": "case",
+    "title": "TechFlow SaaS: 280% Increase in Trial Signups",
+    "client": "TechFlow",
+    "industry": "SaaS",
+    "services": [
+      "SEO",
+      "Paid Media",
+      "Content Marketing"
+    ],
+    "url": "/work/techflow-saas-growth"
+  }
+]

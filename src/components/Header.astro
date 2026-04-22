@@ -1,4 +1,7 @@
 ---
+import ThemeToggle from './ThemeToggle.astro';
+import SearchModal from './SearchModal';
+
 const navLinks = [
   { href: '/services', label: 'Services' },
   { href: '/work', label: 'Work' },
@@ -15,11 +18,11 @@ const currentPath = Astro.url.pathname;
   <nav class="container-custom">
     <div class="flex items-center justify-between h-20">
       <!-- Logo -->
-      <a href="/" class="flex items-center gap-2 group">
+      <a href="/" class="flex items-center gap-2 group focus-ring">
         <div class="w-10 h-10 rounded-lg bg-electric-500 flex items-center justify-center group-hover:shadow-neon-md transition-shadow">
           <span class="text-white font-display font-bold text-xl">Y</span>
         </div>
-        <span class="font-display font-bold text-lg hidden sm:block">
+        <span class="font-display font-bold text-lg hidden sm:block text-light-900 dark:text-white">
           Your Dedicated <span class="text-electric-400">Marketer</span>
         </span>
       </a>
@@ -30,15 +33,26 @@ const currentPath = Astro.url.pathname;
           <a
             href={link.href}
             class:list={[
-              'text-sm font-medium transition-colors animated-underline',
+              'text-sm font-medium transition-colors animated-underline focus-ring',
               currentPath.startsWith(link.href)
                 ? 'text-electric-400'
-                : 'text-gray-300 hover:text-white',
+                : 'text-light-600 dark:text-gray-300 hover:text-light-900 dark:hover:text-white',
             ]}
           >
             {link.label}
           </a>
         ))}
+        <button
+          id="search-btn"
+          class="p-2 text-gray-300 hover:text-white focus-ring"
+          aria-label="Open search"
+          title="Search (Cmd/Ctrl + K)"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        <ThemeToggle />
       </div>
 
       <!-- CTA Button -->
@@ -51,8 +65,11 @@ const currentPath = Astro.url.pathname;
       <!-- Mobile Menu Button -->
       <button
         id="mobile-menu-btn"
-        class="lg:hidden p-2 text-gray-300 hover:text-white"
+        class="lg:hidden p-2 text-gray-300 hover:text-white focus-ring"
         aria-label="Toggle menu"
+        aria-controls="mobile-menu"
+        aria-haspopup="true"
+        aria-expanded="false"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -63,24 +80,37 @@ const currentPath = Astro.url.pathname;
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="lg:hidden hidden">
-    <div class="container-custom py-4 border-t border-white/5">
+    <div class="container-custom py-4 border-t border-light-200 dark:border-white/5">
       <div class="flex flex-col gap-4">
         {navLinks.map((link) => (
           <a
             href={link.href}
             class:list={[
-              'text-sm font-medium py-2 transition-colors',
+              'text-sm font-medium py-2 transition-colors focus-ring',
               currentPath.startsWith(link.href)
                 ? 'text-electric-400'
-                : 'text-gray-300 hover:text-white',
+                : 'text-light-600 dark:text-gray-300 hover:text-light-900 dark:hover:text-white',
             ]}
           >
             {link.label}
           </a>
         ))}
-        <a href="/contact" class="btn-primary text-sm text-center mt-2">
-          Get Started
-        </a>
+        <div class="flex items-center gap-4 mt-2">
+          <button
+            id="search-btn-mobile"
+            class="p-2 text-gray-300 hover:text-white focus-ring"
+            aria-label="Open search"
+            title="Search (Cmd/Ctrl + K)"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+          <ThemeToggle />
+          <a href="/contact" class="btn-primary text-sm text-center flex-1">
+            Get Started
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -89,18 +119,135 @@ const currentPath = Astro.url.pathname;
 <!-- Spacer for fixed header -->
 <div class="h-20" />
 
+<!-- Search Modal -->
+<SearchModal client:load />
+
 <script>
   const menuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+  const searchBtn = document.getElementById('search-btn');
+  const searchBtnMobile = document.getElementById('search-btn-mobile');
+  let focusTrapCleanup: (() => void) | null = null;
+  let isSearchOpen = false;
+
+  // Search modal state management
+  function openSearch() {
+    isSearchOpen = true;
+    // Dispatch custom event for SearchModal component
+    const event = new CustomEvent('open-search');
+    document.dispatchEvent(event);
+  }
+
+  function closeSearch() {
+    isSearchOpen = false;
+    // Dispatch custom event for SearchModal component
+    const event = new CustomEvent('close-search');
+    document.dispatchEvent(event);
+  }
+
+  // Search button click handlers
+  searchBtn?.addEventListener('click', openSearch);
+  searchBtnMobile?.addEventListener('click', openSearch);
+
+  // Keyboard shortcut (Cmd/Ctrl + K)
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (isSearchOpen) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    }
+  });
+
+  // Listen for close events from SearchModal
+  document.addEventListener('search-modal-closed', () => {
+    isSearchOpen = false;
+  });
+
+  // Focus trap implementation
+  function trapFocus(element: HTMLElement) {
+    const focusableEls = element.querySelectorAll(
+      'a[href]:not([disabled]), button:not([disabled]), textarea:not([disabled]), input[type="text"]:not([disabled]), input[type="radio"]:not([disabled]), input[type="checkbox"]:not([disabled]), select:not([disabled])'
+    );
+    const firstFocusableEl = focusableEls[0] as HTMLElement;
+    const lastFocusableEl = focusableEls[focusableEls.length - 1] as HTMLElement;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+      if (!isTabPressed) return;
+
+      if (e.shiftKey) {
+        // Shift + Tab
+        if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+          e.preventDefault();
+        }
+      } else {
+        // Tab
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          e.preventDefault();
+        }
+      }
+    };
+
+    element.addEventListener('keydown', handleKeyDown);
+
+    // Return cleanup function
+    return () => {
+      element.removeEventListener('keydown', handleKeyDown);
+    };
+  }
+
+  function openMenu() {
+    mobileMenu?.classList.remove('hidden');
+    menuBtn?.setAttribute('aria-expanded', 'true');
+    // Set up focus trap
+    focusTrapCleanup = trapFocus(mobileMenu!);
+    // Focus first menu item
+    const firstLink = mobileMenu?.querySelector('a') as HTMLElement;
+    firstLink?.focus();
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.add('hidden');
+    menuBtn?.setAttribute('aria-expanded', 'false');
+    // Clean up focus trap
+    if (focusTrapCleanup) {
+      focusTrapCleanup();
+      focusTrapCleanup = null;
+    }
+    // Return focus to menu button
+    menuBtn?.focus();
+  }
 
   menuBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+    const isHidden = mobileMenu?.classList.contains('hidden');
+    if (isHidden) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
   });
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!menuBtn?.contains(e.target as Node) && !mobileMenu?.contains(e.target as Node)) {
-      mobileMenu?.classList.add('hidden');
+      closeMenu();
     }
+  });
+
+  // Close menu on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mobileMenu?.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+
+  // Close menu on route change
+  document.addEventListener('astro:after-preparation', () => {
+    closeMenu();
   });
 </script>

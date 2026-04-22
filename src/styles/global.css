@@ -13,10 +13,14 @@
 @import '@fontsource/space-grotesk/700.css';
 
 @layer base {
-  /* Dark mode by default */
+  /* Light mode by default, dark mode with class */
   html {
+    @apply bg-light text-light-900;
+    color-scheme: dark light;
+  }
+
+  html.dark {
     @apply bg-dark-900 text-white;
-    color-scheme: dark;
   }
 
   body {
@@ -42,7 +46,7 @@
 @layer components {
   /* Glassmorphism card */
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl;
+    @apply bg-light-100/50 dark:bg-white/5 backdrop-blur-md border border-light-200 dark:border-white/10 rounded-2xl;
   }
 
   /* Neon text glow */
@@ -149,6 +153,44 @@
 
   /* Focus ring */
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-electric-500 focus:ring-offset-2 focus:ring-offset-dark-900;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-electric-500 focus-visible:ring-offset-2 focus-visible:ring-offset-light dark:focus-visible:ring-offset-dark-900;
+  }
+
+  /* Custom select arrow */
+  .select-arrow {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%233b82f6' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
+  /* Skip link */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+  }
+
+  .skip-link:focus,
+  .skip-link:active {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 9999;
+    padding: 1rem 1.5rem;
+    background-color: theme('colors.electric.500');
+    color: white;
+    font-weight: 600;
+    border-radius: 0 0 0.5rem 0;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
 }

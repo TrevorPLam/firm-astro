@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useId } from 'react';
 
 interface FAQItem {
   question: string;
@@ -14,6 +14,7 @@ interface FAQAccordionProps {
 export default function FAQAccordion({ items, searchable = false }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
+  const baseId = useId();
 
   const filteredItems = searchable
     ? items.filter(
@@ -32,7 +33,7 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
       {searchable && (
         <div className="relative mb-6">
           <svg
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-light-500 dark:text-gray-500"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -49,13 +50,13 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
             placeholder="Search questions..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-12 pr-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors"
+            className="w-full pl-12 pr-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus-ring transition-colors"
           />
         </div>
       )}
 
       {filteredItems.length === 0 ? (
-        <div className="text-center py-8 text-gray-400">
+        <div className="text-center py-8 text-light-600 dark:text-gray-400">
           No questions found matching your search.
         </div>
       ) : (
@@ -67,9 +68,11 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
             >
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+                aria-expanded={openIndex === index}
+                aria-controls={`${baseId}-panel-${index}`}
+                className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-light-100 dark:hover:bg-white/5 transition-colors focus-ring"
               >
-                <span className="font-medium text-white pr-4">{item.question}</span>
+                <span className="font-medium text-light-900 dark:text-white pr-4">{item.question}</span>
                 <svg
                   className={`w-5 h-5 text-electric-400 flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? 'rotate-180' : ''
@@ -87,11 +90,12 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
                 </svg>
               </button>
               <div
+                id={`${baseId}-panel-${index}`}
                 className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
               >
-                <div className="px-6 pb-4 text-gray-400 text-sm leading-relaxed">
+                <div className="px-6 pb-4 text-light-600 dark:text-gray-400 text-sm leading-relaxed">
                   {item.answer}
                 </div>
               </div>

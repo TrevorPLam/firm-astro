@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useId } from 'react';
 
 interface FormData {
   name: string;
@@ -28,6 +28,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const baseId = useId();
 
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
@@ -76,7 +77,7 @@ export default function ContactForm() {
 
   if (isSubmitted) {
     return (
-      <div className="glass-card p-8 text-center">
+      <div className="glass-card p-8 text-center" aria-live="polite">
         <div className="w-16 h-16 rounded-full bg-electric-500/20 flex items-center justify-center mx-auto mb-6">
           <svg
             className="w-8 h-8 text-electric-400"
@@ -92,8 +93,8 @@ export default function ContactForm() {
             />
           </svg>
         </div>
-        <h3 className="font-display text-2xl font-bold text-white mb-2">Message Sent!</h3>
-        <p className="text-gray-400">
+        <h3 className="font-display text-2xl font-bold text-light-900 dark:text-white mb-2">Message Sent!</h3>
+        <p className="text-light-600 dark:text-gray-400">
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
       </div>
@@ -105,7 +106,7 @@ export default function ContactForm() {
       <div className="grid gap-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
             Name <span className="text-electric-400">*</span>
           </label>
           <input
@@ -114,17 +115,19 @@ export default function ContactForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors"
+            aria-invalid={!!errors.name}
+            aria-describedby={errors.name ? `${baseId}-name-error` : undefined}
+            className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus-ring transition-colors"
             placeholder="John Doe"
           />
           {errors.name && (
-            <p className="mt-1 text-sm text-red-400">{errors.name}</p>
+            <p id={`${baseId}-name-error`} className="mt-1 text-sm text-red-400">{errors.name}</p>
           )}
         </div>
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="email" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
             Email <span className="text-electric-400">*</span>
           </label>
           <input
@@ -133,17 +136,19 @@ export default function ContactForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors"
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? `${baseId}-email-error` : undefined}
+            className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus-ring transition-colors"
             placeholder="john@company.com"
           />
           {errors.email && (
-            <p className="mt-1 text-sm text-red-400">{errors.email}</p>
+            <p id={`${baseId}-email-error`} className="mt-1 text-sm text-red-400">{errors.email}</p>
           )}
         </div>
 
         {/* Company */}
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="company" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
             Company
           </label>
           <input
@@ -152,14 +157,14 @@ export default function ContactForm() {
             name="company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors"
+            className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus-ring transition-colors"
             placeholder="Company Inc."
           />
         </div>
 
         {/* Service Interest */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="service" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
             Service Interest
           </label>
           <select
@@ -167,11 +172,11 @@ export default function ContactForm() {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors appearance-none cursor-pointer"
+            className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors appearance-none cursor-pointer select-arrow"
           >
-            <option value="" className="bg-dark-800">Select a service</option>
+            <option value="" className="bg-white dark:bg-dark-800">Select a service</option>
             {services.map((service) => (
-              <option key={service} value={service} className="bg-dark-800">
+              <option key={service} value={service} className="bg-white dark:bg-dark-800">
                 {service}
               </option>
             ))}
@@ -180,7 +185,7 @@ export default function ContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+          <label htmlFor="message" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
             Message <span className="text-electric-400">*</span>
           </label>
           <textarea
@@ -189,11 +194,13 @@ export default function ContactForm() {
             value={formData.message}
             onChange={handleChange}
             rows={5}
-            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors resize-none"
+            aria-invalid={!!errors.message}
+            aria-describedby={errors.message ? `${baseId}-message-error` : undefined}
+            className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors resize-none"
             placeholder="Tell us about your project..."
           />
           {errors.message && (
-            <p className="mt-1 text-sm text-red-400">{errors.message}</p>
+            <p id={`${baseId}-message-error`} className="mt-1 text-sm text-red-400">{errors.message}</p>
           )}
         </div>
 
