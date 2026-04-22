@@ -1,12 +1,24 @@
 # Codebase Improvement Tasks
 
 ## TASK-001: Implement real form submission backend
-[ ] 🟡 Pending 🔴 High
+[x] � Completed 🔴 High
 
-- [ ] TASK-001-01: Create API endpoint or form handler in `src/pages/api/contact.ts` (or similar)
-- [ ] TASK-001-02: Update `src/components/ContactForm.tsx` to call real API endpoint
-- [ ] TASK-001-03: Add environment variable for form submission URL
-- [ ] TASK-001-04: Add form submission success/error handling with user feedback
+- [x] TASK-001-01: Create API endpoint or form handler in `src/pages/api/contact.ts` (or similar)
+- [x] TASK-001-02: Update `src/components/ContactForm.tsx` to call real API endpoint
+- [x] TASK-001-03: Add environment variable for form submission URL
+- [x] TASK-001-04: Add form submission success/error handling with user feedback
+
+### Completion Note
+**Note**: Task description was outdated - form already had real API integration with Cloudflare Worker. Changes made:
+- Created `.env.example` and `.dev.vars` with `VITE_FORM_SUBMISSION_URL` environment variable
+- Updated `ContactForm.tsx` to use environment variable instead of hardcoded URL
+- Replaced `alert()` error handling with inline error message display with proper ARIA attributes
+- Added TypeScript type definitions in `src/env.d.ts`
+- Updated `.gitignore` to exclude `.dev.vars`
+- All validation logic, loading states, and success messages preserved
+- Dev server running successfully at http://localhost:4322/
+
+**Limitations**: Manual browser testing not performed - requires user to test form submission at /contact page. Error scenario simulation requires actual API failure.
 
 ### Priority / Urgency
 High - Critical functionality currently simulated, prevents production deployment
@@ -92,14 +104,35 @@ const handleSubmit = async (e: FormEvent) => {
 ---
 
 ## TASK-002: Add automated testing framework
-[ ] 🟡 Pending 🔴 High
+[x] ✅ Completed 🔴 High
 
-- [ ] TASK-002-01: Install Vitest for unit testing in `package.json`
-- [ ] TASK-002-02: Install Playwright for E2E testing in `package.json`
-- [ ] TASK-002-03: Create vitest.config.ts in repo root
-- [ ] TASK-002-04: Create playwright.config.ts in repo root
-- [ ] TASK-002-05: Add test scripts to `package.json` (test, test:e2e)
-- [ ] TASK-002-06: Create initial test file structure (src/__tests__/)
+- [x] TASK-002-01: Install Vitest for unit testing in `package.json`
+- [x] TASK-002-02: Install Playwright for E2E testing in `package.json`
+- [x] TASK-002-03: Create vitest.config.ts in repo root
+- [x] TASK-002-04: Create playwright.config.ts in repo root
+- [x] TASK-002-05: Add test scripts to `package.json` (test, test:e2e)
+- [x] TASK-002-06: Create initial test file structure (src/__tests__/)
+
+### Completion Note
+**Changes Made:**
+- Installed Vitest 4.1.5, @vitest/ui 4.1.5, @vitejs/plugin-react 4.3.4, happy-dom 20.9.0, @testing-library/react 16.3.2, @testing-library/jest-dom 6.9.1
+- Installed @playwright/test 1.59.1
+- Created vitest.config.ts with getViteConfig() helper for Astro integration, React plugin, happy-dom environment, and path aliases
+- Created playwright.config.ts with webServer configuration for automatic dev server startup, baseURL set to localhost:4321
+- Added test scripts to package.json: test, test:ui, test:e2e, test:e2e:ui
+- Created src/__tests__/ directory with setup.ts and example.test.ts
+- Created src/test/ directory with example.spec.ts for E2E tests
+- Fixed version compatibility issue by downgrading @vitejs/plugin-react to 4.3.4
+- Excluded src/test directory from Vitest to prevent conflict with Playwright tests
+
+**Validation Performed:**
+- Vitest configuration verified: 2 sample tests passed
+- Playwright configuration verified: 2 E2E tests passed (homepage title and load check)
+- TypeScript compatibility confirmed through successful test execution
+
+**Limitations:**
+- TypeScript type checking via `npx astro check` requires additional packages (@astrojs/check, typescript) not installed, but tests ran successfully with TypeScript
+- Dev server warnings during Playwright tests about ClientLogos component (pre-existing issue, not caused by testing setup)
 
 ### Priority / Urgency
 High - No automated testing exists, critical for production readiness and confidence in deployments

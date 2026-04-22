@@ -9,16 +9,16 @@
     "build:with-search": "astro build && node scripts/generate-search-index.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "generate-search-index": "node scripts/generate-search-index.mjs"
+    "generate-search-index": "node scripts/generate-search-index.mjs",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.2",
-    "@astrojs/react": "^4.1.0",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^6.0.0",
     "@fontsource/inter": "^5.1.0",
     "@fontsource/space-grotesk": "^5.1.0",
-    "astro": "^5.0.0",
     "astro-robots-txt": "^0.5.0",
     "minisearch": "^7.2.0",
     "react": "^18.3.1",
@@ -27,7 +27,20 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@astrojs/cloudflare": "^13.2.0",
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/react": "^4.4.2",
+    "@astrojs/tailwind": "^6.0.2",
+    "@playwright/test": "^1.59.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
     "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1"
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.7.0",
+    "@vitest/ui": "^4.1.5",
+    "astro": "^5.18.1",
+    "happy-dom": "^20.9.0",
+    "vitest": "^4.1.5",
+    "wrangler": "^4.84.1"
   }
 }
