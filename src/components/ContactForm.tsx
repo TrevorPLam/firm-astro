@@ -1,4 +1,5 @@
-import { useState, FormEvent, useId } from 'react';
+import { useState, useId } from 'react';
+import type { FormEvent } from 'react';
 
 interface FormData {
   name: string;
@@ -28,6 +29,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const baseId = useId();
 
   const validateForm = (): boolean => {
@@ -57,12 +59,31 @@ export default function ContactForm() {
     if (!validateForm()) return;
 
     setIsSubmitting(true);
+    setErrorMessage(null);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const formEndpoint = import.meta.env.VITE_FORM_SUBMISSION_URL || 'https://contact-form-worker.thetrevorlam-860.workers.dev';
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Form submission failed');
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch (error) {
+      setIsSubmitting(false);
+      console.error('Form submission error:', error);
+      setErrorMessage('Failed to submit form. Please try again.');
+    }
   };
 
   const handleChange = (
@@ -103,6 +124,11 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="glass-card p-8">
+      {errorMessage && (
+        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg" role="alert" aria-live="polite">
+          <p className="text-sm text-red-400">{errorMessage}</p>
+        </div>
+      )}
       <div className="grid gap-6">
         {/* Name */}
         <div>

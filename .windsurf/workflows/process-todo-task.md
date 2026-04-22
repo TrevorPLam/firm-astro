@@ -248,7 +248,64 @@ Only mark a task complete in `TODO.md` after:
 
 ---
 
-## Step 10: Move to Next Task
+## Step 10: Update Documentation
+
+After completing the task and updating TODO.md, review and update relevant documentation if the changes warrant it.
+
+### Documentation to Review
+- **README.md**: Update if the task changes project structure, setup instructions, or key features
+- **AGENTS.md**: Update if the task introduces new patterns, changes technology stack, or modifies architectural guidelines
+- **Other documentation**: Update any other relevant docs (e.g., component docs, API docs, migration guides)
+
+### When to Update Documentation
+Update documentation when:
+- New features or capabilities were added
+- Architectural patterns changed
+- Dependencies or tooling were modified
+- Setup or deployment processes changed
+- New conventions or best practices were established
+
+### When to Skip Documentation
+Skip documentation updates when:
+- Changes are minor bug fixes or typo corrections
+- Changes are internal implementation details not visible to users
+- Changes are temporary or experimental
+
+### Output Required
+- List of documentation files updated (if any)
+- Summary of documentation changes made
+- Reason for each update (or reason for skipping)
+
+---
+
+## Step 11: Push to GitHub
+
+After completing the task, updating TODO.md, and updating documentation (if applicable), push the changes to GitHub.
+
+### Actions
+1. Stage all changes: `git add .`
+2. Commit with a descriptive message following the task context
+3. Push to the appropriate branch
+
+### Commit Message Guidelines
+- Reference the task ID if applicable
+- Use clear, descriptive language
+- Summarize what was changed and why
+- Example: "Complete task-001: Add contact form validation"
+
+### Branch Considerations
+- If working on a feature branch, push to that branch
+- If working directly on main, ensure changes are ready for production
+- Consider creating a pull request for significant changes
+
+### Output Required
+- Confirmation that changes were committed and pushed
+- Commit message used
+- Branch pushed to
+
+---
+
+## Step 12: Move to Next Task
 
 Repeat the workflow for the **next `pending` task** in `TODO.md`.
 
