@@ -6,6 +6,31 @@ trigger: always_on
 
 # Styling Guidelines
 
+## Tailwind CSS v4.0
+This project uses Tailwind CSS v4.0 (released January 2025). Note the breaking changes from v3.
+
+## Tailwind v4.0 Key Changes
+
+### Configuration
+- CSS-first configuration (no tailwind.config.js)
+- Use `@theme` directive in CSS for theme customization
+- Automatic content detection (no need to specify content paths)
+- Built-in import support for CSS modules
+
+### Theme Variables
+- Use CSS custom properties for theme values
+- Define colors, spacing, etc. in `@theme` block
+- Dynamic utility values and variants
+- Modernized P3 color palette
+
+### New Features
+- Container queries support
+- New 3D transform utilities
+- Expanded gradient APIs (linear angles, interpolation modifiers)
+- `@starting-style` support for animations
+- `not-*` variant for negation
+- Enhanced gradient utilities (conic, radial)
+
 ## Color Usage
 - **Primary Accent**: Use `electric-500` (#0055FF) for primary actions
 - **Secondary Accent**: Use `electric-400` for hover states and highlights
@@ -30,6 +55,7 @@ trigger: always_on
 - Avoid custom CSS in component styles
 - Use Tailwind's responsive prefixes (md:, lg:, xl:)
 - Use state variants (hover:, focus:, active:)
+- Use container queries for responsive components (v4.0)
 
 ## Animations
 - `animate-float`: Gentle floating animation
@@ -37,6 +63,7 @@ trigger: always_on
 - `animate-fade-in`: Fade in effect
 - `animate-glow-pulse`: Pulsing glow effect
 - `animate-glitch`: Glitch effect (use sparingly)
+- Use `@starting-style` for entry animations (v4.0)
 
 ## Spacing
 - Use Tailwind's spacing scale (4, 8, 12, 16, etc.)
@@ -60,5 +87,26 @@ trigger: always_on
 - Use custom neon shadows for accent effects
 - Use glass shadows for glassmorphism
 - Avoid heavy shadows on dark backgrounds
+
+## Migration from v3 to v4
+- Remove tailwind.config.js (use CSS-first config)
+- Update to new Vite plugin: `@tailwindcss/vite`
+- Convert theme values to CSS custom properties
+- Use `@theme` directive for customization
+- Remove content configuration (automatic detection)
+
+## Configuration Example (v4.0)
+```css
+@import "tailwindcss";
+
+@theme {
+  --color-electric-500: #0055FF;
+  --color-electric-400: #3366FF;
+  --color-dark-900: #0a0a0a;
+  --color-dark-700: #1a1a1a;
+  --color-light-DEFAULT: #ffffff;
+  --color-light-100: #f5f5f5;
+}
+```
 
 </styling_guidelines>

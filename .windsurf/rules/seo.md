@@ -7,6 +7,30 @@ globs: src/pages/**/*.astro
 
 # SEO Requirements for Pages
 
+## AI-First SEO (2026)
+SEO in 2026 is AI-dominated. Google uses AI systems that continuously test, learn, and refine search results. Focus on user intent and content quality over keyword stuffing.
+
+### AI Overviews
+- AI Overviews change user click patterns
+- Optimize for featured snippet opportunities
+- Provide clear, direct answers to common questions
+- Structure content for AI summarization
+- Focus on E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness)
+
+### Intent Over Keywords
+- Match user search intent (informational, navigational, transactional)
+- Create comprehensive content that satisfies intent
+- Use natural language, not keyword stuffing
+- Address related questions and follow-up topics
+- Continuous AI-driven algorithm adjustments - monitor trends
+
+### AI Content Guidelines
+- Disclose AI-generated content when appropriate
+- Add human perspective and unique insights
+- Verify AI-generated facts and statistics
+- Maintain consistent brand voice
+- Focus on original value, not just rehashing
+
 ## Required Meta Tags
 Every page must include:
 - `<title>` - Page title with site name suffix
@@ -35,18 +59,21 @@ Every page must include:
 - Include person schema for author pages
 - Include local business schema if applicable
 - Use proper schema.org types
+- Structured data helps AI understand content context
 
 ## Title Format
 - Main page: "Site Name"
 - Other pages: "Page Title | Site Name"
 - Keep titles under 60 characters
-- Use descriptive, keyword-rich titles
+- Use descriptive, intent-focused titles
+- Avoid clickbait - match content expectations
 
 ## Description Guidelines
 - Write unique descriptions for each page
 - Include target keywords naturally
 - Keep between 150-160 characters
 - Write compelling, action-oriented descriptions
+- Reflect actual page content accurately
 
 ## Image Optimization
 - Use appropriate image dimensions (1200x630 for OG)
@@ -81,6 +108,7 @@ Every page must include:
 - Use lazy loading for images
 - Enable compression
 - Use CDN for static assets
+- Core Web Vitals impact rankings
 
 ## Mobile SEO
 - Ensure mobile-friendly design
@@ -88,5 +116,12 @@ Every page must include:
 - Test with mobile-friendly test tool
 - Optimize touch targets
 - Ensure readable font sizes
+
+## Content Quality
+- Provide unique, valuable content
+- Update outdated content regularly
+- Demonstrate expertise and authority
+- Include author information and credentials
+- Cite reliable sources and data
 
 </seo_requirements>

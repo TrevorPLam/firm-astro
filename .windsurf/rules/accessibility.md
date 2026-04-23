@@ -6,6 +6,27 @@ trigger: always_on
 
 # Accessibility Standards
 
+## WCAG Standards
+
+### Current Standard: WCAG 2.2
+- WCAG 2.2 is the current approved standard (ISO/IEC 40500:2025)
+- WCAG 2.2 does not deprecate WCAG 2.1 or 2.0
+- Content meeting WCAG 2.2 also meets WCAG 2.1 and 2.0
+- W3C encourages using the latest version (WCAG 2.2)
+
+### WCAG 3.0 Status
+- WCAG 3.0 is in development (working drafts published March 2026)
+- WCAG 3.0 will not supersede WCAG 2 for several years
+- WCAG 2 will not be deprecated when WCAG 3.0 is released
+- Continue following WCAG 2.2 AA standards for now
+- Monitor WCAG 3.0 progress for future adoption
+
+### Legal Compliance
+- ADA 2026 requirements enforce WCAG 2.1 AA as benchmark
+- European Accessibility Act (EAA) uses WCAG 2.1 (expected to update to 2.2)
+- Courts consistently apply WCAG 2.1 AA in accessibility lawsuits
+- Over 5,000 digital accessibility lawsuits filed in 2025 (37% increase)
+
 ## Semantic HTML
 - Use proper HTML5 elements: header, nav, main, footer, article, section, aside
 - Maintain heading hierarchy (h1 → h2 → h3)

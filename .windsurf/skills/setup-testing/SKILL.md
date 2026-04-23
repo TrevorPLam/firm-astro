@@ -5,6 +5,21 @@ description: Guides setup of Vitest for unit testing and Playwright for E2E test
 
 # Testing Framework Setup Guide
 
+## 2026 Testing Stack
+
+### Recommended Stack
+- **Vitest 4.0**: Unit testing with native browser support, redesigned public API
+- **Playwright**: E2E testing with AI automation
+- **Default**: Vitest for unit tests, Playwright for browser tests
+- **Note**: Jest 30 shipped June 2025 but Vitest is preferred for new projects
+
+### Vitest 4.0 Features
+- Native browser support backed by Playwright and WebdriverIO
+- Redesigned public API
+- Inline workspace configuration
+- Mature browser mode
+- Faster execution with Vite integration
+
 ## Install Dependencies
 
 ```bash
