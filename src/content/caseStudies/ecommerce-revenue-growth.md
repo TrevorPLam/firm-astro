@@ -22,7 +22,6 @@ testimonial:
   quote: "The team at Your Dedicated Marketer didn't just improve our metrics - they transformed how we think about marketing. Our email program now drives 35% of our revenue."
   author: "Jessica Williams"
   role: "CMO, StyleHouse"
-image: "/case-studies/stylehouse.jpg"
 featured: true
 publishedAt: 2024-01-10
 ---

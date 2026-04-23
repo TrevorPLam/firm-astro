@@ -22,7 +22,6 @@ testimonial:
   quote: "Your Dedicated Marketer transformed how we approach business development. We went from relying solely on referrals to having a predictable pipeline of qualified prospects coming through our website."
   author: "James Morrison"
   role: "Managing Partner, Sterling Legal"
-image: "/case-studies/sterling-legal.jpg"
 featured: false
 publishedAt: 2024-03-15
 ---

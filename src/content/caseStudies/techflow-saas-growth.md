@@ -22,7 +22,6 @@ testimonial:
   quote: "Your Dedicated Marketer transformed our growth trajectory. Their data-driven approach and deep understanding of SaaS marketing delivered results we didn't think were possible in such a short timeframe."
   author: "Michael Chen"
   role: "CEO, TechFlow"
-image: "/case-studies/techflow.jpg"
 featured: true
 publishedAt: 2024-01-15
 ---

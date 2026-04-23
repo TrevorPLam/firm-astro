@@ -22,7 +22,6 @@ testimonial:
   quote: "We went from barely surviving to turning away new patients. Your Dedicated Marketer's local SEO expertise transformed our online presence, and the ROI on our ad spend has never been better."
   author: "Dr. Sarah Mitchell"
   role: "Practice Owner, BrightSmile Dental"
-image: "/case-studies/brightsmile-dental.jpg"
 featured: false
 publishedAt: 2024-02-20
 ---

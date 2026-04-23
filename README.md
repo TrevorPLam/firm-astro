@@ -295,6 +295,35 @@ site: "https://yourdomain.com";
 - Safari (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
+## Dependency Compatibility
+
+**Last Checked**: April 22, 2026
+
+### Current Stack Status
+- **Astro**: 5.18.1 (Stable, compatible with all integrations)
+- **React**: 18.3.1 (Compatible with @astrojs/react 4.4.2)
+- **Tailwind CSS**: 3.4.19 (Compatible with @astrojs/tailwind 6.0.2)
+- **Node.js**: v24.13.0 (Compatible with Astro 5)
+
+### Known Compatibility Issues
+- **@astrojs/cloudflare**: Currently at 13.2.0 (incompatible with Astro 5). Downgraded to 12.2.0 for Astro 5 compatibility.
+- **Astro 6 Upgrade**: Deferred. Current stack stable on Astro 5. Migration to Astro 6 would require:
+  - Upgrading @astrojs/cloudflare to 13.2.0 (requires Astro 6)
+  - Migrating Tailwind to @tailwindcss/vite + Tailwind 4
+  - Migrating Zod schemas from 3 to 4
+  - Upgrading @astrojs/react to 5.0.4 and @astrojs/mdx to 5.0.4
+
+### Safe Minor Updates Available
+- @astrojs/sitemap: 3.2.1 → 3.7.2
+- @fontsource/inter: 5.1.0 → 5.2.8
+- @fontsource/space-grotesk: 5.1.0 → 5.2.10
+
+### Upgrade Strategy
+Staying on Astro 5 for stability. Plan to evaluate Astro 6 upgrade in 6-12 months when:
+- Astro 6 has more maturity
+- Clear need for new features emerges
+- Time available for thorough migration (4-8 hours estimated)
+
 ## License
 
 This project is proprietary. All rights reserved.

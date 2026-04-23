@@ -22,7 +22,6 @@ testimonial:
   quote: "Your Dedicated Marketer solved our biggest challenge: making user acquisition economics work. The analytics implementation alone transformed how we allocate budget - we now know exactly which channels drive our most valuable users."
   author: "Alex Rodriguez"
   role: "CEO, PayFlow Finance"
-image: "/case-studies/payflow-finance.jpg"
 featured: false
 publishedAt: 2024-04-10
 ---

@@ -20,19 +20,19 @@
     "lighthouse:ci": "lhci autorun"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.2.1",
-    "@fontsource/inter": "^5.1.0",
-    "@fontsource/space-grotesk": "^5.1.0",
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
     "@sentry/browser": "^10.49.0",
     "astro-robots-txt": "^0.5.0",
     "minisearch": "^7.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwindcss": "^3.4.17",
+    "tailwindcss": "~3.4.17",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^13.2.0",
+    "@astrojs/cloudflare": "^12.2.0",
     "@astrojs/mdx": "^4.3.14",
     "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
@@ -48,7 +48,7 @@
     "@vitest/ui": "^4.1.5",
     "astro": "^5.18.1",
     "cross-env": "^10.1.0",
-    "eslint": "^10.2.1",
+    "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -64,5 +64,87 @@
     "typescript-eslint": "^8.59.0",
     "vitest": "^4.1.5",
     "wrangler": "^4.84.1"
+  },
+  "_dependencyNotes": {
+    "lastChecked": "April 22, 2026",
+    "compatibilityStrategy": "Staying on Astro 5 for stability. Astro 6 upgrade deferred to 6-12 months.",
+    "coreFramework": {
+      "astro": {
+        "version": "5.18.1",
+        "status": "Stable",
+        "notes": "Compatible with all current integrations. Latest is 6.1.9 but requires significant migration (Node 22+, Zod 4, Tailwind 4, integration updates)."
+      }
+    },
+    "integrations": {
+      "@astrojs/cloudflare": {
+        "version": "12.2.0",
+        "status": "Compatible with Astro 5",
+        "notes": "Downgraded from 13.2.0 (which requires Astro 6). Last version compatible with Astro 5."
+      },
+      "@astrojs/mdx": {
+        "version": "4.3.14",
+        "status": "Compatible with Astro 5",
+        "notes": "Latest is 5.0.4 but requires Astro 6. Current version works with Astro 5."
+      },
+      "@astrojs/react": {
+        "version": "4.4.2",
+        "status": "Compatible",
+        "notes": "Supports React 17, 18, and 19. Latest is 5.0.4 but requires Astro 6."
+      },
+      "@astrojs/tailwind": {
+        "version": "6.0.2",
+        "status": "Compatible with Astro 5",
+        "notes": "Does NOT support Astro 6. Requires Tailwind CSS 3.0.24+. For Tailwind 4, use @tailwindcss/vite instead."
+      },
+      "@astrojs/sitemap": {
+        "version": "3.7.2",
+        "status": "Latest compatible",
+        "notes": "Updated to latest minor version. Compatible with Astro 5."
+      }
+    },
+    "frameworks": {
+      "react": {
+        "version": "18.3.1",
+        "status": "Compatible",
+        "notes": "@astrojs/react 4.4.2 already supports React 19. Optional upgrade to 19.2.5 available."
+      },
+      "tailwindcss": {
+        "version": "3.4.17",
+        "status": "Compatible",
+        "notes": "Latest is 4.2.4 but requires @tailwindcss/vite and major config migration. Staying on 3.x for stability."
+      },
+      "zod": {
+        "version": "3.24.1",
+        "status": "Compatible with Astro 5",
+        "notes": "Latest is 4.3.6 but requires Astro 6 and significant schema migration. Staying on 3.x."
+      }
+    },
+    "developmentTools": {
+      "eslint": {
+        "version": "9.18.0",
+        "status": "Compatible",
+        "notes": "Downgraded from 10.2.1 for compatibility with eslint-plugin-jsx-a11y@6.10.2 (requires eslint ^3-9)."
+      },
+      "typescript": {
+        "version": "6.0.3",
+        "status": "Compatible",
+        "notes": "Latest stable. Some peer dependency warnings with tsconfck and zod-to-ts but functional."
+      },
+      "nodejs": {
+        "version": "v24.13.0",
+        "status": "Compatible",
+        "notes": "Well above Astro 5 requirement (18+) and Astro 6 requirement (22.12.0+)."
+      }
+    },
+    "knownIssues": [
+      "@eslint/js@10.0.1 prefers eslint@10+ but using eslint@9.18.0 for compatibility",
+      "tsconfck@3.1.6 prefers typescript@5.x but using typescript@6.0.3",
+      "zod-to-ts@1.2.0 prefers typescript@4.9.4-5.0.2 but using typescript@6.0.3",
+      "npm audit reports 12 vulnerabilities (3 low, 8 moderate, 1 high)"
+    ],
+    "safeUpdatesAvailable": [
+      "react: 18.3.1 → 19.2.5 (optional, @astrojs/react already supports it)",
+      "react-dom: 18.3.1 → 19.2.5 (optional)"
+    ]
   }
 }
