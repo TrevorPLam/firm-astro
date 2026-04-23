@@ -44,13 +44,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/services/seo\" class=\"glass-card p-6 md:p-8 card-hover group block\">",
++                 "html": "<a href=\"/services/seo\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
 +                   ".md\\:p-8.card-hover[href$=\"seo\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -60,11 +60,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\">",
++         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"44:4\">",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".md\\:p-8.card-hover[href$=\"seo\"] > .group-hover\\:neon-text.inline-flex",
++           ".md\\:p-8.card-hover[href$=\"seo\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
 +         ],
 +       },
 +       Object {
@@ -85,13 +85,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/services/paid-media\" class=\"glass-card p-6 md:p-8 card-hover group block\">",
++                 "html": "<a href=\"/services/paid-media\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
 +                   ".md\\:p-8.card-hover[href$=\"paid-media\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -101,11 +101,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\">",
++         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"44:4\">",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".md\\:p-8.card-hover[href$=\"paid-media\"] > .group-hover\\:neon-text.inline-flex",
++           ".md\\:p-8.card-hover[href$=\"paid-media\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
 +         ],
 +       },
 +       Object {
@@ -126,13 +126,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/services/content-marketing\" class=\"glass-card p-6 md:p-8 card-hover group block\">",
++                 "html": "<a href=\"/services/content-marketing\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
 +                   ".md\\:p-8.card-hover[href$=\"content-marketing\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -142,11 +142,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\">",
++         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"44:4\">",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".md\\:p-8.card-hover[href$=\"content-marketing\"] > .group-hover\\:neon-text.inline-flex",
++           ".md\\:p-8.card-hover[href$=\"content-marketing\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
 +         ],
 +       },
 +       Object {
@@ -167,13 +167,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/services/email-automation\" class=\"glass-card p-6 md:p-8 card-hover group block\">",
++                 "html": "<a href=\"/services/email-automation\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
 +                   ".md\\:p-8.card-hover[href$=\"email-automation\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -183,11 +183,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\">",
++         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"44:4\">",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".md\\:p-8.card-hover[href$=\"email-automation\"] > .group-hover\\:neon-text.inline-flex",
++           ".md\\:p-8.card-hover[href$=\"email-automation\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
 +         ],
 +       },
 +       Object {
@@ -208,13 +208,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/services/analytics-and-reporting\" class=\"glass-card p-6 md:p-8 card-hover group block\">",
++                 "html": "<a href=\"/services/analytics-and-reporting\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
 +                   ".md\\:p-8.card-hover.group:nth-child(5)",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -224,11 +224,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\">",
++         "html": "<span class=\"inline-flex items-center text-sm text-electric-400 font-medium group-hover:neon-text\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"44:4\">",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".md\\:p-8.card-hover.group:nth-child(5) > .group-hover\\:neon-text.inline-flex",
++           ".md\\:p-8.card-hover.group:nth-child(5) > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
 +         ],
 +       },
 +       Object {
@@ -249,13 +249,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.04 (foreground color: #3385ff, background color: #858585, font size: 27.0pt (36px), font weight: bold). Expected contrast ratio of 3:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -265,11 +265,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.04 (foreground color: #3385ff, background color: #858585, font size: 27.0pt (36px), font weight: bold). Expected contrast ratio of 3:1",
-+         "html": "<span class=\"text-electric-400\">Us</span>",
++         "html": "<span class=\"text-electric-400\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"80:54\">Us</span>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-3xl > span",
++           "span[data-astro-source-loc=\"80:54\"]",
 +         ],
 +       },
 +       Object {
@@ -290,19 +290,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"85:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(1)",
++                   "div[data-astro-source-loc=\"85:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -312,11 +312,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display font-semibold text-white mb-2\">AI-Powered</h3>",
++         "html": "<h3 class=\"font-display font-semibold text-white mb-2\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"102:66\">AI-Powered</h3>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(1) > .mb-2.text-white",
++           "h3[data-astro-source-loc=\"102:66\"]",
 +         ],
 +       },
 +       Object {
@@ -337,19 +337,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"85:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(1)",
++                   "div[data-astro-source-loc=\"85:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -359,11 +359,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-sm text-gray-400\">Leveraging cutting-edge AI for smarter campaigns</p>",
++         "html": "<p class=\"text-sm text-gray-400\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"103:44\">Leveraging cutting-edge AI for smarter campaigns</p>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(1) > .text-gray-400",
++           "p[data-astro-source-loc=\"103:44\"]",
 +         ],
 +       },
 +       Object {
@@ -384,19 +384,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"106:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(2)",
++                   "div[data-astro-source-loc=\"106:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -406,11 +406,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display font-semibold text-white mb-2\">Data-Driven</h3>",
++         "html": "<h3 class=\"font-display font-semibold text-white mb-2\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"124:66\">Data-Driven</h3>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(2) > .mb-2.text-white",
++           "h3[data-astro-source-loc=\"124:66\"]",
 +         ],
 +       },
 +       Object {
@@ -431,19 +431,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"106:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(2)",
++                   "div[data-astro-source-loc=\"106:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -453,11 +453,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-sm text-gray-400\">Every decision backed by real metrics</p>",
++         "html": "<p class=\"text-sm text-gray-400\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"125:44\">Every decision backed by real metrics</p>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(2) > .text-gray-400",
++           "p[data-astro-source-loc=\"125:44\"]",
 +         ],
 +       },
 +       Object {
@@ -478,19 +478,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"128:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(3)",
++                   "div[data-astro-source-loc=\"128:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -500,11 +500,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display font-semibold text-white mb-2\">Dedicated Team</h3>",
++         "html": "<h3 class=\"font-display font-semibold text-white mb-2\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"146:66\">Dedicated Team</h3>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(3) > .mb-2.text-white",
++           "h3[data-astro-source-loc=\"146:66\"]",
 +         ],
 +       },
 +       Object {
@@ -525,19 +525,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"128:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(3)",
++                   "div[data-astro-source-loc=\"128:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -547,11 +547,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-sm text-gray-400\">Your success is our only priority</p>",
++         "html": "<p class=\"text-sm text-gray-400\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"147:44\">Your success is our only priority</p>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(3) > .text-gray-400",
++           "p[data-astro-source-loc=\"147:44\"]",
 +         ],
 +       },
 +       Object {
@@ -572,19 +572,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"150:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(4)",
++                   "div[data-astro-source-loc=\"150:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -594,11 +594,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.87 (foreground color: #ffffff, background color: #bdbdbd, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display font-semibold text-white mb-2\">Proven Results</h3>",
++         "html": "<h3 class=\"font-display font-semibold text-white mb-2\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"168:66\">Proven Results</h3>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(4) > .mb-2.text-white",
++           "h3[data-astro-source-loc=\"168:66\"]",
 +         ],
 +       },
 +       Object {
@@ -619,19 +619,19 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<div class=\"glass-card p-6 text-center\">",
++                 "html": "<div class=\"glass-card p-6 text-center\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"150:49\">",
 +                 "target": Array [
-+                   ".text-center.p-6.glass-card:nth-child(4)",
++                   "div[data-astro-source-loc=\"150:49\"]",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<section class=\"section bg-dark-800/50\">",
++                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"76:43\">",
 +                 "target": Array [
 +                   ".bg-dark-800\\/50",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -641,11 +641,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +         ],
 +         "failureSummary": "Fix any of the following:
 +   Element has insufficient color contrast of 1.35 (foreground color: #9ca3af, background color: #bdbdbd, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-sm text-gray-400\">340% average ROI for our clients</p>",
++         "html": "<p class=\"text-sm text-gray-400\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/pages/services/index.astro\" data-astro-source-loc=\"169:44\">340% average ROI for our clients</p>",
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".text-center.p-6.glass-card:nth-child(4) > .text-gray-400",
++           "p[data-astro-source-loc=\"169:44\"]",
 +         ],
 +       },
 +     ],

@@ -44,7 +44,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.47 (foreground color: #d1d5db, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -79,7 +79,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 1.47 (foreground color: #d1d5db, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -114,7 +114,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 2.53 (foreground color: #9ca3af, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -155,7 +155,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -196,7 +196,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -237,7 +237,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -278,7 +278,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -313,388 +313,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
 +             "relatedNodes": Array [
 +               Object {
-+                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"]",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"text-xs text-electric-400 font-medium uppercase tracking-wider\">E-commerce</span>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#c8d9fb",
-+               "contrastRatio": 2.48,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#3385ff",
-+               "fontSize": "9.0pt (12px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 2.48 (foreground color: #3385ff, background color: #c8d9fb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<span class=\"px-2 py-1 text-xs bg-electric-500/20 text-electric-400 rounded\">Featured</span>",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .px-2.py-1.bg-electric-500\\/20",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"]",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 2.48 (foreground color: #3385ff, background color: #c8d9fb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"px-2 py-1 text-xs bg-electric-500/20 text-electric-400 rounded\">Featured</span>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .px-2.py-1.bg-electric-500\\/20",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 1.04,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#ffffff",
-+               "fontSize": "13.5pt (18px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"]",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display text-lg font-semibold text-white mb-2 group-hover:text-electric-400 transition-colors\">StyleHouse E-commerce: $2.4M Revenue Growth</h3>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > h3",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 2.43,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#9ca3af",
-+               "fontSize": "10.5pt (14px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"]",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-gray-400 text-sm mb-4\">StyleHouse</p>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .text-gray-400",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 3.38,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#3385ff",
-+               "fontSize": "10.5pt (14px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"]",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"text-sm text-electric-400 font-medium\">View Details</span>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 3.38,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#3385ff",
-+               "fontSize": "9.0pt (12px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(3)",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"text-xs text-electric-400 font-medium uppercase tracking-wider\">Technology</span>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(3) > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 1.04,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#ffffff",
-+               "fontSize": "13.5pt (18px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(3)",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<h3 class=\"font-display text-lg font-semibold text-white mb-2 group-hover:text-electric-400 transition-colors\">PayFlow Finance: 195% Increase in App Downloads</h3>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(3) > .p-6 > h3",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 2.43,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#9ca3af",
-+               "fontSize": "10.5pt (14px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(3)",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<p class=\"text-gray-400 text-sm mb-4\">PayFlow Finance</p>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(3) > .p-6 > .text-gray-400",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 3.38,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#3385ff",
-+               "fontSize": "10.5pt (14px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
-+                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
-+                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(3)",
-+                 ],
-+               },
-+               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
-+                 "target": Array [
-+                   "body",
-+                 ],
-+               },
-+             ],
-+           },
-+         ],
-+         "failureSummary": "Fix any of the following:
-+   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
-+         "html": "<span class=\"text-sm text-electric-400 font-medium\">View Details</span>",
-+         "impact": "serious",
-+         "none": Array [],
-+         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(3) > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
-+         ],
-+       },
-+       Object {
-+         "all": Array [],
-+         "any": Array [
-+           Object {
-+             "data": Object {
-+               "bgColor": "#fafafa",
-+               "contrastRatio": 3.38,
-+               "expectedContrastRatio": "4.5:1",
-+               "fgColor": "#3385ff",
-+               "fontSize": "9.0pt (12px)",
-+               "fontWeight": "normal",
-+               "messageKey": null,
-+             },
-+             "id": "color-contrast",
-+             "impact": "serious",
-+             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
-+             "relatedNodes": Array [
-+               Object {
 +                 "html": "<a href=\"/work/legal-consulting-lead-gen\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
 +                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(4)",
++                   ".card-hover.group.glass-card:nth-child(2)",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -708,7 +333,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
++           ".card-hover.group.glass-card:nth-child(2) > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
 +         ],
 +       },
 +       Object {
@@ -731,11 +356,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/work/legal-consulting-lead-gen\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
 +                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(4)",
++                   ".card-hover.group.glass-card:nth-child(2)",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -749,7 +374,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(4) > .p-6 > h3",
++           ".card-hover.group.glass-card:nth-child(2) > .p-6 > h3",
 +         ],
 +       },
 +       Object {
@@ -772,11 +397,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/work/legal-consulting-lead-gen\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
 +                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(4)",
++                   ".card-hover.group.glass-card:nth-child(2)",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -790,7 +415,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .text-gray-400",
++           ".card-hover.group.glass-card:nth-child(2) > .p-6 > .text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -813,11 +438,11 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/work/legal-consulting-lead-gen\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
 +                 "target": Array [
-+                   ".card-hover.group.glass-card:nth-child(4)",
++                   ".card-hover.group.glass-card:nth-child(2)",
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -831,7 +456,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
++           ".card-hover.group.glass-card:nth-child(2) > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
 +         ],
 +       },
 +       Object {
@@ -858,7 +483,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -905,7 +530,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -946,7 +571,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -987,7 +612,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -1028,7 +653,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -1043,6 +668,381 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "none": Array [],
 +         "target": Array [
 +           "a[href$=\"techflow-saas-growth\"] > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 3.38,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#3385ff",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   ".card-hover.group.glass-card:nth-child(4)",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<span class=\"text-xs text-electric-400 font-medium uppercase tracking-wider\">Technology</span>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 1.04,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#ffffff",
++               "fontSize": "13.5pt (18px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   ".card-hover.group.glass-card:nth-child(4)",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<h3 class=\"font-display text-lg font-semibold text-white mb-2 group-hover:text-electric-400 transition-colors\">PayFlow Finance: 195% Increase in App Downloads</h3>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".card-hover.group.glass-card:nth-child(4) > .p-6 > h3",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 2.43,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#9ca3af",
++               "fontSize": "10.5pt (14px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   ".card-hover.group.glass-card:nth-child(4)",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<p class=\"text-gray-400 text-sm mb-4\">PayFlow Finance</p>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .text-gray-400",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 3.38,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#3385ff",
++               "fontSize": "10.5pt (14px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/fintech-app-user-acquisition\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   ".card-hover.group.glass-card:nth-child(4)",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<span class=\"text-sm text-electric-400 font-medium\">View Details</span>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           ".card-hover.group.glass-card:nth-child(4) > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 3.38,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#3385ff",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"]",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<span class=\"text-xs text-electric-400 font-medium uppercase tracking-wider\">E-commerce</span>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .uppercase.tracking-wider.text-xs",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#c8d9fb",
++               "contrastRatio": 2.48,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#3385ff",
++               "fontSize": "9.0pt (12px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 2.48 (foreground color: #3385ff, background color: #c8d9fb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<span class=\"px-2 py-1 text-xs bg-electric-500/20 text-electric-400 rounded\">Featured</span>",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .px-2.py-1.bg-electric-500\\/20",
++                 ],
++               },
++               Object {
++                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"]",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 2.48 (foreground color: #3385ff, background color: #c8d9fb, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<span class=\"px-2 py-1 text-xs bg-electric-500/20 text-electric-400 rounded\">Featured</span>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .gap-3.mb-4.items-center > .px-2.py-1.bg-electric-500\\/20",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 1.04,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#ffffff",
++               "fontSize": "13.5pt (18px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"]",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 1.04 (foreground color: #ffffff, background color: #fafafa, font size: 13.5pt (18px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<h3 class=\"font-display text-lg font-semibold text-white mb-2 group-hover:text-electric-400 transition-colors\">StyleHouse E-commerce: $2.4M Revenue Growth</h3>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > h3",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 2.43,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#9ca3af",
++               "fontSize": "10.5pt (14px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"]",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 2.43 (foreground color: #9ca3af, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<p class=\"text-gray-400 text-sm mb-4\">StyleHouse</p>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .text-gray-400",
++         ],
++       },
++       Object {
++         "all": Array [],
++         "any": Array [
++           Object {
++             "data": Object {
++               "bgColor": "#fafafa",
++               "contrastRatio": 3.38,
++               "expectedContrastRatio": "4.5:1",
++               "fgColor": "#3385ff",
++               "fontSize": "10.5pt (14px)",
++               "fontWeight": "normal",
++               "messageKey": null,
++             },
++             "id": "color-contrast",
++             "impact": "serious",
++             "message": "Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++             "relatedNodes": Array [
++               Object {
++                 "html": "<a href=\"/work/ecommerce-revenue-growth\" class=\"glass-card overflow-hidden card-hover group block focus-ring\">",
++                 "target": Array [
++                   "a[href$=\"ecommerce-revenue-growth\"]",
++                 ],
++               },
++               Object {
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/OneDrive/Documents/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "target": Array [
++                   "body",
++                 ],
++               },
++             ],
++           },
++         ],
++         "failureSummary": "Fix any of the following:
++   Element has insufficient color contrast of 3.38 (foreground color: #3385ff, background color: #fafafa, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1",
++         "html": "<span class=\"text-sm text-electric-400 font-medium\">View Details</span>",
++         "impact": "serious",
++         "none": Array [],
++         "target": Array [
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6 > .mt-4.pt-4.border-white\\/5 > span",
 +         ],
 +       },
 +     ],
@@ -1252,10 +1252,10 @@ Error: expect(received).toEqual(expected) // deep equality
           - combobox [ref=e40] [cursor=pointer]:
             - option "All Industries" [selected]
             - option "Healthcare"
-            - option "E-commerce"
-            - option "Technology"
             - option "Professional Services"
             - option "SaaS"
+            - option "Technology"
+            - option "E-commerce"
         - generic [ref=e41]:
           - generic [ref=e42]: Service
           - combobox [ref=e43] [cursor=pointer]:
@@ -1263,186 +1263,181 @@ Error: expect(received).toEqual(expected) // deep equality
             - option "SEO"
             - option "Paid Media"
             - option "Analytics"
-            - option "Email Automation"
             - option "Content Marketing"
+            - option "Email Automation"
       - paragraph [ref=e44]: Showing 5 of 5 case studies
       - generic [ref=e45]:
-        - 'link "BrightSmile Dental: 165% Increase in New Patient Appointments Healthcare BrightSmile Dental: 165% Increase in New Patient Appointments BrightSmile Dental +165% New Patient Appointments -42% Patient Acquisition Cost View Details" [ref=e46] [cursor=pointer]':
+        - 'link "Healthcare BrightSmile Dental: 165% Increase in New Patient Appointments BrightSmile Dental +165% New Patient Appointments -42% Patient Acquisition Cost View Details" [ref=e46] [cursor=pointer]':
           - /url: /work/dental-practice-patient-growth
-          - 'img "BrightSmile Dental: 165% Increase in New Patient Appointments" [ref=e48]'
-          - generic [ref=e49]:
-            - generic [ref=e51]: Healthcare
-            - 'heading "BrightSmile Dental: 165% Increase in New Patient Appointments" [level=3] [ref=e52]'
-            - paragraph [ref=e53]: BrightSmile Dental
-            - generic [ref=e54]:
-              - generic [ref=e55]:
-                - generic [ref=e56]: +165%
-                - generic [ref=e57]: New Patient Appointments
-              - generic [ref=e58]:
-                - generic [ref=e59]: "-42%"
-                - generic [ref=e60]: Patient Acquisition Cost
-            - generic [ref=e61]:
-              - generic [ref=e62]: View Details
-              - img [ref=e63]
-        - 'link "StyleHouse E-commerce: $2.4M Revenue Growth E-commerce Featured StyleHouse E-commerce: $2.4M Revenue Growth StyleHouse +$2.4M Revenue Growth +180% Email Revenue View Details" [ref=e65] [cursor=pointer]':
-          - /url: /work/ecommerce-revenue-growth
-          - 'img "StyleHouse E-commerce: $2.4M Revenue Growth" [ref=e67]'
-          - generic [ref=e68]:
-            - generic [ref=e69]:
-              - generic [ref=e70]: E-commerce
-              - generic [ref=e71]: Featured
-            - 'heading "StyleHouse E-commerce: $2.4M Revenue Growth" [level=3] [ref=e72]'
-            - paragraph [ref=e73]: StyleHouse
-            - generic [ref=e74]:
-              - generic [ref=e75]:
-                - generic [ref=e76]: +$2.4M
-                - generic [ref=e77]: Revenue Growth
-              - generic [ref=e78]:
-                - generic [ref=e79]: +180%
-                - generic [ref=e80]: Email Revenue
-            - generic [ref=e81]:
-              - generic [ref=e82]: View Details
-              - img [ref=e83]
-        - 'link "PayFlow Finance: 195% Increase in App Downloads Technology PayFlow Finance: 195% Increase in App Downloads PayFlow Finance +195% App Downloads -58% User Acquisition Cost View Details" [ref=e85] [cursor=pointer]':
-          - /url: /work/fintech-app-user-acquisition
-          - 'img "PayFlow Finance: 195% Increase in App Downloads" [ref=e87]'
-          - generic [ref=e88]:
-            - generic [ref=e90]: Technology
-            - 'heading "PayFlow Finance: 195% Increase in App Downloads" [level=3] [ref=e91]'
-            - paragraph [ref=e92]: PayFlow Finance
-            - generic [ref=e93]:
-              - generic [ref=e94]:
-                - generic [ref=e95]: +195%
-                - generic [ref=e96]: App Downloads
-              - generic [ref=e97]:
-                - generic [ref=e98]: "-58%"
-                - generic [ref=e99]: User Acquisition Cost
-            - generic [ref=e100]:
-              - generic [ref=e101]: View Details
-              - img [ref=e102]
-        - 'link "Sterling Legal: 320% Increase in Qualified Leads Professional Services Sterling Legal: 320% Increase in Qualified Leads Sterling Legal +320% Qualified Leads +2,400 Email List Growth View Details" [ref=e104] [cursor=pointer]':
+          - generic [ref=e47]:
+            - generic [ref=e49]: Healthcare
+            - 'heading "BrightSmile Dental: 165% Increase in New Patient Appointments" [level=3] [ref=e50]'
+            - paragraph [ref=e51]: BrightSmile Dental
+            - generic [ref=e52]:
+              - generic [ref=e53]:
+                - generic [ref=e54]: +165%
+                - generic [ref=e55]: New Patient Appointments
+              - generic [ref=e56]:
+                - generic [ref=e57]: "-42%"
+                - generic [ref=e58]: Patient Acquisition Cost
+            - generic [ref=e59]:
+              - generic [ref=e60]: View Details
+              - img [ref=e61]
+        - 'link "Professional Services Sterling Legal: 320% Increase in Qualified Leads Sterling Legal +320% Qualified Leads +2,400 Email List Growth View Details" [ref=e63] [cursor=pointer]':
           - /url: /work/legal-consulting-lead-gen
-          - 'img "Sterling Legal: 320% Increase in Qualified Leads" [ref=e106]'
-          - generic [ref=e107]:
-            - generic [ref=e109]: Professional Services
-            - 'heading "Sterling Legal: 320% Increase in Qualified Leads" [level=3] [ref=e110]'
-            - paragraph [ref=e111]: Sterling Legal
-            - generic [ref=e112]:
-              - generic [ref=e113]:
-                - generic [ref=e114]: +320%
-                - generic [ref=e115]: Qualified Leads
-              - generic [ref=e116]:
-                - generic [ref=e117]: +2,400
-                - generic [ref=e118]: Email List Growth
-            - generic [ref=e119]:
-              - generic [ref=e120]: View Details
-              - img [ref=e121]
-        - 'link "TechFlow SaaS: 280% Increase in Trial Signups SaaS Featured TechFlow SaaS: 280% Increase in Trial Signups TechFlow +280% Trial Signups -45% CAC Reduction View Details" [ref=e123] [cursor=pointer]':
+          - generic [ref=e64]:
+            - generic [ref=e66]: Professional Services
+            - 'heading "Sterling Legal: 320% Increase in Qualified Leads" [level=3] [ref=e67]'
+            - paragraph [ref=e68]: Sterling Legal
+            - generic [ref=e69]:
+              - generic [ref=e70]:
+                - generic [ref=e71]: +320%
+                - generic [ref=e72]: Qualified Leads
+              - generic [ref=e73]:
+                - generic [ref=e74]: +2,400
+                - generic [ref=e75]: Email List Growth
+            - generic [ref=e76]:
+              - generic [ref=e77]: View Details
+              - img [ref=e78]
+        - 'link "SaaS Featured TechFlow SaaS: 280% Increase in Trial Signups TechFlow +280% Trial Signups -45% CAC Reduction View Details" [ref=e80] [cursor=pointer]':
           - /url: /work/techflow-saas-growth
-          - 'img "TechFlow SaaS: 280% Increase in Trial Signups" [ref=e125]'
-          - generic [ref=e126]:
-            - generic [ref=e127]:
-              - generic [ref=e128]: SaaS
-              - generic [ref=e129]: Featured
-            - 'heading "TechFlow SaaS: 280% Increase in Trial Signups" [level=3] [ref=e130]'
-            - paragraph [ref=e131]: TechFlow
-            - generic [ref=e132]:
-              - generic [ref=e133]:
-                - generic [ref=e134]: +280%
-                - generic [ref=e135]: Trial Signups
-              - generic [ref=e136]:
-                - generic [ref=e137]: "-45%"
-                - generic [ref=e138]: CAC Reduction
-            - generic [ref=e139]:
-              - generic [ref=e140]: View Details
-              - img [ref=e141]
-    - generic [ref=e147]:
-      - heading "Want Similar Results for Your Business?" [level=2] [ref=e148]
-      - paragraph [ref=e149]: Let's discuss how we can help you achieve your growth goals with data-driven marketing strategies.
-      - link "Start Your Success Story" [ref=e150] [cursor=pointer]:
+          - generic [ref=e81]:
+            - generic [ref=e82]:
+              - generic [ref=e83]: SaaS
+              - generic [ref=e84]: Featured
+            - 'heading "TechFlow SaaS: 280% Increase in Trial Signups" [level=3] [ref=e85]'
+            - paragraph [ref=e86]: TechFlow
+            - generic [ref=e87]:
+              - generic [ref=e88]:
+                - generic [ref=e89]: +280%
+                - generic [ref=e90]: Trial Signups
+              - generic [ref=e91]:
+                - generic [ref=e92]: "-45%"
+                - generic [ref=e93]: CAC Reduction
+            - generic [ref=e94]:
+              - generic [ref=e95]: View Details
+              - img [ref=e96]
+        - 'link "Technology PayFlow Finance: 195% Increase in App Downloads PayFlow Finance +195% App Downloads -58% User Acquisition Cost View Details" [ref=e98] [cursor=pointer]':
+          - /url: /work/fintech-app-user-acquisition
+          - generic [ref=e99]:
+            - generic [ref=e101]: Technology
+            - 'heading "PayFlow Finance: 195% Increase in App Downloads" [level=3] [ref=e102]'
+            - paragraph [ref=e103]: PayFlow Finance
+            - generic [ref=e104]:
+              - generic [ref=e105]:
+                - generic [ref=e106]: +195%
+                - generic [ref=e107]: App Downloads
+              - generic [ref=e108]:
+                - generic [ref=e109]: "-58%"
+                - generic [ref=e110]: User Acquisition Cost
+            - generic [ref=e111]:
+              - generic [ref=e112]: View Details
+              - img [ref=e113]
+        - 'link "E-commerce Featured StyleHouse E-commerce: $2.4M Revenue Growth StyleHouse +$2.4M Revenue Growth +180% Email Revenue View Details" [ref=e115] [cursor=pointer]':
+          - /url: /work/ecommerce-revenue-growth
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - generic [ref=e118]: E-commerce
+              - generic [ref=e119]: Featured
+            - 'heading "StyleHouse E-commerce: $2.4M Revenue Growth" [level=3] [ref=e120]'
+            - paragraph [ref=e121]: StyleHouse
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - generic [ref=e124]: +$2.4M
+                - generic [ref=e125]: Revenue Growth
+              - generic [ref=e126]:
+                - generic [ref=e127]: +180%
+                - generic [ref=e128]: Email Revenue
+            - generic [ref=e129]:
+              - generic [ref=e130]: View Details
+              - img [ref=e131]
+    - generic [ref=e137]:
+      - heading "Want Similar Results for Your Business?" [level=2] [ref=e138]
+      - paragraph [ref=e139]: Let's discuss how we can help you achieve your growth goals with data-driven marketing strategies.
+      - link "Start Your Success Story" [ref=e140] [cursor=pointer]:
         - /url: /contact
-  - contentinfo [ref=e151]:
-    - generic [ref=e152]:
-      - generic [ref=e153]:
-        - generic [ref=e154]:
-          - link "Y Your Dedicated Marketer" [ref=e155] [cursor=pointer]:
+  - contentinfo [ref=e141]:
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - link "Y Your Dedicated Marketer" [ref=e145] [cursor=pointer]:
             - /url: /
-            - generic [ref=e157]: "Y"
-            - generic [ref=e158]: Your Dedicated Marketer
-          - paragraph [ref=e159]: AI-powered growth strategies for modern brands. Transform your digital presence with data-driven marketing.
-          - generic [ref=e160]:
-            - link "Twitter" [ref=e161] [cursor=pointer]:
+            - generic [ref=e147]: "Y"
+            - generic [ref=e148]: Your Dedicated Marketer
+          - paragraph [ref=e149]: AI-powered growth strategies for modern brands. Transform your digital presence with data-driven marketing.
+          - generic [ref=e150]:
+            - link "Twitter" [ref=e151] [cursor=pointer]:
               - /url: https://twitter.com/yourdedicatedmarketer
-              - img [ref=e162]
-            - link "LinkedIn" [ref=e164] [cursor=pointer]:
+              - img [ref=e152]
+            - link "LinkedIn" [ref=e154] [cursor=pointer]:
               - /url: https://linkedin.com/company/yourdedicatedmarketer
-              - img [ref=e165]
-            - link "Instagram" [ref=e167] [cursor=pointer]:
+              - img [ref=e155]
+            - link "Instagram" [ref=e157] [cursor=pointer]:
               - /url: https://instagram.com/yourdedicatedmarketer
-              - img [ref=e168]
-        - generic [ref=e170]:
-          - heading "Services" [level=4] [ref=e171]
-          - list [ref=e172]:
-            - listitem [ref=e173]:
-              - link "SEO" [ref=e174] [cursor=pointer]:
+              - img [ref=e158]
+        - generic [ref=e160]:
+          - heading "Services" [level=4] [ref=e161]
+          - list [ref=e162]:
+            - listitem [ref=e163]:
+              - link "SEO" [ref=e164] [cursor=pointer]:
                 - /url: /services/seo
-            - listitem [ref=e175]:
-              - link "Paid Media" [ref=e176] [cursor=pointer]:
+            - listitem [ref=e165]:
+              - link "Paid Media" [ref=e166] [cursor=pointer]:
                 - /url: /services/paid-media
-            - listitem [ref=e177]:
-              - link "Content Marketing" [ref=e178] [cursor=pointer]:
+            - listitem [ref=e167]:
+              - link "Content Marketing" [ref=e168] [cursor=pointer]:
                 - /url: /services/content-marketing
-            - listitem [ref=e179]:
-              - link "Email Automation" [ref=e180] [cursor=pointer]:
+            - listitem [ref=e169]:
+              - link "Email Automation" [ref=e170] [cursor=pointer]:
                 - /url: /services/email-automation
-            - listitem [ref=e181]:
-              - link "Analytics & Reporting" [ref=e182] [cursor=pointer]:
+            - listitem [ref=e171]:
+              - link "Analytics & Reporting" [ref=e172] [cursor=pointer]:
                 - /url: /services/analytics-and-reporting
-        - generic [ref=e183]:
-          - heading "Company" [level=4] [ref=e184]
-          - list [ref=e185]:
-            - listitem [ref=e186]:
-              - link "About Us" [ref=e187] [cursor=pointer]:
+        - generic [ref=e173]:
+          - heading "Company" [level=4] [ref=e174]
+          - list [ref=e175]:
+            - listitem [ref=e176]:
+              - link "About Us" [ref=e177] [cursor=pointer]:
                 - /url: /about
-            - listitem [ref=e188]:
-              - link "Our Team" [ref=e189] [cursor=pointer]:
+            - listitem [ref=e178]:
+              - link "Our Team" [ref=e179] [cursor=pointer]:
                 - /url: /team
-            - listitem [ref=e190]:
-              - link "Case Studies" [ref=e191] [cursor=pointer]:
+            - listitem [ref=e180]:
+              - link "Case Studies" [ref=e181] [cursor=pointer]:
                 - /url: /work
-            - listitem [ref=e192]:
-              - link "Blog" [ref=e193] [cursor=pointer]:
+            - listitem [ref=e182]:
+              - link "Blog" [ref=e183] [cursor=pointer]:
                 - /url: /blog
-            - listitem [ref=e194]:
-              - link "Careers" [ref=e195] [cursor=pointer]:
+            - listitem [ref=e184]:
+              - link "Careers" [ref=e185] [cursor=pointer]:
                 - /url: /careers
-        - generic [ref=e196]:
-          - heading "Resources" [level=4] [ref=e197]
-          - list [ref=e198]:
-            - listitem [ref=e199]:
-              - link "Pricing" [ref=e200] [cursor=pointer]:
+        - generic [ref=e186]:
+          - heading "Resources" [level=4] [ref=e187]
+          - list [ref=e188]:
+            - listitem [ref=e189]:
+              - link "Pricing" [ref=e190] [cursor=pointer]:
                 - /url: /pricing
-            - listitem [ref=e201]:
-              - link "FAQ" [ref=e202] [cursor=pointer]:
+            - listitem [ref=e191]:
+              - link "FAQ" [ref=e192] [cursor=pointer]:
                 - /url: /faq
-            - listitem [ref=e203]:
-              - link "Industries" [ref=e204] [cursor=pointer]:
+            - listitem [ref=e193]:
+              - link "Industries" [ref=e194] [cursor=pointer]:
                 - /url: /industries/saas
-            - listitem [ref=e205]:
-              - link "Contact" [ref=e206] [cursor=pointer]:
+            - listitem [ref=e195]:
+              - link "Contact" [ref=e196] [cursor=pointer]:
                 - /url: /contact
-        - generic [ref=e207]:
-          - heading "Legal" [level=4] [ref=e208]
-          - list [ref=e209]:
-            - listitem [ref=e210]:
-              - link "Privacy Policy" [ref=e211] [cursor=pointer]:
+        - generic [ref=e197]:
+          - heading "Legal" [level=4] [ref=e198]
+          - list [ref=e199]:
+            - listitem [ref=e200]:
+              - link "Privacy Policy" [ref=e201] [cursor=pointer]:
                 - /url: /privacy-policy
-            - listitem [ref=e212]:
-              - link "Terms of Service" [ref=e213] [cursor=pointer]:
+            - listitem [ref=e202]:
+              - link "Terms of Service" [ref=e203] [cursor=pointer]:
                 - /url: /terms-of-service
-      - generic [ref=e214]:
-        - paragraph [ref=e215]: © 2026 Your Dedicated Marketer. All rights reserved.
-        - paragraph [ref=e216]: Built with Astro & Tailwind CSS
+      - generic [ref=e204]:
+        - paragraph [ref=e205]: © 2026 Your Dedicated Marketer. All rights reserved.
+        - paragraph [ref=e206]: Built with Astro & Tailwind CSS
 ```
 
 # Test source
