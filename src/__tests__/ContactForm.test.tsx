@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ContactForm from "@components/ContactForm";
 
-describe("ContactForm component", () => {
+describe("ContactForm component", { tags: ["integration"] }, () => {
   beforeEach(() => {
     global.fetch = vi.fn();
   });

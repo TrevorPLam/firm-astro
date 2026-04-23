@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { experimental_AstroContainer as AstroContainer } from "astro/container";
 import Button from "@components/Button.astro";
 
-describe("Button component", () => {
+describe("Button component", { tags: ["unit"] }, () => {
   it("should render with correct text when text content is provided", async () => {
     // Arrange
     const container = await AstroContainer.create();

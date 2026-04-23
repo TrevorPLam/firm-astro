@@ -5,8 +5,14 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 2 : undefined,
   reporter: "html",
+  shard: process.env.CI_SHARD
+    ? {
+        current: parseInt(process.env.CI_SHARD),
+        total: parseInt(process.env.CI_TOTAL),
+      }
+    : undefined,
   use: {
     baseURL: process.env.BASE_URL || "http://localhost:4321",
     trace: "on-first-retry",

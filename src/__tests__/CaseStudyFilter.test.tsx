@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CaseStudyFilter from "@components/CaseStudyFilter";
 
-describe("CaseStudyFilter component", () => {
+describe("CaseStudyFilter component", { tags: ["integration"] }, () => {
   const mockCaseStudies = [
     {
       slug: "case-1",

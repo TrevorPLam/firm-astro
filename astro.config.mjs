@@ -27,9 +27,27 @@ export default defineConfig({
   build: {
     assets: "_assets",
   },
+  prefetch: {
+    defaultStrategy: "viewport",
+    prefetchAll: false,
+  },
   vite: {
     ssr: {
       noExternal: ["@fontsource/inter", "@fontsource/space-grotesk"],
+    },
+    build: {
+      target: "esnext",
+      sourcemap: false,
+      rollupOptions: {
+        output: {
+          manualChunks(id) {
+            if (id.includes("node_modules")) {
+              return "vendor";
+            }
+          },
+        },
+      },
+      chunkSizeWarningLimit: 500,
     },
     plugins: [
       // Bundle analysis - only enabled when BUNDLE_ANALYZE environment variable is set

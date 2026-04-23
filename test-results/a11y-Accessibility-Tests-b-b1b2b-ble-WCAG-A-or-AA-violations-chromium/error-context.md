@@ -50,7 +50,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -91,7 +91,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -132,7 +132,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -173,7 +173,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -214,7 +214,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -255,7 +255,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -296,7 +296,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -337,7 +337,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -378,7 +378,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -419,7 +419,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -460,7 +460,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -501,7 +501,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -542,7 +542,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -583,7 +583,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -624,7 +624,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -665,7 +665,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -706,7 +706,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -747,7 +747,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +                 ],
 +               },
 +               Object {
-+                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"163:87\">",
++                 "html": "<body class=\"min-h-screen bg-light text-light-900 dark:bg-dark-900 dark:text-white\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/layouts/BaseLayout.astro\" data-astro-source-loc=\"166:87\">",
 +                 "target": Array [
 +                   "body",
 +                 ],
@@ -902,14 +902,14 @@ Error: expect(received).toEqual(expected) // deep equality
             - generic [ref=e113]: Your Dedicated Marketer
           - paragraph [ref=e114]: AI-powered growth strategies for modern brands. Transform your digital presence with data-driven marketing.
           - generic [ref=e115]:
-            - link "Twitter" [ref=e116] [cursor=pointer]:
-              - /url: https://twitter.com/yourdedicatedmarketer
+            - link "Instagram" [ref=e116] [cursor=pointer]:
+              - /url: https://instagram.com/YourDedicatedMarketer
               - img [ref=e117]
-            - link "LinkedIn" [ref=e119] [cursor=pointer]:
-              - /url: https://linkedin.com/company/yourdedicatedmarketer
+            - link "Threads" [ref=e119] [cursor=pointer]:
+              - /url: https://threads.net/YourDedicatedMarketer
               - img [ref=e120]
-            - link "Instagram" [ref=e122] [cursor=pointer]:
-              - /url: https://instagram.com/yourdedicatedmarketer
+            - link "YouTube" [ref=e122] [cursor=pointer]:
+              - /url: https://youtube.com/YourDedicatedMarketer
               - img [ref=e123]
         - generic [ref=e125]:
           - heading "Services" [level=4] [ref=e126]
@@ -994,87 +994,87 @@ Error: expect(received).toEqual(expected) // deep equality
 # Test source
 
 ```ts
-  1  | import { test, expect } from './fixtures/a11y';
+  1  | import { test, expect } from "./fixtures/a11y";
   2  | 
-  3  | test.describe('Accessibility Tests', () => {
-  4  |   test('homepage should not have automatically detectable WCAG A or AA violations', async ({
+  3  | test.describe("Accessibility Tests", () => {
+  4  |   test("homepage should not have automatically detectable WCAG A or AA violations", async ({
   5  |     page,
   6  |     makeAxeBuilder,
   7  |   }) => {
-  8  |     await page.goto('/');
+  8  |     await page.goto("/");
   9  |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   10 |     expect(accessibilityScanResults.violations).toEqual([]);
   11 |   });
   12 | 
-  13 |   test('about page should not have automatically detectable WCAG A or AA violations', async ({
+  13 |   test("about page should not have automatically detectable WCAG A or AA violations", async ({
   14 |     page,
   15 |     makeAxeBuilder,
   16 |   }) => {
-  17 |     await page.goto('/about');
+  17 |     await page.goto("/about");
   18 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   19 |     expect(accessibilityScanResults.violations).toEqual([]);
   20 |   });
   21 | 
-  22 |   test('contact page should not have automatically detectable WCAG A or AA violations', async ({
+  22 |   test("contact page should not have automatically detectable WCAG A or AA violations", async ({
   23 |     page,
   24 |     makeAxeBuilder,
   25 |   }) => {
-  26 |     await page.goto('/contact');
+  26 |     await page.goto("/contact");
   27 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   28 |     expect(accessibilityScanResults.violations).toEqual([]);
   29 |   });
   30 | 
-  31 |   test('blog index should not have automatically detectable WCAG A or AA violations', async ({
+  31 |   test("blog index should not have automatically detectable WCAG A or AA violations", async ({
   32 |     page,
   33 |     makeAxeBuilder,
   34 |   }) => {
-  35 |     await page.goto('/blog');
+  35 |     await page.goto("/blog");
   36 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
 > 37 |     expect(accessibilityScanResults.violations).toEqual([]);
      |                                                 ^ Error: expect(received).toEqual(expected) // deep equality
   38 |   });
   39 | 
-  40 |   test('work index should not have automatically detectable WCAG A or AA violations', async ({
+  40 |   test("work index should not have automatically detectable WCAG A or AA violations", async ({
   41 |     page,
   42 |     makeAxeBuilder,
   43 |   }) => {
-  44 |     await page.goto('/work');
+  44 |     await page.goto("/work");
   45 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   46 |     expect(accessibilityScanResults.violations).toEqual([]);
   47 |   });
   48 | 
-  49 |   test('services index should not have automatically detectable WCAG A or AA violations', async ({
+  49 |   test("services index should not have automatically detectable WCAG A or AA violations", async ({
   50 |     page,
   51 |     makeAxeBuilder,
   52 |   }) => {
-  53 |     await page.goto('/services');
+  53 |     await page.goto("/services");
   54 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   55 |     expect(accessibilityScanResults.violations).toEqual([]);
   56 |   });
   57 | 
-  58 |   test('team page should not have automatically detectable WCAG A or AA violations', async ({
+  58 |   test("team page should not have automatically detectable WCAG A or AA violations", async ({
   59 |     page,
   60 |     makeAxeBuilder,
   61 |   }) => {
-  62 |     await page.goto('/team');
+  62 |     await page.goto("/team");
   63 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   64 |     expect(accessibilityScanResults.violations).toEqual([]);
   65 |   });
   66 | 
-  67 |   test('pricing page should not have automatically detectable WCAG A or AA violations', async ({
+  67 |   test("pricing page should not have automatically detectable WCAG A or AA violations", async ({
   68 |     page,
   69 |     makeAxeBuilder,
   70 |   }) => {
-  71 |     await page.goto('/pricing');
+  71 |     await page.goto("/pricing");
   72 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   73 |     expect(accessibilityScanResults.violations).toEqual([]);
   74 |   });
   75 | 
-  76 |   test('faq page should not have automatically detectable WCAG A or AA violations', async ({
+  76 |   test("faq page should not have automatically detectable WCAG A or AA violations", async ({
   77 |     page,
   78 |     makeAxeBuilder,
   79 |   }) => {
-  80 |     await page.goto('/faq');
+  80 |     await page.goto("/faq");
   81 |     const accessibilityScanResults = await makeAxeBuilder().analyze();
   82 |     expect(accessibilityScanResults.violations).toEqual([]);
   83 |   });

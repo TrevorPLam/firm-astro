@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import FAQAccordion from "@components/FAQAccordion";
 
-describe("FAQAccordion component", () => {
+describe("FAQAccordion component", { tags: ["integration"] }, () => {
   const mockItems = [
     {
       question: "What is your pricing?",
