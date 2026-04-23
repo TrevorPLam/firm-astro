@@ -1,4 +1,4 @@
-import { useState, useId } from "react";
+import { useState, useId, useCallback, useEffect } from "react";
 
 interface FAQItem {
   question: string;
@@ -14,18 +14,35 @@ interface FAQAccordionProps {
 export default function FAQAccordion({ items, searchable = false }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState("");
   const baseId = useId();
+
+  // Debounce search query by 300ms
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 300);
+
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
 
   const filteredItems = searchable
     ? items.filter(
         (item) =>
-          item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          item.answer.toLowerCase().includes(searchQuery.toLowerCase())
+          item.question.toLowerCase().includes(debouncedSearchQuery.toLowerCase()) ||
+          item.answer.toLowerCase().includes(debouncedSearchQuery.toLowerCase())
       )
     : items;
 
   const toggleItem = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleItem(index);
+    }
   };
 
   return (
@@ -50,6 +67,7 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
             placeholder="Search questions..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            autoFocus={searchable}
             className="w-full pl-12 pr-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white placeholder-light-500 dark:placeholder-gray-500 focus-ring transition-colors"
           />
         </div>
@@ -65,13 +83,21 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
             <div key={index} className="glass-card overflow-hidden">
               <button
                 onClick={() => toggleItem(index)}
+                onKeyDown={(e) => handleKeyDown(e, index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`${baseId}-panel-${index}`}
                 className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-light-100 dark:hover:bg-white/5 transition-colors focus-ring"
               >
-                <span className="font-medium text-light-900 dark:text-white pr-4">
-                  {item.question}
-                </span>
+                <div className="flex flex-col pr-4">
+                  {item.category && (
+                    <span className="text-xs text-electric-400 font-medium mb-1 uppercase tracking-wide">
+                      {item.category}
+                    </span>
+                  )}
+                  <span className="font-medium text-light-900 dark:text-white">
+                    {item.question}
+                  </span>
+                </div>
                 <svg
                   className={`w-5 h-5 text-electric-400 flex-shrink-0 transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""

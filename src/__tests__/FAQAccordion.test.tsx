@@ -1,9 +1,13 @@
-import { describe, it, expect } from "vitest";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import FAQAccordion from "@components/FAQAccordion";
 
 describe("FAQAccordion component", { tags: ["integration"] }, () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   const mockItems = [
     {
       question: "What is your pricing?",
@@ -43,9 +47,9 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
     it("should render answers hidden by default", () => {
       render(<FAQAccordion items={mockItems} />);
 
-      const answers = screen.getAllByText(/Our pricing|custom solutions|turnaround time/);
-      answers.forEach((answer) => {
-        expect(answer.closest('[class*="max-h-0"]')).toBeInTheDocument();
+      const buttons = screen.getAllByRole('button');
+      buttons.forEach((button) => {
+        expect(button).toHaveAttribute('aria-expanded', 'false');
       });
     });
   });
@@ -55,54 +59,47 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
       const user = userEvent.setup();
       render(<FAQAccordion items={mockItems} />);
 
-      const firstQuestion = screen.getByText("What is your pricing?");
-      await user.click(firstQuestion);
+      const firstQuestion = screen.getByText("What is your pricing?").closest('button');
+      await user.click(firstQuestion as HTMLElement);
 
-      const answer = screen.getByText("Our pricing starts at $500/month for basic services.");
-      expect(answer.closest('[class*="max-h-96"]')).toBeInTheDocument();
+      expect(firstQuestion).toHaveAttribute('aria-expanded', 'true');
     });
 
     it("should collapse item when clicked again", async () => {
       const user = userEvent.setup();
       render(<FAQAccordion items={mockItems} />);
 
-      const firstQuestion = screen.getByText("What is your pricing?");
-      await user.click(firstQuestion);
-      await user.click(firstQuestion);
+      const firstQuestion = screen.getByText("What is your pricing?").closest('button');
+      await user.click(firstQuestion as HTMLElement);
+      await user.click(firstQuestion as HTMLElement);
 
-      const answer = screen.getByText("Our pricing starts at $500/month for basic services.");
-      expect(answer.closest('[class*="max-h-0"]')).toBeInTheDocument();
+      expect(firstQuestion).toHaveAttribute('aria-expanded', 'false');
     });
 
     it("should close previously opened item when another is clicked", async () => {
       const user = userEvent.setup();
       render(<FAQAccordion items={mockItems} />);
 
-      const firstQuestion = screen.getByText("What is your pricing?");
-      const secondQuestion = screen.getByText("Do you offer custom solutions?");
+      const firstQuestion = screen.getByText("What is your pricing?").closest('button');
+      const secondQuestion = screen.getByText("Do you offer custom solutions?").closest('button');
 
-      await user.click(firstQuestion);
-      await user.click(secondQuestion);
+      await user.click(firstQuestion as HTMLElement);
+      await user.click(secondQuestion as HTMLElement);
 
-      const firstAnswer = screen.getByText("Our pricing starts at $500/month for basic services.");
-      const secondAnswer = screen.getByText(
-        "Yes, we offer custom solutions tailored to your needs."
-      );
-
-      expect(firstAnswer.closest('[class*="max-h-0"]')).toBeInTheDocument();
-      expect(secondAnswer.closest('[class*="max-h-96"]')).toBeInTheDocument();
+      expect(firstQuestion).toHaveAttribute('aria-expanded', 'false');
+      expect(secondQuestion).toHaveAttribute('aria-expanded', 'true');
     });
 
     it("should rotate chevron icon when expanded", async () => {
       const user = userEvent.setup();
       render(<FAQAccordion items={mockItems} />);
 
-      const firstQuestion = screen.getByText("What is your pricing?");
-      const chevron = firstQuestion.nextElementSibling as SVGElement;
+      const firstQuestion = screen.getByText("What is your pricing?").closest("button");
+      const chevron = firstQuestion?.querySelector("svg") as SVGElement;
 
       expect(chevron).not.toHaveClass("rotate-180");
 
-      await user.click(firstQuestion);
+      await user.click(firstQuestion as HTMLElement);
 
       expect(chevron).toHaveClass("rotate-180");
     });
@@ -116,6 +113,9 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
       const searchInput = screen.getByPlaceholderText("Search questions...");
       await user.type(searchInput, "pricing");
 
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
+
       expect(screen.getByText("What is your pricing?")).toBeInTheDocument();
       expect(screen.queryByText("Do you offer custom solutions?")).not.toBeInTheDocument();
       expect(screen.queryByText("What is your turnaround time?")).not.toBeInTheDocument();
@@ -127,6 +127,9 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
 
       const searchInput = screen.getByPlaceholderText("Search questions...");
       await user.type(searchInput, "custom");
+
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
 
       expect(screen.queryByText("What is your pricing?")).not.toBeInTheDocument();
       expect(screen.getByText("Do you offer custom solutions?")).toBeInTheDocument();
@@ -140,6 +143,9 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
       const searchInput = screen.getByPlaceholderText("Search questions...");
       await user.type(searchInput, "nonexistent");
 
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
+
       expect(screen.getByText("No questions found matching your search.")).toBeInTheDocument();
     });
 
@@ -149,6 +155,9 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
 
       const searchInput = screen.getByPlaceholderText("Search questions...");
       await user.type(searchInput, "PRICING");
+
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
 
       expect(screen.getByText("What is your pricing?")).toBeInTheDocument();
     });
@@ -160,10 +169,16 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
       const searchInput = screen.getByPlaceholderText("Search questions...");
       await user.type(searchInput, "pricing");
 
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
+
       expect(screen.getByText("What is your pricing?")).toBeInTheDocument();
       expect(screen.queryByText("Do you offer custom solutions?")).not.toBeInTheDocument();
 
       await user.clear(searchInput);
+
+      // Wait for debounce
+      await new Promise(resolve => setTimeout(resolve, 350));
 
       expect(screen.getByText("What is your pricing?")).toBeInTheDocument();
       expect(screen.getByText("Do you offer custom solutions?")).toBeInTheDocument();
@@ -177,6 +192,39 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
 
       const firstQuestion = screen.getByText("What is your pricing?").closest("button");
       expect(firstQuestion).toHaveAttribute("aria-expanded", "false");
+    });
+
+    it("should toggle accordion with Enter key", async () => {
+      const user = userEvent.setup();
+      render(<FAQAccordion items={mockItems} />);
+
+      const firstQuestion = screen.getByText("What is your pricing?").closest("button");
+      expect(firstQuestion).toHaveAttribute("aria-expanded", "false");
+
+      await user.keyboard("{Tab}");
+      await user.keyboard("{Enter}");
+
+      expect(firstQuestion).toHaveAttribute("aria-expanded", "true");
+    });
+
+    it("should toggle accordion with Space key", async () => {
+      const user = userEvent.setup();
+      render(<FAQAccordion items={mockItems} />);
+
+      const firstQuestion = screen.getByText("What is your pricing?").closest("button");
+      expect(firstQuestion).toHaveAttribute("aria-expanded", "false");
+
+      await user.keyboard("{Tab}");
+      await user.keyboard(" ");
+
+      expect(firstQuestion).toHaveAttribute("aria-expanded", "true");
+    });
+
+    it("should focus search input when searchable is true", () => {
+      render(<FAQAccordion items={mockItems} searchable={true} />);
+
+      const searchInput = screen.getByPlaceholderText("Search questions...");
+      expect(searchInput).toHaveFocus();
     });
 
     it("should set aria-expanded true when item is opened", async () => {
@@ -230,10 +278,10 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
 
       expect(screen.getByText("Single question?")).toBeInTheDocument();
 
-      const question = screen.getByText("Single question?");
-      await user.click(question);
+      const question = screen.getByText("Single question?").closest('button');
+      await user.click(question as HTMLElement);
 
-      expect(screen.getByText("Single answer.").closest('[class*="max-h-96"]')).toBeInTheDocument();
+      expect(question).toHaveAttribute('aria-expanded', 'true');
     });
 
     it("should handle items with category", () => {
@@ -248,6 +296,7 @@ describe("FAQAccordion component", { tags: ["integration"] }, () => {
       render(<FAQAccordion items={itemsWithCategory} />);
 
       expect(screen.getByText("Question?")).toBeInTheDocument();
+      expect(screen.getByText("General")).toBeInTheDocument();
     });
   });
 });

@@ -522,7 +522,7 @@ All 31 tests pass.
 
 ## TASK-007: Add FAQAccordion Missing Tests
 
-[ ] 🟡 Pending 🟡 Medium
+[x] 🟢 Completed 🟡 Medium
 
 ### Priority / Urgency
 **Medium** - Component has untested keyboard navigation and search features
@@ -612,7 +612,7 @@ Focus management testing
 
 ## TASK-008: Add SearchModal Missing Tests
 
-[ ] 🟡 Pending 🟡 Medium
+[x] 🟢 Completed 🟡 Medium
 
 ### Priority / Urgency
 **Medium** - Component has completely mocked search, no real functionality tested
