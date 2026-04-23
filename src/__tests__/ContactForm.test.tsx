@@ -6,6 +6,7 @@ import ContactForm from "@components/ContactForm";
 describe("ContactForm component", { tags: ["integration"] }, () => {
   beforeEach(() => {
     global.fetch = vi.fn();
+    vi.unstubAllEnvs();
   });
 
   afterEach(() => {
@@ -438,6 +439,91 @@ describe("ContactForm component", { tags: ["integration"] }, () => {
 
       // Assert
       expect(serviceSelect).toHaveValue("SEO");
+    });
+  });
+
+  describe("Environment variable handling", () => {
+    it("should use VITE_FORM_SUBMISSION_URL when defined", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      vi.stubEnv("VITE_FORM_SUBMISSION_URL", "https://custom-worker.example.com");
+      (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true }),
+      } as Response);
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert
+      expect(global.fetch).toHaveBeenCalledWith(
+        "https://custom-worker.example.com",
+        expect.objectContaining({
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+    });
+
+    it("should fall back to hardcoded URL when env var is undefined", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      vi.stubEnv("VITE_FORM_SUBMISSION_URL", undefined);
+      (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true }),
+      } as Response);
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert
+      expect(global.fetch).toHaveBeenCalledWith(
+        "https://contact-form-worker.thetrevorlam-860.workers.dev",
+        expect.objectContaining({
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+        })
+      );
+    });
+
+    it("should handle network failure with fallback URL", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      vi.stubEnv("VITE_FORM_SUBMISSION_URL", undefined);
+      (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValue(new Error("Network error"));
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert
+      await waitFor(() => {
+        expect(screen.getByText("Failed to submit form. Please try again.")).toBeInTheDocument();
+      });
     });
   });
 });

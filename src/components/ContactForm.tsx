@@ -62,6 +62,7 @@ export default function ContactForm() {
     setErrorMessage(null);
 
     try {
+      // Fallback URL matches .env.example - used when VITE_FORM_SUBMISSION_URL is not set
       const formEndpoint =
         import.meta.env.VITE_FORM_SUBMISSION_URL ||
         "https://contact-form-worker.thetrevorlam-860.workers.dev";
