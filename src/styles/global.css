@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 /* Import fonts */
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
-@import '@fontsource/space-grotesk/400.css';
-@import '@fontsource/space-grotesk/500.css';
-@import '@fontsource/space-grotesk/600.css';
-@import '@fontsource/space-grotesk/700.css';
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/600.css";
+@import "@fontsource/space-grotesk/700.css";
 
 @layer base {
   /* Light mode by default, dark mode with class */
@@ -28,7 +28,12 @@
   }
 
   /* Headings use display font */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display font-bold;
   }
 
@@ -51,18 +56,18 @@
 
   /* Neon text glow */
   .neon-text {
-    text-shadow: 
-      0 0 5px theme('colors.electric.500'),
-      0 0 10px theme('colors.electric.500'),
-      0 0 20px theme('colors.electric.500');
+    text-shadow:
+      0 0 5px theme("colors.electric.500"),
+      0 0 10px theme("colors.electric.500"),
+      0 0 20px theme("colors.electric.500");
   }
 
   /* Neon text glow on hover */
   .hover\:neon-text:hover {
-    text-shadow: 
-      0 0 5px theme('colors.electric.500'),
-      0 0 10px theme('colors.electric.500'),
-      0 0 20px theme('colors.electric.500');
+    text-shadow:
+      0 0 5px theme("colors.electric.500"),
+      0 0 10px theme("colors.electric.500"),
+      0 0 20px theme("colors.electric.500");
   }
 
   /* Electric blue gradient */
@@ -76,7 +81,7 @@
   }
 
   .animated-underline::after {
-    content: '';
+    content: "";
     @apply absolute bottom-0 left-0 w-0 h-0.5 bg-electric-500 transition-all duration-300;
   }
 
@@ -123,7 +128,7 @@
 
   /* Grid patterns for backgrounds */
   .grid-pattern {
-    background-image: 
+    background-image:
       linear-gradient(rgba(0, 85, 255, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0, 85, 255, 0.03) 1px, transparent 1px);
     background-size: 50px 50px;
@@ -131,7 +136,11 @@
 
   /* Radial gradient background */
   .radial-glow {
-    background: radial-gradient(ellipse at center, theme('colors.electric.500/10') 0%, transparent 70%);
+    background: radial-gradient(
+      ellipse at center,
+      theme("colors.electric.500/10") 0%,
+      transparent 70%
+    );
   }
 }
 
@@ -186,7 +195,7 @@
     overflow: visible;
     z-index: 9999;
     padding: 1rem 1.5rem;
-    background-color: theme('colors.electric.500');
+    background-color: theme("colors.electric.500");
     color: white;
     font-weight: 600;
     border-radius: 0 0 0.5rem 0;

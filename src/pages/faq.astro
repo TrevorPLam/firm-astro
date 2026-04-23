@@ -1,88 +1,104 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import FAQAccordion from '../components/FAQAccordion';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import FAQAccordion from "../components/FAQAccordion";
 
 const faqs = [
   // General
   {
-    question: 'What makes Your Dedicated Marketer different from other agencies?',
-    answer: 'We combine AI-powered strategies with human expertise to deliver data-driven results. Our dedicated team model means you work with the same experts who understand your business deeply. We focus on measurable ROI, not vanity metrics.',
-    category: 'General',
+    question: "What makes Your Dedicated Marketer different from other agencies?",
+    answer:
+      "We combine AI-powered strategies with human expertise to deliver data-driven results. Our dedicated team model means you work with the same experts who understand your business deeply. We focus on measurable ROI, not vanity metrics.",
+    category: "General",
   },
   {
-    question: 'How long does it take to see results?',
-    answer: 'Timeline varies by service. Paid media can show results within days. SEO typically takes 3-6 months for significant impact. Content marketing builds momentum over 2-3 months. We set realistic expectations and provide regular progress updates.',
-    category: 'General',
+    question: "How long does it take to see results?",
+    answer:
+      "Timeline varies by service. Paid media can show results within days. SEO typically takes 3-6 months for significant impact. Content marketing builds momentum over 2-3 months. We set realistic expectations and provide regular progress updates.",
+    category: "General",
   },
   {
-    question: 'What industries do you specialize in?',
-    answer: 'We have deep experience in B2B SaaS, e-commerce, professional services, healthcare, and technology. However, our methodologies are adaptable across industries. We\'ve successfully served clients in over 20 different sectors.',
-    category: 'General',
+    question: "What industries do you specialize in?",
+    answer:
+      "We have deep experience in B2B SaaS, e-commerce, professional services, healthcare, and technology. However, our methodologies are adaptable across industries. We've successfully served clients in over 20 different sectors.",
+    category: "General",
   },
   // Services
   {
-    question: 'Do you offer all services or can I choose specific ones?',
-    answer: 'Absolutely! While we offer comprehensive packages, you can select individual services based on your needs. Many clients start with one service and expand as they see results.',
-    category: 'Services',
+    question: "Do you offer all services or can I choose specific ones?",
+    answer:
+      "Absolutely! While we offer comprehensive packages, you can select individual services based on your needs. Many clients start with one service and expand as they see results.",
+    category: "Services",
   },
   {
-    question: 'What platforms do you work with?',
-    answer: 'We\'re certified partners with Google, Meta, LinkedIn, and HubSpot. We work with all major platforms including Google Ads, Meta Ads, LinkedIn Ads, TikTok, YouTube, and programmatic networks.',
-    category: 'Services',
+    question: "What platforms do you work with?",
+    answer:
+      "We're certified partners with Google, Meta, LinkedIn, and HubSpot. We work with all major platforms including Google Ads, Meta Ads, LinkedIn Ads, TikTok, YouTube, and programmatic networks.",
+    category: "Services",
   },
   {
-    question: 'Do you create content or just strategize?',
-    answer: 'We do both! Our team includes writers, designers, and video producers who create content alongside strategy. You get end-to-end execution, not just recommendations.',
-    category: 'Services',
+    question: "Do you create content or just strategize?",
+    answer:
+      "We do both! Our team includes writers, designers, and video producers who create content alongside strategy. You get end-to-end execution, not just recommendations.",
+    category: "Services",
   },
   // Process
   {
-    question: 'What does the onboarding process look like?',
-    answer: 'Onboarding typically takes 1-2 weeks. We start with discovery sessions, audit your current marketing, establish KPIs, and create your strategy roadmap. You\'ll have a dedicated account manager guiding you throughout.',
-    category: 'Process',
+    question: "What does the onboarding process look like?",
+    answer:
+      "Onboarding typically takes 1-2 weeks. We start with discovery sessions, audit your current marketing, establish KPIs, and create your strategy roadmap. You'll have a dedicated account manager guiding you throughout.",
+    category: "Process",
   },
   {
-    question: 'How often will we communicate?',
-    answer: 'You\'ll have weekly or bi-weekly strategy calls depending on your package. We provide monthly reports and are available via email/Slack for day-to-day questions. Enterprise clients get dedicated communication channels.',
-    category: 'Process',
+    question: "How often will we communicate?",
+    answer:
+      "You'll have weekly or bi-weekly strategy calls depending on your package. We provide monthly reports and are available via email/Slack for day-to-day questions. Enterprise clients get dedicated communication channels.",
+    category: "Process",
   },
   {
-    question: 'What tools do you use?',
-    answer: 'We use industry-leading tools including Google Analytics 4, SEMrush, Ahrefs, HubSpot, Klaviyo, and various AI-powered platforms. We also build custom dashboards for real-time performance visibility.',
-    category: 'Process',
+    question: "What tools do you use?",
+    answer:
+      "We use industry-leading tools including Google Analytics 4, SEMrush, Ahrefs, HubSpot, Klaviyo, and various AI-powered platforms. We also build custom dashboards for real-time performance visibility.",
+    category: "Process",
   },
   // Pricing
   {
-    question: 'Is there a minimum commitment?',
-    answer: 'We offer month-to-month flexibility. However, marketing success requires time, so we recommend at least 3-6 months to see meaningful results. Longer commitments come with discounts.',
-    category: 'Pricing',
+    question: "Is there a minimum commitment?",
+    answer:
+      "We offer month-to-month flexibility. However, marketing success requires time, so we recommend at least 3-6 months to see meaningful results. Longer commitments come with discounts.",
+    category: "Pricing",
   },
   {
-    question: 'What\'s not included in the monthly fee?',
-    answer: 'Advertising spend (paid directly to platforms), premium tool licenses beyond our standard stack, and any custom development work. We\'re transparent about all costs upfront.',
-    category: 'Pricing',
+    question: "What's not included in the monthly fee?",
+    answer:
+      "Advertising spend (paid directly to platforms), premium tool licenses beyond our standard stack, and any custom development work. We're transparent about all costs upfront.",
+    category: "Pricing",
   },
   {
-    question: 'Do you offer performance-based pricing?',
-    answer: 'For qualified clients, we can structure hybrid models with base fees plus performance bonuses. This aligns our incentives with your results. Contact us to discuss eligibility.',
-    category: 'Pricing',
+    question: "Do you offer performance-based pricing?",
+    answer:
+      "For qualified clients, we can structure hybrid models with base fees plus performance bonuses. This aligns our incentives with your results. Contact us to discuss eligibility.",
+    category: "Pricing",
   },
 ];
 
-const categories = ['General', 'Services', 'Process', 'Pricing'];
+const categories = ["General", "Services", "Process", "Pricing"];
 ---
 
-<BaseLayout title="FAQ" description="Frequently asked questions about our digital marketing services, pricing, process, and more. Find answers to common questions.">
+<BaseLayout
+  title="FAQ"
+  description="Frequently asked questions about our digital marketing services, pricing, process, and more. Find answers to common questions."
+>
   <!-- Hero -->
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="max-w-3xl">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
           Frequently Asked <span class="text-electric-400 neon-text">Questions</span>
         </h1>
         <p class="text-lg text-gray-400 leading-relaxed">
-          Find answers to common questions about our services, process, and pricing. Can't find what you're looking for? Contact us directly.
+          Find answers to common questions about our services, process, and pricing. Can't find what
+          you're looking for? Contact us directly.
         </p>
       </div>
     </div>
@@ -101,15 +117,17 @@ const categories = ['General', 'Services', 'Process', 'Pricing'];
   <section class="section bg-dark-800/50">
     <div class="container-custom">
       <div class="glass-card p-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
-          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
-            Still Have Questions?
-          </h2>
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Still Have Questions?</h2>
           <p class="text-gray-400 max-w-xl mx-auto mb-8">
-            We're happy to answer any questions you have. Schedule a free consultation to discuss your specific needs.
+            We're happy to answer any questions you have. Schedule a free consultation to discuss
+            your specific needs.
           </p>
-          <a href="/contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-base">
+          <a
+            href="/contact"
+            class="btn-primary inline-flex items-center justify-center px-8 py-4 text-base"
+          >
             Contact Us
           </a>
         </div>

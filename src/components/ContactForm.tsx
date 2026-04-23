@@ -1,5 +1,5 @@
-import { useState, useId } from 'react';
-import type { FormEvent } from 'react';
+import { useState, useId } from "react";
+import type { FormEvent } from "react";
 
 interface FormData {
   name: string;
@@ -10,21 +10,21 @@ interface FormData {
 }
 
 const services = [
-  'SEO',
-  'Paid Media',
-  'Content Marketing',
-  'Email Automation',
-  'Analytics & Reporting',
-  'Full Service',
+  "SEO",
+  "Paid Media",
+  "Content Marketing",
+  "Email Automation",
+  "Analytics & Reporting",
+  "Full Service",
 ];
 
 export default function ContactForm() {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    company: '',
-    service: '',
-    message: '',
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -36,17 +36,17 @@ export default function ContactForm() {
     const newErrors: Partial<FormData> = {};
 
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
+      newErrors.email = "Please enter a valid email";
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
+      newErrors.message = "Message is required";
     }
 
     setErrors(newErrors);
@@ -62,11 +62,13 @@ export default function ContactForm() {
     setErrorMessage(null);
 
     try {
-      const formEndpoint = import.meta.env.VITE_FORM_SUBMISSION_URL || 'https://contact-form-worker.thetrevorlam-860.workers.dev';
+      const formEndpoint =
+        import.meta.env.VITE_FORM_SUBMISSION_URL ||
+        "https://contact-form-worker.thetrevorlam-860.workers.dev";
       const response = await fetch(formEndpoint, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -74,15 +76,15 @@ export default function ContactForm() {
       const result = await response.json();
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error || 'Form submission failed');
+        throw new Error(result.error || "Form submission failed");
       }
 
       setIsSubmitting(false);
       setIsSubmitted(true);
     } catch (error) {
       setIsSubmitting(false);
-      console.error('Form submission error:', error);
-      setErrorMessage('Failed to submit form. Please try again.');
+      console.error("Form submission error:", error);
+      setErrorMessage("Failed to submit form. Please try again.");
     }
   };
 
@@ -106,15 +108,12 @@ export default function ContactForm() {
             stroke="currentColor"
             viewBox="0 0 24 24"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M5 13l4 4L19 7"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="font-display text-2xl font-bold text-light-900 dark:text-white mb-2">Message Sent!</h3>
+        <h3 className="font-display text-2xl font-bold text-light-900 dark:text-white mb-2">
+          Message Sent!
+        </h3>
         <p className="text-light-600 dark:text-gray-400">
           Thank you for reaching out. We'll get back to you within 24 hours.
         </p>
@@ -125,14 +124,21 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="glass-card p-8">
       {errorMessage && (
-        <div className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg" role="alert" aria-live="polite">
+        <div
+          className="mb-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg"
+          role="alert"
+          aria-live="polite"
+        >
           <p className="text-sm text-red-400">{errorMessage}</p>
         </div>
       )}
       <div className="grid gap-6">
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2"
+          >
             Name <span className="text-electric-400">*</span>
           </label>
           <input
@@ -147,13 +153,18 @@ export default function ContactForm() {
             placeholder="John Doe"
           />
           {errors.name && (
-            <p id={`${baseId}-name-error`} className="mt-1 text-sm text-red-400">{errors.name}</p>
+            <p id={`${baseId}-name-error`} className="mt-1 text-sm text-red-400">
+              {errors.name}
+            </p>
           )}
         </div>
 
         {/* Email */}
         <div>
-          <label htmlFor="email" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2"
+          >
             Email <span className="text-electric-400">*</span>
           </label>
           <input
@@ -168,13 +179,18 @@ export default function ContactForm() {
             placeholder="john@company.com"
           />
           {errors.email && (
-            <p id={`${baseId}-email-error`} className="mt-1 text-sm text-red-400">{errors.email}</p>
+            <p id={`${baseId}-email-error`} className="mt-1 text-sm text-red-400">
+              {errors.email}
+            </p>
           )}
         </div>
 
         {/* Company */}
         <div>
-          <label htmlFor="company" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="company"
+            className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2"
+          >
             Company
           </label>
           <input
@@ -190,7 +206,10 @@ export default function ContactForm() {
 
         {/* Service Interest */}
         <div>
-          <label htmlFor="service" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="service"
+            className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2"
+          >
             Service Interest
           </label>
           <select
@@ -200,7 +219,9 @@ export default function ContactForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 bg-light-100 dark:bg-white/5 border border-light-200 dark:border-white/10 rounded-lg text-light-900 dark:text-white focus:outline-none focus:border-electric-500 focus:ring-1 focus:ring-electric-500 transition-colors appearance-none cursor-pointer select-arrow"
           >
-            <option value="" className="bg-white dark:bg-dark-800">Select a service</option>
+            <option value="" className="bg-white dark:bg-dark-800">
+              Select a service
+            </option>
             {services.map((service) => (
               <option key={service} value={service} className="bg-white dark:bg-dark-800">
                 {service}
@@ -211,7 +232,10 @@ export default function ContactForm() {
 
         {/* Message */}
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2">
+          <label
+            htmlFor="message"
+            className="block text-sm font-medium text-light-700 dark:text-gray-300 mb-2"
+          >
             Message <span className="text-electric-400">*</span>
           </label>
           <textarea
@@ -226,7 +250,9 @@ export default function ContactForm() {
             placeholder="Tell us about your project..."
           />
           {errors.message && (
-            <p id={`${baseId}-message-error`} className="mt-1 text-sm text-red-400">{errors.message}</p>
+            <p id={`${baseId}-message-error`} className="mt-1 text-sm text-red-400">
+              {errors.message}
+            </p>
           )}
         </div>
 
@@ -257,7 +283,7 @@ export default function ContactForm() {
               Sending...
             </span>
           ) : (
-            'Send Message'
+            "Send Message"
           )}
         </button>
       </div>

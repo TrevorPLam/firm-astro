@@ -10,6 +10,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ## WCAG 2.2 Updates (2026)
 
 ### New Success Criteria
+
 - **Focus Appearance (2.4.11)**: Focus indicator must be visible and have sufficient contrast
 - **Focus Not Obscured (2.4.12)**: Focus must not be hidden by other content
 - **Dragging Movements (2.5.7)**: Alternative to dragging operations
@@ -18,6 +19,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 - **Authentication (3.3.8)**: Make authentication accessible
 
 ### ADA Title II Compliance (2026)
+
 - **Deadline**: April 24, 2026 for public institutions
 - **Standard**: WCAG 2.1 Level AA adopted by DOJ
 - **Scope**: State and local government websites and mobile applications
@@ -28,12 +30,14 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 1.1 Tab Navigation
 
 **Test:**
+
 - Use Tab key to navigate through the page
 - Verify focus moves in logical order
 - Check that all interactive elements are reachable
 - Ensure no keyboard traps
 
 **Common Issues:**
+
 - Elements not in tab order
 - Focus moves to non-interactive elements
 - Keyboard traps (can't exit a component)
@@ -42,12 +46,14 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 1.2 Focus Indicators
 
 **Test:**
+
 - Tab through the page and observe focus indicators
 - Verify focus is clearly visible
 - Check that focus-ring class is applied
 - Test on different browsers
 
 **Best Practices:**
+
 - Use `focus-ring` custom class
 - Ensure contrast meets WCAG AA
 - Focus indicator should be at least 2px
@@ -56,6 +62,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 1.3 Keyboard Shortcuts
 
 **Test:**
+
 - Enter key activates buttons and links
 - Space key activates buttons
 - Escape key closes modals and dropdowns
@@ -66,6 +73,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 2.1 Test with Screen Readers
 
 **Tools:**
+
 - NVDA (Windows, free)
 - JAWS (Windows, paid)
 - VoiceOver (macOS/iOS, built-in)
@@ -74,12 +82,14 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 2.2 Semantic HTML
 
 **Check:**
+
 - Proper use of HTML5 elements (header, nav, main, footer, article, section)
 - Heading hierarchy (h1 → h2 → h3)
 - No skipped heading levels
 - Landmark roles when appropriate
 
 **Example:**
+
 ```astro
 <header>
   <nav aria-label="Main navigation">
@@ -102,6 +112,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 2.3 ARIA Attributes
 
 **Check:**
+
 - `aria-label` for buttons without text
 - `aria-describedby` for form error messages
 - `aria-invalid` for form validation errors
@@ -110,27 +121,27 @@ This skill guides you through performing a comprehensive accessibility audit fol
 - `aria-hidden="true"` for decorative elements
 
 **Example:**
+
 ```astro
 <button aria-label="Close modal" onClick={closeModal}>
   <CloseIcon />
 </button>
 
-<input
-  id="email"
-  aria-invalid={hasError}
-  aria-describedby="email-error"
-/>
+<input id="email" aria-invalid={hasError} aria-describedby="email-error" />
 
-{hasError && (
-  <p id="email-error" role="alert">
-    Please enter a valid email
-  </p>
-)}
+{
+  hasError && (
+    <p id="email-error" role="alert">
+      Please enter a valid email
+    </p>
+  )
+}
 ```
 
 ### 2.4 Alt Text
 
 **Check:**
+
 - All images have alt text
 - Alt text is descriptive and meaningful
 - Empty alt text for decorative images: `alt=""`
@@ -138,6 +149,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 - Icon-only buttons have aria-label
 
 **Example:**
+
 ```astro
 <!-- Descriptive image -->
 <Image src={heroImage} alt="Team collaborating on SEO strategy" />
@@ -156,18 +168,21 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 3.1 Test Color Contrast
 
 **Tools:**
+
 - WebAIM Contrast Checker
 - Chrome DevTools Lighthouse
 - axe DevTools
 - Colour Contrast Analyser
 
 **WCAG AA Standards:**
+
 - Normal text: 4.5:1 contrast ratio
 - Large text (18pt+): 3:1 contrast ratio
 - UI components: 3:1 contrast ratio
 - Graphics: 3:1 contrast ratio
 
 **Test:**
+
 - Test all text colors against backgrounds
 - Test in both light and dark modes
 - Test focus indicators
@@ -176,12 +191,14 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 3.2 Don't Rely on Color Alone
 
 **Check:**
+
 - Color is not the only way to convey information
 - Use icons, text, or patterns in addition to color
 - Error states have text indicators
 - Links are distinguished by more than color
 
 **Example:**
+
 ```astro
 <!-- Bad - color only -->
 <span class="error">Error</span>
@@ -198,31 +215,30 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 4.1 Label Association
 
 **Check:**
+
 - All form inputs have associated labels
 - Labels use `htmlFor` and `id`
 - Required fields are indicated
 - Error messages are linked to inputs
 
 **Example:**
+
 ```astro
 <label htmlFor="email">Email Address</label>
-<input
-  id="email"
-  type="email"
-  required
-  aria-invalid={hasError}
-  aria-describedby="email-error"
-/>
-{hasError && (
-  <p id="email-error" class="error-message">
-    Please enter a valid email address
-  </p>
-)}
+<input id="email" type="email" required aria-invalid={hasError} aria-describedby="email-error" />
+{
+  hasError && (
+    <p id="email-error" class="error-message">
+      Please enter a valid email address
+    </p>
+  )
+}
 ```
 
 ### 4.2 Input Types
 
 **Check:**
+
 - Use proper input types (email, tel, url, etc.)
 - Use `required` attribute for required fields
 - Use `placeholder` for hints (not as replacement for labels)
@@ -231,6 +247,7 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 4.3 Form Validation
 
 **Check:**
+
 - Validation errors are announced to screen readers
 - Error messages are clear and specific
 - Users can fix errors without losing data
@@ -241,12 +258,14 @@ This skill guides you through performing a comprehensive accessibility audit fol
 ### 5.1 Modals and Dialogs
 
 **Check:**
+
 - Focus moves to modal when opened
 - Focus is trapped within modal
 - Focus returns to trigger when closed
 - Escape key closes modal
 
 **Example:**
+
 ```tsx
 useEffect(() => {
   if (isOpen) {
@@ -254,12 +273,12 @@ useEffect(() => {
     modalRef.current?.focus();
     // Trap focus
     const handleTab = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+      if (e.key === "Tab") {
         // Trap focus logic
       }
     };
-    document.addEventListener('keydown', handleTab);
-    return () => document.removeEventListener('keydown', handleTab);
+    document.addEventListener("keydown", handleTab);
+    return () => document.removeEventListener("keydown", handleTab);
   }
 }, [isOpen]);
 ```
@@ -267,12 +286,14 @@ useEffect(() => {
 ### 5.2 Dynamic Content
 
 **Check:**
+
 - Dynamic content updates are announced
 - Use `aria-live` for important updates
 - Use `role="alert"` for errors
 - Use `role="status"` for status updates
 
 **Example:**
+
 ```astro
 <div aria-live="polite" aria-atomic="true">
   {statusMessage}
@@ -284,12 +305,14 @@ useEffect(() => {
 ### 6.1 Skip Link Implementation
 
 **Check:**
+
 - Skip link at top of page
 - Visible on focus
 - Links to main content with `#main`
 - Works across all pages
 
 **Example:**
+
 ```astro
 <a href="#main" class="skip-link">Skip to main content</a>
 <main id="main">
@@ -298,6 +321,7 @@ useEffect(() => {
 ```
 
 **CSS:**
+
 ```css
 .skip-link {
   position: absolute;
@@ -319,12 +343,14 @@ useEffect(() => {
 ### 7.1 Automated Testing
 
 **Tools:**
+
 - axe DevTools (Chrome extension)
 - Lighthouse accessibility audit
 - WAVE (Web Accessibility Evaluation Tool)
 - Pa11y (command line)
 
 **Run Lighthouse:**
+
 ```bash
 npx lighthouse https://yoursite.com --view --only-categories=accessibility
 ```
@@ -379,13 +405,17 @@ npx lighthouse https://yoursite.com --view --only-categories=accessibility
 ## Common Issues and Fixes
 
 ### Missing Alt Text
+
 **Fix:** Add descriptive alt text to all images
+
 ```astro
 <Image src={image} alt="Descriptive text" />
 ```
 
 ### Poor Color Contrast
+
 **Fix:** Increase contrast or change colors
+
 ```css
 /* Bad - low contrast */
 color: #999;
@@ -397,28 +427,33 @@ background: #fff;
 ```
 
 ### Missing Labels
+
 **Fix:** Add labels to all form inputs
+
 ```astro
 <label htmlFor="input">Label</label>
 <input id="input" />
 ```
 
 ### Keyboard Trap
+
 **Fix:** Ensure focus can escape
+
 ```tsx
 // Add escape key handler
 useEffect(() => {
   const handleEscape = (e: KeyboardEvent) => {
-    if (e.key === 'Escape') onClose();
+    if (e.key === "Escape") onClose();
   };
-  document.addEventListener('keydown', handleEscape);
-  return () => document.removeEventListener('keydown', handleEscape);
+  document.addEventListener("keydown", handleEscape);
+  return () => document.removeEventListener("keydown", handleEscape);
 }, [onClose]);
 ```
 
 ## Next Steps
 
 After audit:
+
 1. Fix critical issues first
 2. Implement quick wins
 3. Plan long-term improvements

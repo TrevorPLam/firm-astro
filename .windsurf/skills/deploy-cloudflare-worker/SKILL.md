@@ -17,6 +17,7 @@ This skill guides you through deploying Cloudflare Workers for the Astro marketi
 ## Authentication
 
 ### Login to Cloudflare
+
 ```bash
 wrangler login
 ```
@@ -24,6 +25,7 @@ wrangler login
 This will open a browser to authenticate with your Cloudflare account.
 
 ### Verify Authentication
+
 ```bash
 wrangler whoami
 ```
@@ -31,6 +33,7 @@ wrangler whoami
 ## Wrangler CLI 2026 Updates
 
 ### New Features
+
 - **Rebuilt CLI**: Broader API coverage with unified developer experience
 - **Dev Registry**: Cross-process service bindings for Durable Objects and tail workers
 - **RPC APIs**: Remote procedure calls for Workers bindings
@@ -38,6 +41,7 @@ wrangler whoami
 - **Enhanced Debugging**: Debug port for cross-process service bindings
 
 ### Dev Registry Usage
+
 ```bash
 # Use dev registry for local development
 wrangler dev --local
@@ -47,6 +51,7 @@ wrangler dev --experimental
 ```
 
 ### Interactive CLI Commands
+
 ```bash
 # Interactive mode for complex deployments
 wrangler deploy --interactive
@@ -103,6 +108,7 @@ DATABASE_URL=your_database_url_here
 ```
 
 Add `.dev.vars` to `.gitignore`:
+
 ```
 .dev.vars
 ```
@@ -205,12 +211,12 @@ wrangler tail
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
-    
-    if (url.pathname === '/api/submit') {
+
+    if (url.pathname === "/api/submit") {
       return handleFormSubmit(request, env);
     }
-    
-    return new Response('Not Found', { status: 404 });
+
+    return new Response("Not Found", { status: 404 });
   },
 };
 ```
@@ -222,7 +228,7 @@ export default {
   async fetch(request, env, ctx) {
     const apiKey = env.API_KEY;
     const dbUrl = env.DATABASE_URL;
-    
+
     // Use secrets securely
   },
 };
@@ -232,21 +238,21 @@ export default {
 
 ```javascript
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
 };
 
 export default {
   async fetch(request, env, ctx) {
-    if (request.method === 'OPTIONS') {
+    if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
     }
-    
+
     // Handle other requests
     const response = await handleRequest(request, env);
     return new Response(response.body, {
-      headers: { ...response.headers, ...corsHeaders }
+      headers: { ...response.headers, ...corsHeaders },
     });
   },
 };
@@ -283,18 +289,19 @@ npm install --save-dev @cloudflare/vitest-pool-workers vitest
 ```
 
 Create test file:
-```javascript
-import { describe, it, expect } from 'vitest';
-import worker from '../index';
 
-describe('Worker', () => {
-  it('should handle form submission', async () => {
-    const request = new Request('http://localhost/api/submit', {
-      method: 'POST',
-      body: JSON.stringify({ name: 'Test' }),
+```javascript
+import { describe, it, expect } from "vitest";
+import worker from "../index";
+
+describe("Worker", () => {
+  it("should handle form submission", async () => {
+    const request = new Request("http://localhost/api/submit", {
+      method: "POST",
+      body: JSON.stringify({ name: "Test" }),
     });
-    
-    const response = await worker.fetch(request, { API_KEY: 'test' }, {});
+
+    const response = await worker.fetch(request, { API_KEY: "test" }, {});
     expect(response.status).toBe(200);
   });
 });
@@ -315,6 +322,7 @@ wrangler tail --env production
 ### Analytics
 
 Enable Workers Analytics in Cloudflare dashboard:
+
 - Navigate to Workers & Pages
 - Select your worker
 - Enable Analytics
@@ -361,6 +369,7 @@ wrangler deploy --force
 ## Best Practices
 
 ### Security
+
 - Never commit secrets to git
 - Use wrangler secret for sensitive data
 - Rotate secrets regularly
@@ -368,12 +377,14 @@ wrangler deploy --force
 - Never log sensitive data
 
 ### Performance
+
 - Use streaming for large responses
 - Use `ctx.waitUntil()` for background work
 - Cache responses when appropriate
 - Use edge caching for static content
 
 ### Code Quality
+
 - Use TypeScript for type safety
 - Write tests for critical paths
 - Use error boundaries

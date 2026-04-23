@@ -34,6 +34,7 @@ featured: false
 ## Categories
 
 Use existing categories:
+
 - SEO
 - Paid Media
 - Content Marketing
@@ -49,6 +50,7 @@ Use existing categories:
 ## Validation
 
 The post will be validated against the Zod schema in `src/content/config.ts`:
+
 - title: string (required)
 - description: string (required)
 - pubDate: date (required)

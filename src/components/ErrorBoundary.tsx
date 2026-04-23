@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface ErrorBoundaryState {
   hasError: boolean;
@@ -22,7 +22,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     // Log error details to console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error("ErrorBoundary caught an error:", error, errorInfo);
   }
 
   handleReset = () => {
@@ -59,10 +59,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
           <p className="text-gray-400 mb-6 max-w-md mx-auto">
             An error occurred while loading this component. Please try again.
           </p>
-          <button
-            onClick={this.handleReset}
-            className="btn-primary"
-          >
+          <button onClick={this.handleReset} className="btn-primary">
             Try Again
           </button>
         </div>

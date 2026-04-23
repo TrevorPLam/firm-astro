@@ -82,18 +82,11 @@ open stats.html
 
 ```astro
 ---
-import { Image } from 'astro:assets';
-import myImage from '../images/my-image.jpg';
+import { Image } from "astro:assets";
+import myImage from "../images/my-image.jpg";
 ---
 
-<Image 
-  src={myImage} 
-  alt="Description" 
-  width={800} 
-  height={600}
-  loading="lazy"
-  format="webp"
-/>
+<Image src={myImage} alt="Description" width={800} height={600} loading="lazy" format="webp" />
 ```
 
 ### Image Best Practices
@@ -121,19 +114,14 @@ sharp input.jpg --quality 80 output.jpg
 ### Lazy Load Images
 
 ```astro
-<img 
-  src="/image.jpg" 
-  alt="Description" 
-  loading="lazy"
-  decoding="async"
-/>
+<img src="/image.jpg" alt="Description" loading="lazy" decoding="async" />
 ```
 
 ### Lazy Load Components
 
 ```astro
 ---
-import HeavyComponent from './HeavyComponent.astro';
+import HeavyComponent from "./HeavyComponent.astro";
 ---
 
 <HeavyComponent client:visible />
@@ -142,9 +130,9 @@ import HeavyComponent from './HeavyComponent.astro';
 ### Lazy Load JavaScript
 
 ```tsx
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense } from "react";
 
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 function App() {
   return (
@@ -164,7 +152,7 @@ Add to `astro.config.mjs`:
 ```javascript
 export default defineConfig({
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: "auto",
   },
 });
 ```
@@ -181,16 +169,14 @@ export default defineConfig({
 
 ```javascript
 // public/sw.js
-const CACHE_NAME = 'v1';
-const urlsToCache = ['/'];
+const CACHE_NAME = "v1";
+const urlsToCache = ["/"];
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
-  );
+self.addEventListener("install", (event) => {
+  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)));
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((response) => response || fetch(event.request))
   );
@@ -202,7 +188,7 @@ self.addEventListener('fetch', (event) => {
 ### Dynamic Imports
 
 ```tsx
-const Component = lazy(() => import('./Component'));
+const Component = lazy(() => import("./Component"));
 ```
 
 ### Route-Based Splitting
@@ -212,7 +198,7 @@ Astro automatically splits routes. Configure in `astro.config.mjs`:
 ```javascript
 export default defineConfig({
   build: {
-    format: 'directory',
+    format: "directory",
   },
 });
 ```
@@ -227,8 +213,8 @@ export default defineConfig({
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['react', 'react-dom'],
-            ui: ['@components/Button', '@components/Card'],
+            vendor: ["react", "react-dom"],
+            ui: ["@components/Button", "@components/Card"],
           },
         },
       },
@@ -245,7 +231,7 @@ Tailwind automatically purges unused CSS. Verify in `tailwind.config.mjs`:
 
 ```javascript
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
 };
 ```
 
@@ -255,7 +241,7 @@ export default {
 // astro.config.mjs
 export default defineConfig({
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: "auto",
   },
 });
 ```
@@ -270,13 +256,13 @@ Enabled by default in production builds.
 
 ```astro
 ---
-import '@fontsource/inter';
-import '@fontsource/space-grotesk';
+import "@fontsource/inter";
+import "@fontsource/space-grotesk";
 ---
 
 <style global>
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-display: swap;
   }
 </style>
@@ -290,7 +276,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
     },
   },
@@ -320,7 +306,7 @@ Enabled by default on modern hosting platforms (Vercel, Cloudflare, Netlify).
 ### Web Vitals Monitoring
 
 ```tsx
-import { useReportWebVitals } from 'web-vitals';
+import { useReportWebVitals } from "web-vitals";
 
 export function WebVitals() {
   useReportWebVitals((metric) => {
@@ -334,6 +320,7 @@ export function WebVitals() {
 ### Real User Monitoring (RUM)
 
 Set up RUM with:
+
 - Google Analytics
 - Cloudflare Web Analytics
 - Vercel Analytics
@@ -380,6 +367,7 @@ export default defineConfig({
 **Symptoms**: Slow TTI, large bundle size
 
 **Solutions**:
+
 - Code split heavy components
 - Remove unused dependencies
 - Use tree shaking
@@ -391,6 +379,7 @@ export default defineConfig({
 **Symptoms**: Slow LCP, large image sizes
 
 **Solutions**:
+
 - Optimize image sizes
 - Use modern formats (WebP, AVIF)
 - Implement lazy loading
@@ -402,6 +391,7 @@ export default defineConfig({
 **Symptoms**: High CLS score
 
 **Solutions**:
+
 - Reserve space for dynamic content
 - Use aspect-ratio for media
 - Avoid inserting content above
@@ -413,6 +403,7 @@ export default defineConfig({
 **Symptoms**: Slow TTI, long main thread work
 
 **Solutions**:
+
 - Reduce JavaScript execution
 - Defer non-critical scripts
 - Optimize main thread work
@@ -466,6 +457,7 @@ lighthouse https://yourdomain.com
 ### Set Up Alerts
 
 Monitor:
+
 - Lighthouse scores
 - Core Web Vitals
 - Bundle size

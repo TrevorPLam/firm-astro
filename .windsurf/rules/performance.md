@@ -11,6 +11,7 @@ When optimizing site performance:
 ## Core Web Vitals Targets
 
 ### LCP (Largest Contentful Paint)
+
 - Target: < 2.5 seconds
 - Optimize hero images and above-fold content
 - Use responsive images with proper sizing
@@ -18,6 +19,7 @@ When optimizing site performance:
 - Minimize render-blocking resources
 
 ### INP (Interaction to Next Paint)
+
 - Target: < 200 milliseconds
 - Minimize JavaScript execution time
 - Use event delegation for many listeners
@@ -25,6 +27,7 @@ When optimizing site performance:
 - Optimize input handlers
 
 ### CLS (Cumulative Layout Shift)
+
 - Target: < 0.1
 - Reserve space for dynamic content
 - Use aspect-ratio for images and videos
@@ -34,6 +37,7 @@ When optimizing site performance:
 ## Bundle Optimization
 
 ### Code Splitting
+
 - Use dynamic imports for heavy components
 - Split vendor code from application code
 - Lazy load routes with Astro's prefetch
@@ -41,6 +45,7 @@ When optimizing site performance:
 - Analyze bundle size regularly
 
 ### Tree Shaking
+
 - Remove unused code via tree shaking
 - Use ES modules for better tree shaking
 - Avoid importing entire libraries
@@ -48,6 +53,7 @@ When optimizing site performance:
 - Configure sideEffects in package.json
 
 ### Minification
+
 - Enable minification in production build
 - Minify HTML, CSS, and JavaScript
 - Use terser for JavaScript optimization
@@ -57,6 +63,7 @@ When optimizing site performance:
 ## Asset Optimization
 
 ### Images
+
 - Use Astro Image component for optimization
 - Serve WebP format with fallbacks
 - Use responsive images with srcset
@@ -65,6 +72,7 @@ When optimizing site performance:
 - Use appropriate image formats (WebP, AVIF)
 
 ### Fonts
+
 - Use font-display: swap for faster rendering
 - Subset fonts to include only needed characters
 - Use WOFF2 format for better compression
@@ -72,6 +80,7 @@ When optimizing site performance:
 - Avoid font flash with proper loading strategy
 
 ### CSS
+
 - Purge unused CSS with Tailwind
 - Minify CSS in production
 - Use critical CSS inlining for above-fold
@@ -81,6 +90,7 @@ When optimizing site performance:
 ## Caching Strategies
 
 ### Browser Caching
+
 - Set appropriate Cache-Control headers
 - Use long cache for static assets (1 year)
 - Use short cache for HTML (no-cache)
@@ -88,6 +98,7 @@ When optimizing site performance:
 - Implement service worker for offline support
 
 ### CDN Caching
+
 - Deploy to CDN for global distribution
 - Configure CDN cache rules
 - Use cache busting for asset updates
@@ -95,6 +106,7 @@ When optimizing site performance:
 - Monitor cache hit rates
 
 ### API Caching
+
 - Cache API responses when appropriate
 - Use stale-while-revalidate strategy
 - Implement cache invalidation
@@ -104,6 +116,7 @@ When optimizing site performance:
 ## Lazy Loading
 
 ### Images
+
 - Use loading="lazy" for below-fold images
 - Use native lazy loading (browser support)
 - Consider Intersection Observer for control
@@ -111,6 +124,7 @@ When optimizing site performance:
 - Use placeholder images for smooth loading
 
 ### JavaScript
+
 - Lazy load non-critical JavaScript
 - Use dynamic imports for code splitting
 - Defer non-essential scripts
@@ -118,6 +132,7 @@ When optimizing site performance:
 - Load JavaScript after critical path
 
 ### Components
+
 - Use Astro's client:load directive for interactivity
 - Use client:visible for viewport-based loading
 - Use client:idle for low-priority components
@@ -127,6 +142,7 @@ When optimizing site performance:
 ## Network Optimization
 
 ### HTTP/2 and HTTP/3
+
 - Enable HTTP/2 on server
 - Use HTTP/3 if available
 - Multiplex requests over single connection
@@ -134,6 +150,7 @@ When optimizing site performance:
 - Use server push for critical resources
 
 ### Resource Hints
+
 - Use preload for critical resources
 - Use prefetch for likely next navigation
 - Use preconnect for important origins
@@ -141,6 +158,7 @@ When optimizing site performance:
 - Avoid overusing resource hints
 
 ### Reduce Requests
+
 - Combine CSS files when possible
 - Use sprites for small icons
 - Use data URIs for tiny assets
@@ -150,6 +168,7 @@ When optimizing site performance:
 ## Server-Side Optimization
 
 ### Static Generation
+
 - Pre-render pages at build time
 - Use ISR for dynamic content
 - Cache build artifacts
@@ -157,6 +176,7 @@ When optimizing site performance:
 - Use incremental builds
 
 ### Edge Computing
+
 - Deploy to edge network
 - Use edge functions for dynamic content
 - Cache at edge for faster responses
@@ -164,6 +184,7 @@ When optimizing site performance:
 - Use Cloudflare Workers for edge logic
 
 ### Compression
+
 - Enable gzip compression
 - Enable Brotli compression (better ratio)
 - Compress text-based assets
@@ -173,6 +194,7 @@ When optimizing site performance:
 ## Monitoring and Analysis
 
 ### Performance Monitoring
+
 - Use Lighthouse for performance audits
 - Monitor Core Web Vitals in production
 - Use RUM (Real User Monitoring)
@@ -180,6 +202,7 @@ When optimizing site performance:
 - Set up performance budgets
 
 ### Bundle Analysis
+
 - Use webpack-bundle-analyzer or similar
 - Identify large dependencies
 - Find optimization opportunities
@@ -187,6 +210,7 @@ When optimizing site performance:
 - Set bundle size budgets
 
 ### Performance Budgets
+
 - Set budgets for JavaScript size
 - Set budgets for CSS size
 - Set budgets for image sizes
@@ -209,6 +233,7 @@ When optimizing site performance:
 ## Performance Checklist
 
 Before deploying:
+
 - [ ] Lighthouse score > 90
 - [ ] Core Web Vitals in green
 - [ ] Images optimized and compressed
@@ -225,6 +250,7 @@ Before deploying:
 ## Common Performance Issues
 
 ### Large JavaScript Bundle
+
 - Split code into smaller chunks
 - Remove unused dependencies
 - Use tree shaking
@@ -232,6 +258,7 @@ Before deploying:
 - Consider lighter alternatives
 
 ### Slow Image Loading
+
 - Optimize image sizes
 - Use modern formats (WebP, AVIF)
 - Implement lazy loading
@@ -239,6 +266,7 @@ Before deploying:
 - Serve from CDN
 
 ### Layout Shifts
+
 - Reserve space for dynamic content
 - Use aspect-ratio for media
 - Avoid inserting content above
@@ -246,6 +274,7 @@ Before deploying:
 - Test with CLS monitoring
 
 ### Slow Time to Interactive
+
 - Reduce JavaScript execution
 - Defer non-critical scripts
 - Optimize main thread work

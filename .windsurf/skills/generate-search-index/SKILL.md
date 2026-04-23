@@ -26,13 +26,13 @@ The search index generation script is located at `scripts/generate-search-index.
 ### Script Structure
 
 ```javascript
-import MiniSearch from 'minisearch';
-import { getCollection } from 'astro:content';
+import MiniSearch from "minisearch";
+import { getCollection } from "astro:content";
 
 // Configure MiniSearch
 const miniSearch = new MiniSearch({
-  fields: ['title', 'description', 'content'],
-  storeFields: ['title', 'description', 'slug', 'category', 'publishedAt'],
+  fields: ["title", "description", "content"],
+  storeFields: ["title", "description", "slug", "category", "publishedAt"],
   searchOptions: {
     boost: { title: 2, description: 1.5 },
     fuzzy: 0.2,
@@ -41,25 +41,25 @@ const miniSearch = new MiniSearch({
 });
 
 // Load content
-const blogPosts = await getCollection('blog');
-const caseStudies = await getCollection('caseStudies');
+const blogPosts = await getCollection("blog");
+const caseStudies = await getCollection("caseStudies");
 
 // Add documents to index
 const documents = [
-  ...blogPosts.map(post => ({
+  ...blogPosts.map((post) => ({
     id: post.slug,
     title: post.data.title,
     description: post.data.description,
-    content: post.rendered?.html || '',
+    content: post.rendered?.html || "",
     slug: `/blog/${post.slug}`,
     category: post.data.category,
     publishedAt: post.data.pubDate,
   })),
-  ...caseStudies.map(study => ({
+  ...caseStudies.map((study) => ({
     id: study.slug,
     title: study.data.title,
     description: study.data.challenge,
-    content: study.rendered?.html || '',
+    content: study.rendered?.html || "",
     slug: `/work/${study.slug}`,
     category: study.data.industry,
     publishedAt: study.data.publishedAt,
@@ -72,7 +72,7 @@ miniSearch.addAll(documents);
 const index = JSON.stringify(miniSearch);
 
 // Write to public directory
-fs.writeFileSync('public/search-index.json', index);
+fs.writeFileSync("public/search-index.json", index);
 ```
 
 ## MiniSearch Configuration
@@ -83,8 +83,8 @@ Configure which fields to include in the search index:
 
 ```javascript
 const miniSearch = new MiniSearch({
-  fields: ['title', 'description', 'content'],  // Fields to search
-  storeFields: ['title', 'description', 'slug', 'category', 'publishedAt'],  // Fields to return
+  fields: ["title", "description", "content"], // Fields to search
+  storeFields: ["title", "description", "slug", "category", "publishedAt"], // Fields to return
 });
 ```
 
@@ -94,11 +94,11 @@ Configure search behavior:
 
 ```javascript
 const searchOptions = {
-  boost: { title: 2, description: 1.5 },  // Boost specific fields
-  fuzzy: 0.2,  // Fuzzy matching (0 = exact, 1 = very fuzzy)
-  prefix: true,  // Match prefixes
-  combineWith: 'AND',  // Combine terms with AND/OR
-  maxResults: 10,  // Maximum results to return
+  boost: { title: 2, description: 1.5 }, // Boost specific fields
+  fuzzy: 0.2, // Fuzzy matching (0 = exact, 1 = very fuzzy)
+  prefix: true, // Match prefixes
+  combineWith: "AND", // Combine terms with AND/OR
+  maxResults: 10, // Maximum results to return
 };
 ```
 
@@ -119,6 +119,7 @@ boost: {
 ### Blog Posts
 
 Index blog posts with the following fields:
+
 - `title`: Post title
 - `description`: Post description from frontmatter
 - `content`: Full rendered HTML content
@@ -129,6 +130,7 @@ Index blog posts with the following fields:
 ### Case Studies
 
 Index case studies with the following fields:
+
 - `title`: Case study title
 - `description`: Challenge description from frontmatter
 - `content`: Full rendered HTML content
@@ -161,6 +163,7 @@ npm run generate-search-index
 ```
 
 This will:
+
 1. Load all blog posts and case studies
 2. Build the MiniSearch index
 3. Write the index to `public/search-index.json`
@@ -172,6 +175,7 @@ npm run build:with-search
 ```
 
 This will:
+
 1. Build the Astro site
 2. Generate the search index
 3. Deploy both together
@@ -208,15 +212,15 @@ The search index is generated at `public/search-index.json`.
 ### Loading the Index
 
 ```tsx
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function SearchModal() {
   const [searchIndex, setSearchIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/search-index.json')
-      .then(res => res.json())
-      .then(data => setSearchIndex(data));
+    fetch("/search-index.json")
+      .then((res) => res.json())
+      .then((data) => setSearchIndex(data));
   }, []);
 
   // Use searchIndex for searching
@@ -226,11 +230,11 @@ export default function SearchModal() {
 ### Searching with MiniSearch
 
 ```tsx
-import MiniSearch from 'minisearch';
+import MiniSearch from "minisearch";
 
 const miniSearch = new MiniSearch({
-  fields: ['title', 'description', 'content'],
-  storeFields: ['title', 'description', 'slug', 'category'],
+  fields: ["title", "description", "content"],
+  storeFields: ["title", "description", "slug", "category"],
   searchOptions: {
     boost: { title: 2, description: 1.5 },
     fuzzy: 0.2,
@@ -242,7 +246,7 @@ const miniSearch = new MiniSearch({
 miniSearch.load(searchIndex);
 
 // Search
-const results = miniSearch.search('SEO strategies');
+const results = miniSearch.search("SEO strategies");
 ```
 
 ## Performance Optimization
@@ -374,6 +378,7 @@ du -h public/search-index.json
 ### Search Analytics
 
 Track search usage:
+
 - Search queries
 - Click-through rates
 - Popular search terms

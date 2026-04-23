@@ -13,11 +13,11 @@ Create pages in `src/pages/` with `.astro` extension.
 
 ```astro
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
+import BaseLayout from "@layouts/BaseLayout.astro";
 
-const title = 'Page Title';
-const description = 'Page description for SEO (150-160 characters)';
-const image = '/og-image.jpg';
+const title = "Page Title";
+const description = "Page description for SEO (150-160 characters)";
+const image = "/og-image.jpg";
 ---
 
 <BaseLayout title={title} description={description} image={image}>
@@ -34,11 +34,11 @@ For dynamic routes (blog posts, case studies):
 
 ```astro
 ---
-import { getCollection } from 'astro:content';
-import BaseLayout from '@layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "@layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection("blog");
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
@@ -62,6 +62,7 @@ const { Content } = await post.render();
 Every page must include:
 
 **Required Props for BaseLayout:**
+
 - `title`: Page title (format: "Page Title | Your Dedicated Marketer")
 - `description`: Page description (150-160 characters)
 - `image`: Featured image path (default: `/og-image.png`)
@@ -69,6 +70,7 @@ Every page must include:
 - `type`: 'website' or 'article' (default: 'website')
 
 **For Blog Posts:**
+
 - `type: "article"`
 - `publishedTime`: Publication date
 - `author`: Author name
@@ -76,6 +78,7 @@ Every page must include:
 ## Page Types
 
 **Main Pages** (src/pages/):
+
 - `index.astro` - Landing page
 - `about.astro` - About page
 - `contact.astro` - Contact page
@@ -84,12 +87,14 @@ Every page must include:
 - `faq.astro` - FAQ page
 
 **Service Pages** (src/pages/services/):
+
 - `index.astro` - Services overview
 - `seo.astro` - SEO service page
 - `paid-media.astro` - Paid Media service page
 - etc.
 
 **Content Pages**:
+
 - `blog/index.astro` - Blog listing
 - `blog/[slug].astro` - Blog post detail
 - `work/index.astro` - Case studies listing
@@ -98,6 +103,7 @@ Every page must include:
 ## JSON-LD Structured Data
 
 BaseLayout automatically includes:
+
 - Organization schema for main pages
 - Article schema for blog posts
 

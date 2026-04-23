@@ -1,56 +1,63 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
-import Button from '../../components/Button.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import Button from "../../components/Button.astro";
 
 const services = [
   {
-    title: 'SEO',
-    description: 'Dominate search rankings with AI-powered optimization strategies that drive organic growth. Technical SEO, content optimization, and authority building.',
-    icon: 'seo',
-    href: '/services/seo',
+    title: "SEO",
+    description:
+      "Dominate search rankings with AI-powered optimization strategies that drive organic growth. Technical SEO, content optimization, and authority building.",
+    icon: "seo",
+    href: "/services/seo",
   },
   {
-    title: 'Paid Media',
-    description: 'Maximize ROI with data-driven paid advertising across Google, Meta, LinkedIn, and more. Campaign strategy, execution, and continuous optimization.',
-    icon: 'paid-media',
-    href: '/services/paid-media',
+    title: "Paid Media",
+    description:
+      "Maximize ROI with data-driven paid advertising across Google, Meta, LinkedIn, and more. Campaign strategy, execution, and continuous optimization.",
+    icon: "paid-media",
+    href: "/services/paid-media",
   },
   {
-    title: 'Content Marketing',
-    description: 'Build authority and engage your audience with strategic content that converts. Blog posts, whitepapers, video content, and distribution strategies.',
-    icon: 'content-marketing',
-    href: '/services/content-marketing',
+    title: "Content Marketing",
+    description:
+      "Build authority and engage your audience with strategic content that converts. Blog posts, whitepapers, video content, and distribution strategies.",
+    icon: "content-marketing",
+    href: "/services/content-marketing",
   },
   {
-    title: 'Email Automation',
-    description: 'Nurture leads and drive conversions with intelligent email sequences and automation. List building, segmentation, and personalized campaigns.',
-    icon: 'email-automation',
-    href: '/services/email-automation',
+    title: "Email Automation",
+    description:
+      "Nurture leads and drive conversions with intelligent email sequences and automation. List building, segmentation, and personalized campaigns.",
+    icon: "email-automation",
+    href: "/services/email-automation",
   },
   {
-    title: 'Analytics & Reporting',
-    description: 'Transform data into actionable insights with comprehensive analytics and custom dashboards. Track KPIs, measure success, and optimize performance.',
-    icon: 'analytics-and-reporting',
-    href: '/services/analytics-and-reporting',
+    title: "Analytics & Reporting",
+    description:
+      "Transform data into actionable insights with comprehensive analytics and custom dashboards. Track KPIs, measure success, and optimize performance.",
+    icon: "analytics-and-reporting",
+    href: "/services/analytics-and-reporting",
   },
 ];
 ---
 
-<BaseLayout 
-  title="Services" 
+<BaseLayout
+  title="Services"
   description="Comprehensive digital marketing services including SEO, paid media, content marketing, email automation, and analytics. AI-powered strategies for modern brands."
 >
   <!-- Hero -->
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="max-w-3xl">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
           Our <span class="text-electric-400 neon-text">Services</span>
         </h1>
         <p class="text-lg text-gray-400 leading-relaxed">
-          Comprehensive digital marketing solutions powered by AI and data-driven strategies. We help brands achieve measurable growth through targeted campaigns and continuous optimization.
+          Comprehensive digital marketing solutions powered by AI and data-driven strategies. We
+          help brands achieve measurable growth through targeted campaigns and continuous
+          optimization.
         </p>
       </div>
     </div>
@@ -60,9 +67,7 @@ const services = [
   <section class="section">
     <div class="container-custom">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {services.map((service) => (
-          <ServiceCard {...service} />
-        ))}
+        {services.map((service) => <ServiceCard {...service} />)}
       </div>
     </div>
   </section>
@@ -75,42 +80,89 @@ const services = [
           Why Choose <span class="text-electric-400">Us</span>?
         </h2>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="glass-card p-6 text-center">
-          <div class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          <div
+            class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-electric-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
           <h3 class="font-display font-semibold text-white mb-2">AI-Powered</h3>
           <p class="text-sm text-gray-400">Leveraging cutting-edge AI for smarter campaigns</p>
         </div>
-        
+
         <div class="glass-card p-6 text-center">
-          <div class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          <div
+            class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-electric-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
             </svg>
           </div>
           <h3 class="font-display font-semibold text-white mb-2">Data-Driven</h3>
           <p class="text-sm text-gray-400">Every decision backed by real metrics</p>
         </div>
-        
+
         <div class="glass-card p-6 text-center">
-          <div class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          <div
+            class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-electric-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+              ></path>
             </svg>
           </div>
           <h3 class="font-display font-semibold text-white mb-2">Dedicated Team</h3>
           <p class="text-sm text-gray-400">Your success is our only priority</p>
         </div>
-        
+
         <div class="glass-card p-6 text-center">
-          <div class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <div
+            class="w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center mx-auto mb-4"
+          >
+            <svg
+              class="w-6 h-6 text-electric-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+              ></path>
             </svg>
           </div>
           <h3 class="font-display font-semibold text-white mb-2">Proven Results</h3>
@@ -124,13 +176,14 @@ const services = [
   <section class="section">
     <div class="container-custom">
       <div class="glass-card p-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
           <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
             Not Sure Which Service You Need?
           </h2>
           <p class="text-gray-400 max-w-xl mx-auto mb-8">
-            Let's discuss your goals and challenges. We'll recommend the best approach for your unique situation.
+            Let's discuss your goals and challenges. We'll recommend the best approach for your
+            unique situation.
           </p>
           <Button href="/contact" variant="primary" size="lg">
             Schedule a Free Consultation

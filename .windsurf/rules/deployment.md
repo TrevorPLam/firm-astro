@@ -12,12 +12,14 @@ When configuring deployments:
 ## Platform Selection
 
 ### Recommended Platforms
+
 - **Vercel**: Best for Astro projects, zero-config deployment
 - **Netlify**: Good alternative with excellent build tools
 - **Cloudflare Pages**: Great for global edge deployment
 - **GitHub Pages**: Free option for static sites
 
 ### Platform Considerations
+
 - Build time limits
 - Edge network coverage
 - Custom domain support
@@ -28,6 +30,7 @@ When configuring deployments:
 ## Vercel Deployment
 
 ### Configuration
+
 - Create `vercel.json` for custom configuration
 - Set build command: `npm run build`
 - Set output directory: `dist`
@@ -35,6 +38,7 @@ When configuring deployments:
 - Enable preview deployments for branches
 
 ### Environment Variables
+
 - Add `VITE_FORM_SUBMISSION_URL` in Vercel dashboard
 - Add `VITE_CALENDLY_URL` in Vercel dashboard
 - Use different values for production/preview
@@ -42,6 +46,7 @@ When configuring deployments:
 - Use Vercel CLI for local testing
 
 ### Deployment Commands
+
 ```bash
 vercel login                    # Authenticate
 vercel                          # Deploy to preview
@@ -51,6 +56,7 @@ vercel env pull .env.local      # Pull env vars locally
 ```
 
 ### vercel.json Example
+
 ```json
 {
   "buildCommand": "npm run build",
@@ -76,6 +82,7 @@ vercel env pull .env.local      # Pull env vars locally
 ## Netlify Deployment
 
 ### Configuration
+
 - Create `netlify.toml` for configuration
 - Set build command: `npm run build`
 - Set publish directory: `dist`
@@ -83,12 +90,14 @@ vercel env pull .env.local      # Pull env vars locally
 - Enable branch previews
 
 ### Environment Variables
+
 - Add in Netlify dashboard under Site settings
 - Use environment-specific values
 - Never commit secrets
 - Use Netlify CLI for local testing
 
 ### Deployment Commands
+
 ```bash
 netlify login                   # Authenticate
 netlify deploy                  # Deploy to preview
@@ -98,6 +107,7 @@ netlify dev                     # Local development
 ```
 
 ### netlify.toml Example
+
 ```toml
 [build]
   command = "npm run build"
@@ -117,6 +127,7 @@ netlify dev                     # Local development
 ## Cloudflare Pages Deployment
 
 ### Configuration
+
 - Use `wrangler.toml` for Workers deployment
 - Configure build settings in Cloudflare dashboard
 - Set build command: `npm run build`
@@ -124,12 +135,14 @@ netlify dev                     # Local development
 - Enable preview deployments
 
 ### Environment Variables
+
 - Add in Cloudflare Pages dashboard
 - Use environment-specific values
 - Never commit secrets
 - Use Wrangler CLI for Workers
 
 ### Deployment Commands
+
 ```bash
 npx wrangler pages project create  # Create project
 npx wrangler pages deploy dist     # Deploy manually
@@ -139,6 +152,7 @@ npx wrangler pages deploy dist     # Deploy manually
 ## GitHub Pages Deployment
 
 ### Configuration
+
 - Use GitHub Actions for deployment
 - Configure in `.github/workflows/deploy.yml`
 - Set source to GitHub Actions in repository settings
@@ -146,12 +160,14 @@ npx wrangler pages deploy dist     # Deploy manually
 - Use custom domain if needed
 
 ### Environment Variables
+
 - Add in GitHub repository Settings > Secrets
 - Use GitHub Actions secrets for sensitive data
 - Never commit secrets to git
 - Use environment-specific secrets
 
 ### GitHub Actions Example
+
 ```yaml
 name: Deploy to GitHub Pages
 
@@ -178,18 +194,21 @@ jobs:
 ## Environment Management
 
 ### Development Environment
+
 - Use `.dev.vars` for local development
 - Add to `.gitignore`
 - Test locally before deploying
 - Use environment-specific URLs
 
 ### Staging/Preview Environment
+
 - Deploy to preview/branch deployments
 - Test before production
 - Use staging APIs and services
 - Monitor for issues
 
 ### Production Environment
+
 - Require manual approval for production
 - Use production APIs and services
 - Monitor after deployment
@@ -198,6 +217,7 @@ jobs:
 ## Pre-Deployment Checklist
 
 ### Build Verification
+
 - [ ] Build succeeds locally
 - [ ] All tests pass
 - [ ] Linting passes
@@ -206,6 +226,7 @@ jobs:
 - [ ] No console errors in dev mode
 
 ### Content Verification
+
 - [ ] All pages build successfully
 - [ ] Images load correctly
 - [ ] Links work properly
@@ -214,6 +235,7 @@ jobs:
 - [ ] Sitemap updated
 
 ### Performance Verification
+
 - [ ] Lighthouse score > 90
 - [ ] Core Web Vitals in green
 - [ ] Bundle size within budget
@@ -221,6 +243,7 @@ jobs:
 - [ ] CSS purged
 
 ### Security Verification
+
 - [ ] No secrets in code
 - [ ] HTTPS enabled
 - [ ] Security headers configured
@@ -230,6 +253,7 @@ jobs:
 ## Post-Deployment Verification
 
 ### Immediate Checks
+
 - [ ] Site loads successfully
 - [ ] All pages accessible
 - [ ] Forms work correctly
@@ -237,6 +261,7 @@ jobs:
 - [ ] Analytics tracking works
 
 ### Monitoring
+
 - [ ] Set up error monitoring
 - [ ] Monitor performance metrics
 - [ ] Check analytics data
@@ -246,6 +271,7 @@ jobs:
 ## Rollback Procedures
 
 ### When to Rollback
+
 - Critical bugs affecting users
 - Security vulnerabilities
 - Performance degradation
@@ -253,6 +279,7 @@ jobs:
 - Deployment failures
 
 ### Rollback Methods
+
 - Revert to previous commit
 - Use platform rollback feature
 - Restore from backup
@@ -260,6 +287,7 @@ jobs:
 - Hotfix if rollback not possible
 
 ### Rollback Commands
+
 ```bash
 # Vercel
 vercel rollback                  # Rollback to previous deployment
@@ -275,6 +303,7 @@ git push origin main             # Push revert
 ## CI/CD Integration
 
 ### GitHub Actions
+
 - Build on every push
 - Run tests on every push
 - Deploy on main branch
@@ -282,6 +311,7 @@ git push origin main             # Push revert
 - Notify on deployment status
 
 ### Workflow Triggers
+
 - Push to main branch
 - Pull requests
 - Manual trigger
@@ -289,6 +319,7 @@ git push origin main             # Push revert
 - Tag releases
 
 ### Deployment Environments
+
 - Development: on every push
 - Staging: on pull requests
 - Production: on main merge with approval
@@ -307,6 +338,7 @@ git push origin main             # Push revert
 ## Troubleshooting
 
 ### Build Failures
+
 - Check build logs for errors
 - Verify dependencies are installed
 - Check environment variables
@@ -314,6 +346,7 @@ git push origin main             # Push revert
 - Test locally first
 
 ### Deployment Failures
+
 - Check deployment logs
 - Verify platform configuration
 - Check authentication
@@ -321,6 +354,7 @@ git push origin main             # Push revert
 - Check file size limits
 
 ### Runtime Errors
+
 - Check browser console
 - Verify environment variables
 - Check API endpoints

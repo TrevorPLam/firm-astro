@@ -16,10 +16,10 @@ Create static UI components in `src/components/` with `.astro` extension.
 interface Props {
   title: string;
   description?: string;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
 }
 
-const { title, description = '', variant = 'primary' } = Astro.props;
+const { title, description = "", variant = "primary" } = Astro.props;
 ---
 
 <div class="component-class">
@@ -45,11 +45,13 @@ const { title, description = '', variant = 'primary' } = Astro.props;
 ## Component Types
 
 **Static Components (.astro)**: Use for:
+
 - Display cards (ServiceCard, TeamCard, PricingCard)
 - Layout components (Header, Footer)
 - Static UI elements (Button, ClientLogos)
 
 **Interactive Components (.tsx)**: Use React for:
+
 - Forms (ContactForm)
 - Accordions (FAQAccordion)
 - Filters (CaseStudyFilter)
@@ -81,9 +83,9 @@ const { title, description = '', variant = 'primary' } = Astro.props;
 ## Import Path Aliases
 
 Use path aliases instead of relative imports:
+
 ```astro
-import Button from '@components/Button.astro';
-import { someFunction } from '@utils/helpers';
+import Button from '@components/Button.astro'; import {someFunction} from '@utils/helpers';
 ```
 
 ## After Creation

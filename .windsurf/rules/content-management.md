@@ -12,6 +12,7 @@ When managing blog posts and case studies:
 ## Content Lifecycle
 
 ### Creating New Content
+
 - Follow existing frontmatter schema in `src/content/config.ts`
 - Use kebab-case for file names (e.g., `seo-strategies-2024.mdx`)
 - Include all required fields in frontmatter
@@ -19,6 +20,7 @@ When managing blog posts and case studies:
 - Set appropriate publish dates
 
 ### Updating Existing Content
+
 - Update `updatedDate` field when modifying content
 - Keep original `pubDate` unchanged
 - Add changelog note at bottom of content
@@ -26,6 +28,7 @@ When managing blog posts and case studies:
 - Update related posts if content references change
 
 ### Archiving Content
+
 - Add `archived: true` to frontmatter for archived posts
 - Do not delete old content (preserve SEO value)
 - Add redirect if URL changes
@@ -33,6 +36,7 @@ When managing blog posts and case studies:
 - Consider adding "updated" note with link to new version
 
 ### Featured Content
+
 - Set `featured: true` for 2-3 items per collection
 - Rotate featured content monthly
 - Featured items should be recent and high-quality
@@ -41,6 +45,7 @@ When managing blog posts and case studies:
 ## Content Quality Standards
 
 ### Blog Posts
+
 - Minimum 500 words for substantive posts
 - Use proper heading hierarchy (##, ###)
 - Include code examples when applicable
@@ -49,6 +54,7 @@ When managing blog posts and case studies:
 - Use consistent author names
 
 ### Case Studies
+
 - Include measurable results with metrics
 - Add testimonials with quotes
 - Structure with Challenge, Solution, Results sections
@@ -59,6 +65,7 @@ When managing blog posts and case studies:
 ## SEO Best Practices
 
 ### Titles and Descriptions
+
 - Keep titles under 60 characters
 - Write unique descriptions (150-160 characters)
 - Include target keywords naturally
@@ -66,6 +73,7 @@ When managing blog posts and case studies:
 - Match user search intent
 
 ### Content Structure
+
 - Use short paragraphs (2-3 sentences)
 - Include bullet points for readability
 - Add internal links to related content
@@ -73,6 +81,7 @@ When managing blog posts and case studies:
 - Include table of contents for long posts
 
 ### Images
+
 - Use descriptive file names (e.g., `seo-audit-checklist.jpg`)
 - Include alt text for all images
 - Use appropriate dimensions (1200x630 for OG)
@@ -82,6 +91,7 @@ When managing blog posts and case studies:
 ## Content Organization
 
 ### Categories
+
 - Use existing categories from config
 - Create new categories only when necessary
 - Keep categories broad (5-10 total)
@@ -89,6 +99,7 @@ When managing blog posts and case studies:
 - Update category filters in UI
 
 ### Tags
+
 - Use 3-5 relevant tags per post
 - Keep tags specific (not categories)
 - Use consistent tag naming
@@ -96,6 +107,7 @@ When managing blog posts and case studies:
 - Consider tag consolidation periodically
 
 ### Content Collections
+
 - Blog posts in `src/content/blog/`
 - Case studies in `src/content/caseStudies/`
 - Follow Zod schema validation
@@ -105,6 +117,7 @@ When managing blog posts and case studies:
 ## Content Workflow
 
 ### Draft Content
+
 - Create draft files with `draft-` prefix
 - Do not include in build (exclude in config)
 - Review before publishing
@@ -112,6 +125,7 @@ When managing blog posts and case studies:
 - Remove `draft-` prefix from filename
 
 ### Review Process
+
 - Check for spelling and grammar errors
 - Verify all links work
 - Test code examples
@@ -120,6 +134,7 @@ When managing blog posts and case studies:
 - Verify SEO meta tags
 
 ### Publishing
+
 - Set appropriate `pubDate`
 - Remove `draft` status if applicable
 - Generate search index if needed
@@ -130,6 +145,7 @@ When managing blog posts and case studies:
 ## Content Maintenance
 
 ### Regular Reviews
+
 - Review content quarterly
 - Update outdated information
 - Check for broken links
@@ -137,6 +153,7 @@ When managing blog posts and case studies:
 - Refresh old posts with new insights
 
 ### Link Maintenance
+
 - Check internal links quarterly
 - Update links to moved content
 - Fix broken external links
@@ -144,6 +161,7 @@ When managing blog posts and case studies:
 - Add links to new related content
 
 ### Performance Monitoring
+
 - Track page views and engagement
 - Identify low-performing content
 - Update or improve underperforming posts
@@ -153,6 +171,7 @@ When managing blog posts and case studies:
 ## Content Migration
 
 ### Importing Content
+
 - Validate frontmatter schema
 - Convert to MDX format
 - Update image paths
@@ -161,6 +180,7 @@ When managing blog posts and case studies:
 - Test build after import
 
 ### Exporting Content
+
 - Export with frontmatter intact
 - Preserve publish dates
 - Include all metadata
@@ -170,6 +190,7 @@ When managing blog posts and case studies:
 ## Content Analytics
 
 ### Metrics to Track
+
 - Page views and unique visitors
 - Time on page
 - Bounce rate
@@ -178,6 +199,7 @@ When managing blog posts and case studies:
 - Search rankings
 
 ### Using Analytics
+
 - Identify top-performing content
 - Find content gaps
 - Understand user behavior
@@ -198,6 +220,7 @@ When managing blog posts and case studies:
 ## File Naming Conventions
 
 ### Blog Posts
+
 - Use kebab-case: `seo-strategies-2024.mdx`
 - Keep names under 60 characters
 - Include year for time-sensitive content
@@ -205,6 +228,7 @@ When managing blog posts and case studies:
 - Avoid special characters
 
 ### Case Studies
+
 - Use client-name-service.md format
 - Example: `techcorp-seo-growth.md`
 - Keep names descriptive
@@ -214,6 +238,7 @@ When managing blog posts and case studies:
 ## Content Validation Checklist
 
 Before publishing content:
+
 - [ ] All required frontmatter fields present
 - [ ] Title and description meet length requirements
 - [ ] Images have alt text

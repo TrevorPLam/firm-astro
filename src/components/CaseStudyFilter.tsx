@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo } from "react";
 
 interface CaseStudy {
   slug: string;
@@ -16,25 +16,25 @@ interface CaseStudyFilterProps {
 }
 
 export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<string>('all');
+  const [selectedIndustry, setSelectedIndustry] = useState<string>("all");
+  const [selectedService, setSelectedService] = useState<string>("all");
 
   // Extract unique industries and services
   const industries = useMemo(() => {
     const unique = new Set(caseStudies.map((cs) => cs.industry));
-    return ['all', ...Array.from(unique)];
+    return ["all", ...Array.from(unique)];
   }, [caseStudies]);
 
   const services = useMemo(() => {
     const unique = new Set(caseStudies.flatMap((cs) => cs.services));
-    return ['all', ...Array.from(unique)];
+    return ["all", ...Array.from(unique)];
   }, [caseStudies]);
 
   // Filter case studies
   const filteredStudies = useMemo(() => {
     return caseStudies.filter((cs) => {
-      const matchesIndustry = selectedIndustry === 'all' || cs.industry === selectedIndustry;
-      const matchesService = selectedService === 'all' || cs.services.includes(selectedService);
+      const matchesIndustry = selectedIndustry === "all" || cs.industry === selectedIndustry;
+      const matchesService = selectedService === "all" || cs.services.includes(selectedService);
       return matchesIndustry && matchesService;
     });
   }, [caseStudies, selectedIndustry, selectedService]);
@@ -52,7 +52,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           >
             {industries.map((industry) => (
               <option key={industry} value={industry} className="bg-dark-800">
-                {industry === 'all' ? 'All Industries' : industry}
+                {industry === "all" ? "All Industries" : industry}
               </option>
             ))}
           </select>
@@ -67,7 +67,7 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           >
             {services.map((service) => (
               <option key={service} value={service} className="bg-dark-800">
-                {service === 'all' ? 'All Services' : service}
+                {service === "all" ? "All Services" : service}
               </option>
             ))}
           </select>
@@ -150,8 +150,8 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
           <p className="text-gray-400">No case studies match your selected filters.</p>
           <button
             onClick={() => {
-              setSelectedIndustry('all');
-              setSelectedService('all');
+              setSelectedIndustry("all");
+              setSelectedService("all");
             }}
             className="mt-4 text-electric-400 hover:text-electric-300 transition-colors focus-ring"
           >

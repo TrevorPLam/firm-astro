@@ -68,4 +68,4 @@ AI is not replacing SEO professionals but augmenting their capabilities. By embr
 
 ---
 
-*Need help implementing AI-powered SEO strategies? Contact our team for a consultation.*
+_Need help implementing AI-powered SEO strategies? Contact our team for a consultation._

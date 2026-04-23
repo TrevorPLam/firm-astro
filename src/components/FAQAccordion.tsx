@@ -1,4 +1,4 @@
-import { useState, useId } from 'react';
+import { useState, useId } from "react";
 
 interface FAQItem {
   question: string;
@@ -13,7 +13,7 @@ interface FAQAccordionProps {
 
 export default function FAQAccordion({ items, searchable = false }: FAQAccordionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const baseId = useId();
 
   const filteredItems = searchable
@@ -62,20 +62,19 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
       ) : (
         <div className="space-y-3">
           {filteredItems.map((item, index) => (
-            <div
-              key={index}
-              className="glass-card overflow-hidden"
-            >
+            <div key={index} className="glass-card overflow-hidden">
               <button
                 onClick={() => toggleItem(index)}
                 aria-expanded={openIndex === index}
                 aria-controls={`${baseId}-panel-${index}`}
                 className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-light-100 dark:hover:bg-white/5 transition-colors focus-ring"
               >
-                <span className="font-medium text-light-900 dark:text-white pr-4">{item.question}</span>
+                <span className="font-medium text-light-900 dark:text-white pr-4">
+                  {item.question}
+                </span>
                 <svg
                   className={`w-5 h-5 text-electric-400 flex-shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-180' : ''
+                    openIndex === index ? "rotate-180" : ""
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -92,7 +91,7 @@ export default function FAQAccordion({ items, searchable = false }: FAQAccordion
               <div
                 id={`${baseId}-panel-${index}`}
                 className={`overflow-hidden transition-all duration-300 ${
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
+                  openIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >
                 <div className="px-6 pb-4 text-light-600 dark:text-gray-400 text-sm leading-relaxed">

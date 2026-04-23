@@ -3,22 +3,27 @@
 ---
 
 <div id="reading-progress" class="fixed top-0 left-0 right-0 h-1 bg-electric-500/20 z-[60]">
-  <div id="progress-bar" class="h-full bg-electric-500 transition-all duration-100" style="width: 0%"></div>
+  <div
+    id="progress-bar"
+    class="h-full bg-electric-500 transition-all duration-100"
+    style="width: 0%"
+  >
+  </div>
 </div>
 
 <script>
-  const progressBar = document.getElementById('progress-bar');
+  const progressBar = document.getElementById("progress-bar");
   let ticking = false;
-  
+
   function updateProgress() {
     const scrollTop = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = (scrollTop / docHeight) * 100;
-    
+
     if (progressBar) {
       progressBar.style.width = `${Math.min(progress, 100)}%`;
     }
-    
+
     ticking = false;
   }
 
@@ -29,9 +34,9 @@
     }
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll, { passive: true });
-  
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll, { passive: true });
+
   // Initial update
   updateProgress();
 </script>

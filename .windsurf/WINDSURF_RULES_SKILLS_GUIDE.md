@@ -5,6 +5,7 @@ Official documentation compiled from [docs.windsurf.com](https://docs.windsurf.c
 ---
 
 ## Table of Contents
+
 - [Overview](#overview)
 - [Rules](#rules)
 - [Skills](#skills)
@@ -28,58 +29,71 @@ Windsurf provides three mechanisms for customizing Cascade behavior:
 ## Rules
 
 ### Purpose
+
 Rules provide persistent, reusable context at the prompt level. They are behavioral guidelines that tell Cascade "how to behave" rather than "what to do."
 
 ### Storage Locations
 
 **Workspace Rules**
+
 - `.windsurf/rules/` in current workspace directory
 - `.windsurf/rules/` in any sub-directory of workspace
 - `.windsurf/rules/` in parent directories up to git root (for git repositories)
 
 **Global Rules**
+
 - `global_rules.md` - applied across all workspaces
 
 **System-Level Rules (Enterprise)**
+
 - **macOS**: `/Library/Application Support/Windsurf/rules/*.md`
 - **Linux/WSL**: `/etc/windsurf/rules/*.md`
 - **Windows**: `C:\ProgramData\Windsurf\rules\*.md`
 
 ### Rule Discovery
+
 Windsurf automatically discovers rules from:
+
 - Current workspace and sub-directories
 - Git repository structure (up to git root)
 - Multiple workspace support (deduplicated with shortest relative path)
 
 ### Activation Modes
+
 Rules can be activated in four ways:
+
 1. **always_on** - Always applied
 2. **glob** - Applied based on file pattern matching
 3. **model_decision** - Cascade decides when to apply
 4. **manual** - User manually activates
 
 ### File Format
+
 Rules are markdown files with optional frontmatter. Maximum 12,000 characters per file.
 
 ### Best Practices for Rules
 
 **Keep Rules Simple and Specific**
+
 - Avoid long or vague rules that may confuse Cascade
 - No need for generic rules (e.g., "write good code") - these are baked into training data
 
 **Use Structured Formatting**
+
 - Bullet points and numbered lists are easier for Cascade to follow
 - XML tags can group similar rules effectively
 
 **Example Rule:**
+
 ```markdown
 # Coding Guidelines
 
 <coding_guidelines>
+
 - My project's programming language is python
 - Use early returns when possible
 - Always add documentation when creating new functions and classes
-</coding_guidelines>
+  </coding_guidelines>
 
 <security>
 - Never hardcode API keys
@@ -89,6 +103,7 @@ Rules are markdown files with optional frontmatter. Maximum 12,000 characters pe
 ```
 
 **Management**
+
 - Access via Customizations icon in Cascade panel
 - Click Edit to modify existing rules
 - Example templates available at [windsurf.com/editor/directory](https://windsurf.com/editor/directory)
@@ -98,24 +113,29 @@ Rules are markdown files with optional frontmatter. Maximum 12,000 characters pe
 ## Skills
 
 ### Purpose
+
 Skills help Cascade handle complex, multi-step tasks by bundling instructions, templates, checklists, and supporting files into folders that Cascade can invoke.
 
 ### Key Concept: Progressive Disclosure
+
 Only the skill's `name` and `description` are shown to the model by default. The full `SKILL.md` content and supporting files are loaded **only when Cascade decides to invoke the skill** (or when you `@mention` it). This keeps the context window lean even with many skills defined.
 
 ### Storage Locations
 
 **Workspace Skills (project-specific)**
+
 - `.windsurf/skills/<skill-name>/`
 - Committed with your repo
 - Available only in current workspace
 
 **Global Skills**
+
 - `~/.codeium/windsurf/skills/<skill-name>/`
 - Available in all workspaces on your machine
 - Not committed to repo
 
 **System-Level Skills (Enterprise)**
+
 - **macOS**: `/Library/Application Support/Windsurf/skills/`
 - **Linux/WSL**: `/etc/windsurf/skills/`
 - **Windows**: `C:\ProgramData\Windsurf\skills\`
@@ -123,6 +143,7 @@ Only the skill's `name` and `description` are shown to the model by default. The
 
 **Cross-Agent Compatibility**
 Windsurf also discovers skills in:
+
 - `.agents/skills/` and `~/.agents/skills/`
 - `.claude/skills/` and `~/.claude/skills/` (if Claude Code config reading enabled)
 
@@ -139,10 +160,12 @@ Windsurf also discovers skills in:
 ### SKILL.md File Format
 
 **Required Frontmatter Fields:**
+
 - **name**: Unique identifier (lowercase letters, numbers, hyphens only)
 - **description**: Brief explanation to help Cascade decide when to invoke
 
 **Example SKILL.md:**
+
 ```markdown
 ---
 name: deploy-to-production
@@ -150,11 +173,13 @@ description: Guides the deployment process to production with safety checks
 ---
 
 ## Pre-deployment Checklist
+
 1. Run all tests
 2. Check for uncommitted changes
 3. Verify environment variables
 
 ## Deployment Steps
+
 Follow these steps to deploy safely...
 
 [Reference supporting files in this directory as needed]
@@ -163,6 +188,7 @@ Follow these steps to deploy safely...
 ### Creating Skills
 
 **Using the UI (easiest):**
+
 1. Open Cascade panel
 2. Click three dots → Customizations menu
 3. Click Skills section
@@ -170,6 +196,7 @@ Follow these steps to deploy safely...
 5. Name the skill (lowercase, numbers, hyphens only)
 
 **Manual Creation:**
+
 - Create directory: `.windsurf/skills/<skill-name>/`
 - Add SKILL.md with YAML frontmatter
 - Add any supporting files
@@ -177,11 +204,13 @@ Follow these steps to deploy safely...
 ### Invoking Skills
 
 **Automatic Invocation**
+
 - Cascade automatically invokes skills when request matches description
 - The `description` field is critical for this
 - Most common usage pattern
 
 **Manual Invocation**
+
 - Type `@skill-name` in Cascade input
 - Useful when you want to ensure specific skill is used
 - Or when skill might not be automatically triggered
@@ -189,6 +218,7 @@ Follow these steps to deploy safely...
 ### Example Use Cases
 
 **Deployment Workflow**
+
 ```
 .windsurf/skills/deploy-staging/
 ├── SKILL.md
@@ -198,6 +228,7 @@ Follow these steps to deploy safely...
 ```
 
 **Code Review Guidelines**
+
 ```
 .windsurf/skills/code-review/
 ├── SKILL.md
@@ -207,6 +238,7 @@ Follow these steps to deploy safely...
 ```
 
 **Testing Procedures**
+
 ```
 .windsurf/skills/run-tests/
 ├── SKILL.md
@@ -235,29 +267,35 @@ Follow these steps to deploy safely...
 ## Workflows
 
 ### Purpose
+
 Workflows provide a structured sequence of steps at the trajectory level, guiding Cascade through a series of interconnected tasks. They are prompt templates for repeatable tasks that you trigger explicitly.
 
 ### Storage Locations
+
 - `.windsurf/workflows/` in current workspace directory
 - `.windsurf/workflows/` in any sub-directory
 - `.windsurf/workflows/` in parent directories up to git root
 - Maximum 12,000 characters per file
 
 ### Workflow Discovery
+
 Same as rules - automatic discovery from workspace, subdirectories, and git root.
 
 ### Creating Workflows
+
 1. Click Customizations icon in Cascade
 2. Navigate to Workflows panel
 3. Click + Workflow button
 4. Workflows saved as markdown files with title, description, and steps
 
 ### Invoking Workflows
+
 - Use slash command: `/[workflow-name]`
 - Manual invocation only
 - Can call other workflows from within a workflow
 
 ### Workflow Features
+
 - Sequential processing of steps
 - Can include instructions like "Call /workflow-2"
 - Particularly good for CLI tool procedures
@@ -267,15 +305,16 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 
 ## Comparison: Rules vs Skills vs Workflows
 
-| Aspect | Skills | Rules | Workflows |
-|--------|--------|-------|-----------|
-| **Purpose** | Multi-step procedures with supporting files | Behavioral guidelines ("how to behave") | Prompt templates for repeatable tasks |
-| **Structure** | Folder with SKILL.md + resource files | Single .md file with frontmatter | Single .md file |
-| **Invocation** | Model decides (progressive disclosure) or @mention | always_on / glob / model_decision / manual | Manual only via /slash-command |
-| **In System Prompt?** | No - only name + description until invoked | Depends on activation mode | No - listed as available commands |
-| **Best For** | Deployments, code review, testing with scripts/templates | Coding style, project conventions, constraints | One-shot runbooks you trigger explicitly |
+| Aspect                | Skills                                                   | Rules                                          | Workflows                                |
+| --------------------- | -------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------- |
+| **Purpose**           | Multi-step procedures with supporting files              | Behavioral guidelines ("how to behave")        | Prompt templates for repeatable tasks    |
+| **Structure**         | Folder with SKILL.md + resource files                    | Single .md file with frontmatter               | Single .md file                          |
+| **Invocation**        | Model decides (progressive disclosure) or @mention       | always_on / glob / model_decision / manual     | Manual only via /slash-command           |
+| **In System Prompt?** | No - only name + description until invoked               | Depends on activation mode                     | No - listed as available commands        |
+| **Best For**          | Deployments, code review, testing with scripts/templates | Coding style, project conventions, constraints | One-shot runbooks you trigger explicitly |
 
 ### Rule of Thumb
+
 - **Use Skills** if Cascade should pick it up automatically AND it needs supporting files
 - **Use Rules** if it's a short behavioral constraint
 - **Use Workflows** if you always want to trigger it yourself
@@ -287,20 +326,24 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 ### General Principles
 
 **1. Keep It Simple**
+
 - Avoid overly complex rules or skills
 - Simple, specific instructions are more effective
 
 **2. Use Structured Formatting**
+
 - Bullet points and numbered lists
 - XML tags for grouping related rules
 - Clear headings and sections
 
 **3. Be Specific**
+
 - Avoid generic instructions
 - Use concrete examples
 - Specify exact behaviors
 
 **4. Test and Iterate**
+
 - Start with basic rules/skills
 - Refine based on actual usage
 - Monitor Cascade's adherence
@@ -335,12 +378,14 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 ### System-Level Rules
 
 **Deployment**
+
 - Managed by IT/security team
 - Use MDM or configuration management tools
 - Cannot be modified by end users
 - Displayed with "System" label in Cascade UI
 
 **Behavior**
+
 - Merged with workspace and global rules
 - Provide additional context without overriding user rules
 - Establish baseline standards while allowing team customizations
@@ -348,11 +393,13 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 ### System-Level Skills
 
 **Deployment**
+
 - Same OS-specific paths as rules
 - Read-only for end users
 - Deployed by IT teams
 
 **Use Cases**
+
 - Organization-wide deployment procedures
 - Standardized code review processes
 - Enterprise security checklists
@@ -360,11 +407,13 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 ### Management
 
 **Tools**
+
 - Mobile Device Management (MDM)
 - Configuration Management systems
 - Standard deployment workflows
 
 **Compliance**
+
 - Ensure internal teams handle deployment and updates
 - Follow organization's security policies
 - Maintain version control for rule/skill changes
@@ -383,6 +432,7 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 ## Quick Reference
 
 ### Rule File Locations
+
 - Workspace: `.windsurf/rules/*.md`
 - Global: `global_rules.md`
 - System (macOS): `/Library/Application Support/Windsurf/rules/*.md`
@@ -390,6 +440,7 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 - System (Windows): `C:\ProgramData\Windsurf\rules\*.md`
 
 ### Skill File Locations
+
 - Workspace: `.windsurf/skills/<name>/SKILL.md`
 - Global: `~/.codeium/windsurf/skills/<name>/SKILL.md`
 - System (macOS): `/Library/Application Support/Windsurf/skills/<name>/SKILL.md`
@@ -397,16 +448,19 @@ Same as rules - automatic discovery from workspace, subdirectories, and git root
 - System (Windows): `C:\ProgramData\Windsurf\skills\<name>\SKILL.md`
 
 ### Workflow File Locations
+
 - Workspace: `.windsurf/workflows/*.md`
 - Subdirectories: `.windsurf/workflows/*.md`
 - Parent directories up to git root
 
 ### Character Limits
+
 - Rules: 12,000 characters per file
 - Workflows: 12,000 characters per file
 - Skills: No explicit limit on SKILL.md (use good judgment)
 
 ### Invocation Methods
+
 - Rules: always_on, glob, model_decision, manual
 - Skills: Automatic (based on description) or @skill-name
 - Workflows: /workflow-name (manual only)

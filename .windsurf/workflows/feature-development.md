@@ -20,6 +20,7 @@ This workflow guides you through developing features from branch to merge.
 ### Feature Description
 
 Clearly define the feature:
+
 - What problem does it solve?
 - What is the scope?
 - What are the acceptance criteria?
@@ -28,6 +29,7 @@ Clearly define the feature:
 ### Create TODO Task (if applicable)
 
 If feature is tracked in TODO.md:
+
 - Create task with clear description
 - Add acceptance criteria
 - Add validation steps
@@ -42,6 +44,7 @@ git checkout -b feature/feature-name
 ```
 
 Branch naming conventions:
+
 - `feature/add-blog-post` - Adding new content
 - `feature/contact-form-validation` - Adding functionality
 - `feature/seo-improvements` - SEO enhancements
@@ -55,6 +58,7 @@ Branch naming conventions:
 ### Research Existing Code
 
 Read relevant files:
+
 - Existing components in `src/components/`
 - Similar pages in `src/pages/`
 - Existing patterns in codebase
@@ -63,6 +67,7 @@ Read relevant files:
 ### Plan Implementation
 
 Document the plan:
+
 - Files to create/modify
 - Components needed
 - Changes to existing code
@@ -76,6 +81,7 @@ Document the plan:
 ### Create New Files
 
 Create files following project conventions:
+
 - Astro components: `src/components/ComponentName.astro`
 - React components: `src/components/ComponentName.tsx`
 - Pages: `src/pages/page-name.astro`
@@ -84,6 +90,7 @@ Create files following project conventions:
 ### Modify Existing Files
 
 Follow existing patterns:
+
 - Use path aliases (`@components/*`, `@layouts/*`)
 - Follow styling guidelines (dark mode, electric blue)
 - Maintain accessibility standards
@@ -92,6 +99,7 @@ Follow existing patterns:
 ### Add Tests
 
 Create tests for new functionality:
+
 - Unit tests in `src/__tests__/`
 - E2E tests in `src/test/`
 - Follow testing guidelines
@@ -103,6 +111,7 @@ Create tests for new functionality:
 ### Self-Review
 
 Before committing, review:
+
 - [ ] Code follows project patterns
 - [ ] TypeScript strict mode compliance
 - [ ] Accessibility standards met
@@ -157,6 +166,7 @@ npm run dev
 ```
 
 Test in development:
+
 - Navigate to relevant pages
 - Test new functionality
 - Test responsive design
@@ -180,6 +190,7 @@ git commit -m "feat(feature-name): add feature description"
 ```
 
 Use conventional commit format:
+
 - `feat:` new features
 - `fix:` bug fixes
 - `refactor:` code refactoring
@@ -189,6 +200,7 @@ Use conventional commit format:
 - `chore:` maintenance tasks
 
 Include detailed commit message:
+
 - What was changed
 - Why it was changed
 - How it was tested
@@ -209,6 +221,7 @@ git push origin feature/feature-name
 ### PR Title
 
 Use conventional commit format:
+
 ```
 feat(feature-name): add feature description
 ```
@@ -216,6 +229,7 @@ feat(feature-name): add feature description
 ### PR Description
 
 Include:
+
 - **Description**: What this PR does
 - **Motivation**: Why this change is needed
 - **Changes**: List of files changed
@@ -235,6 +249,7 @@ Request review from team members familiar with the codebase.
 ### Monitor GitHub Actions
 
 Check that:
+
 - Build passes
 - Unit tests pass
 - E2E tests pass
@@ -244,6 +259,7 @@ Check that:
 ### Address CI Failures
 
 If CI fails:
+
 - Review logs
 - Fix issues
 - Push fixes
@@ -256,6 +272,7 @@ If CI fails:
 ### Review Feedback
 
 Address reviewer feedback:
+
 - Make requested changes
 - Respond to comments
 - Clarify decisions
@@ -264,6 +281,7 @@ Address reviewer feedback:
 ### Re-Test After Changes
 
 After making changes:
+
 - Run tests again
 - Build again
 - Test in development
@@ -276,6 +294,7 @@ After making changes:
 ### Approval Requirements
 
 Before merge:
+
 - All tests pass
 - Build succeeds
 - Code review approved
@@ -285,6 +304,7 @@ Before merge:
 ### Update TODO Task (if applicable)
 
 If feature tracked in TODO.md:
+
 - Update task status to completed
 - Add completion note
 - Document changes made
@@ -297,6 +317,7 @@ If feature tracked in TODO.md:
 ### Merge Options
 
 Choose merge strategy:
+
 - **Squash and merge**: Clean history, recommended for features
 - **Merge commit**: Preserves history, good for large features
 - **Rebase and merge**: Linear history, use with caution
@@ -304,6 +325,7 @@ Choose merge strategy:
 ### Delete Branch
 
 After merge, delete feature branch:
+
 - Delete from GitHub
 - Delete locally: `git branch -d feature/feature-name`
 
@@ -314,6 +336,7 @@ After merge, delete feature branch:
 ### Trigger Deployment
 
 Merge to main triggers GitHub Actions:
+
 - Build runs automatically
 - Tests run automatically
 - Deployment requires manual approval
@@ -353,6 +376,7 @@ Merge to main triggers GitHub Actions:
 ### Update Documentation
 
 Update relevant documentation:
+
 - README.md if project structure changed
 - AGENTS.md if patterns changed
 - Component documentation if new components added
@@ -385,6 +409,7 @@ git push origin main
 ### Document Issues
 
 Document:
+
 - What went wrong
 - Root cause
 - Fix applied

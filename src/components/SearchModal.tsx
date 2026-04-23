@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import MiniSearch from 'minisearch';
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import MiniSearch from "minisearch";
 
 interface SearchResult {
   id: string;
-  type: 'blog' | 'case';
+  type: "blog" | "case";
   title: string;
   description?: string;
   category?: string;
@@ -16,7 +16,7 @@ interface SearchResult {
 
 export default function SearchModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isIndexLoaded, setIsIndexLoaded] = useState(false);
@@ -28,24 +28,35 @@ export default function SearchModal() {
 
   const onClose = useCallback(() => {
     setIsOpen(false);
-    setQuery('');
+    setQuery("");
     setResults([]);
     setSelectedIndex(0);
-    document.dispatchEvent(new CustomEvent('search-modal-closed'));
+    document.dispatchEvent(new CustomEvent("search-modal-closed"));
   }, []);
 
   // Initialize MiniSearch and load index
   const initSearch = useCallback(async () => {
     if (isIndexLoaded || isLoading) return;
-    
+
     setIsLoading(true);
     try {
-      const response = await fetch('/search-index.json');
+      const response = await fetch("/search-index.json");
       const data = await response.json();
-      
+
       miniSearchRef.current = new MiniSearch({
-        fields: ['title', 'description', 'category', 'tags', 'client', 'industry', 'services'],
-        storeFields: ['id', 'type', 'title', 'description', 'category', 'tags', 'client', 'industry', 'services', 'url'],
+        fields: ["title", "description", "category", "tags", "client", "industry", "services"],
+        storeFields: [
+          "id",
+          "type",
+          "title",
+          "description",
+          "category",
+          "tags",
+          "client",
+          "industry",
+          "services",
+          "url",
+        ],
         searchOptions: {
           prefix: true,
           fuzzy: true,
@@ -60,11 +71,11 @@ export default function SearchModal() {
           },
         },
       });
-      
+
       miniSearchRef.current.addAll(data);
       setIsIndexLoaded(true);
     } catch (error) {
-      console.error('Error loading search index:', error);
+      console.error("Error loading search index:", error);
     } finally {
       setIsLoading(false);
     }
@@ -83,12 +94,12 @@ export default function SearchModal() {
     const handleOpenSearch = () => setIsOpen(true);
     const handleCloseSearch = () => setIsOpen(false);
 
-    document.addEventListener('open-search', handleOpenSearch);
-    document.addEventListener('close-search', handleCloseSearch);
+    document.addEventListener("open-search", handleOpenSearch);
+    document.addEventListener("close-search", handleCloseSearch);
 
     return () => {
-      document.removeEventListener('open-search', handleOpenSearch);
-      document.removeEventListener('close-search', handleCloseSearch);
+      document.removeEventListener("open-search", handleOpenSearch);
+      document.removeEventListener("close-search", handleCloseSearch);
     };
   }, []);
 
@@ -111,31 +122,29 @@ export default function SearchModal() {
       if (!isOpen) return;
 
       switch (e.key) {
-        case 'ArrowDown':
+        case "ArrowDown":
           e.preventDefault();
-          setSelectedIndex((prev) => 
-            prev < results.length - 1 ? prev + 1 : prev
-          );
+          setSelectedIndex((prev) => (prev < results.length - 1 ? prev + 1 : prev));
           break;
-        case 'ArrowUp':
+        case "ArrowUp":
           e.preventDefault();
           setSelectedIndex((prev) => (prev > 0 ? prev - 1 : 0));
           break;
-        case 'Enter':
+        case "Enter":
           e.preventDefault();
           if (results[selectedIndex]) {
             window.location.href = results[selectedIndex].url;
           }
           break;
-        case 'Escape':
+        case "Escape":
           e.preventDefault();
           onClose();
           break;
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, results, selectedIndex, onClose]);
 
   // Focus trap
@@ -149,7 +158,7 @@ export default function SearchModal() {
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
     const handleTab = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
+      if (e.key === "Tab") {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             e.preventDefault();
@@ -164,8 +173,8 @@ export default function SearchModal() {
       }
     };
 
-    document.addEventListener('keydown', handleTab);
-    return () => document.removeEventListener('keydown', handleTab);
+    document.addEventListener("keydown", handleTab);
+    return () => document.removeEventListener("keydown", handleTab);
   }, [isOpen]);
 
   // Close on click outside
@@ -177,8 +186,8 @@ export default function SearchModal() {
     };
 
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => document.removeEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
     }
   }, [isOpen, onClose]);
 
@@ -188,7 +197,7 @@ export default function SearchModal() {
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4">
       {/* Backdrop */}
       <div className="fixed inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      
+
       {/* Modal */}
       <div
         ref={modalRef}
@@ -229,16 +238,16 @@ export default function SearchModal() {
         {/* Results */}
         <div ref={resultsRef} className="max-h-96 overflow-y-auto">
           {isLoading && (
-            <div className="p-8 text-center text-gray-400">
-              Loading search index...
-            </div>
+            <div className="p-8 text-center text-gray-400">Loading search index...</div>
           )}
 
           {!isLoading && query.length < 2 && (
             <div className="p-8 text-center text-gray-400">
               <p className="text-sm">Type at least 2 characters to search</p>
               <p className="text-xs mt-2 text-gray-500">
-                Press <kbd className="px-1 py-0.5 bg-white/5 rounded">↑</kbd> <kbd className="px-1 py-0.5 bg-white/5 rounded">↓</kbd> to navigate, <kbd className="px-1 py-0.5 bg-white/5 rounded">Enter</kbd> to select
+                Press <kbd className="px-1 py-0.5 bg-white/5 rounded">↑</kbd>{" "}
+                <kbd className="px-1 py-0.5 bg-white/5 rounded">↓</kbd> to navigate,{" "}
+                <kbd className="px-1 py-0.5 bg-white/5 rounded">Enter</kbd> to select
               </p>
             </div>
           )}
@@ -246,7 +255,9 @@ export default function SearchModal() {
           {!isLoading && query.length >= 2 && results.length === 0 && (
             <div className="p-8 text-center text-gray-400">
               <p className="text-sm">No results found for "{query}"</p>
-              <p className="text-xs mt-2 text-gray-500">Try different keywords or check your spelling</p>
+              <p className="text-xs mt-2 text-gray-500">
+                Try different keywords or check your spelling
+              </p>
             </div>
           )}
 
@@ -258,8 +269,8 @@ export default function SearchModal() {
                   href={result.url}
                   className={`block px-4 py-3 transition-colors ${
                     index === selectedIndex
-                      ? 'bg-electric-500/20 text-electric-400'
-                      : 'hover:bg-white/5 text-gray-300 hover:text-white'
+                      ? "bg-electric-500/20 text-electric-400"
+                      : "hover:bg-white/5 text-gray-300 hover:text-white"
                   }`}
                   onMouseEnter={() => setSelectedIndex(index)}
                 >
@@ -267,7 +278,7 @@ export default function SearchModal() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <span className="text-xs px-2 py-0.5 rounded-full bg-electric-500/20 text-electric-400">
-                          {result.type === 'blog' ? 'Blog' : 'Case Study'}
+                          {result.type === "blog" ? "Blog" : "Case Study"}
                         </span>
                         {result.category && (
                           <span className="text-xs text-gray-500">{result.category}</span>
@@ -283,9 +294,7 @@ export default function SearchModal() {
                         </p>
                       )}
                       {result.client && (
-                        <p className="text-sm text-gray-400 mt-1">
-                          Client: {result.client}
-                        </p>
+                        <p className="text-sm text-gray-400 mt-1">Client: {result.client}</p>
                       )}
                     </div>
                   </div>
@@ -298,7 +307,7 @@ export default function SearchModal() {
         {/* Footer */}
         <div className="px-4 py-2 border-t border-white/10 text-xs text-gray-500 flex items-center justify-between">
           <span>
-            {results.length} {results.length === 1 ? 'result' : 'results'}
+            {results.length} {results.length === 1 ? "result" : "results"}
           </span>
           <div className="flex items-center gap-2">
             <kbd className="px-1.5 py-0.5 bg-white/5 rounded">↑↓</kbd>

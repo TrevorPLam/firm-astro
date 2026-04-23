@@ -1,6 +1,6 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <BaseLayout title="404 - Page Not Found">
@@ -9,28 +9,39 @@ import Button from '../components/Button.astro';
       <div class="max-w-2xl mx-auto text-center">
         <!-- Glitch 404 -->
         <div class="relative mb-8">
-          <h1 class="text-[150px] md:text-[200px] font-display font-bold text-electric-500/20 select-none">
+          <h1
+            class="text-[150px] md:text-[200px] font-display font-bold text-electric-500/20 select-none"
+          >
             404
           </h1>
           <div class="absolute inset-0 flex items-center justify-center">
-            <h1 class="text-6xl md:text-8xl font-display font-bold text-electric-400 neon-text animate-glitch">
+            <h1
+              class="text-6xl md:text-8xl font-display font-bold text-electric-400 neon-text animate-glitch"
+            >
               404
             </h1>
           </div>
         </div>
-        
-        <h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-4">
-          Page Not Found
-        </h2>
+
+        <h2 class="text-2xl md:text-3xl font-display font-bold text-white mb-4">Page Not Found</h2>
         <p class="text-gray-400 mb-8 max-w-md mx-auto">
           The page you're looking for doesn't exist or has been moved. Let's get you back on track.
         </p>
-        
+
         <!-- Search -->
         <div class="max-w-md mx-auto mb-8">
           <div class="relative">
-            <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            <svg
+              class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
             <input
               type="text"
@@ -39,29 +50,44 @@ import Button from '../components/Button.astro';
             />
           </div>
         </div>
-        
+
         <!-- Quick Links -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <Button href="/" variant="primary">
-            Go Home
-          </Button>
-          <Button href="/services" variant="secondary">
-            View Services
-          </Button>
+          <Button href="/" variant="primary"> Go Home </Button>
+          <Button href="/services" variant="secondary"> View Services </Button>
         </div>
-        
+
         <!-- Popular Pages -->
         <div class="glass-card p-6">
           <h3 class="font-display font-semibold text-white mb-4">Popular Pages</h3>
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="/services" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Services</a>
-            <a href="/work" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Case Studies</a>
-            <a href="/about" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">About Us</a>
-            <a href="/contact" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Contact</a>
-            <a href="/pricing" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Pricing</a>
-            <a href="/blog" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Blog</a>
-            <a href="/faq" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">FAQ</a>
-            <a href="/team" class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Team</a>
+            <a
+              href="/services"
+              class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Services</a
+            >
+            <a href="/work" class="text-sm text-gray-400 hover:text-electric-400 transition-colors"
+              >Case Studies</a
+            >
+            <a href="/about" class="text-sm text-gray-400 hover:text-electric-400 transition-colors"
+              >About Us</a
+            >
+            <a
+              href="/contact"
+              class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Contact</a
+            >
+            <a
+              href="/pricing"
+              class="text-sm text-gray-400 hover:text-electric-400 transition-colors">Pricing</a
+            >
+            <a href="/blog" class="text-sm text-gray-400 hover:text-electric-400 transition-colors"
+              >Blog</a
+            >
+            <a href="/faq" class="text-sm text-gray-400 hover:text-electric-400 transition-colors"
+              >FAQ</a
+            >
+            <a href="/team" class="text-sm text-gray-400 hover:text-electric-400 transition-colors"
+              >Team</a
+            >
           </div>
         </div>
       </div>
@@ -71,35 +97,36 @@ import Button from '../components/Button.astro';
 
 <style>
   @keyframes glitch {
-    0%, 100% {
-      text-shadow: 
-        0 0 10px theme('colors.electric.500'),
-        0 0 20px theme('colors.electric.500'),
-        0 0 40px theme('colors.electric.500');
+    0%,
+    100% {
+      text-shadow:
+        0 0 10px theme("colors.electric.500"),
+        0 0 20px theme("colors.electric.500"),
+        0 0 40px theme("colors.electric.500");
     }
     25% {
-      text-shadow: 
+      text-shadow:
         -2px 0 #ff00ff,
         2px 0 #00ffff,
-        0 0 20px theme('colors.electric.500');
+        0 0 20px theme("colors.electric.500");
       transform: translate(-2px, 1px);
     }
     50% {
-      text-shadow: 
+      text-shadow:
         2px 0 #ff00ff,
         -2px 0 #00ffff,
-        0 0 20px theme('colors.electric.500');
+        0 0 20px theme("colors.electric.500");
       transform: translate(2px, -1px);
     }
     75% {
-      text-shadow: 
+      text-shadow:
         -1px 0 #ff00ff,
         1px 0 #00ffff,
-        0 0 20px theme('colors.electric.500');
+        0 0 20px theme("colors.electric.500");
       transform: translate(-1px, 2px);
     }
   }
-  
+
   .animate-glitch {
     animation: glitch 0.5s ease-in-out infinite;
   }

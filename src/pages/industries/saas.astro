@@ -1,85 +1,109 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Button from '../../components/Button.astro';
-import ServiceCard from '../../components/ServiceCard.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
 
 const challenges = [
-  { title: 'Long Sales Cycles', description: 'B2B SaaS deals can take months. We build nurture sequences that keep prospects engaged throughout the journey.' },
-  { title: 'High CAC', description: 'Customer acquisition costs eating into margins? We optimize channels and improve conversion rates to lower CAC.' },
-  { title: 'Churn Reduction', description: 'Acquiring customers is just the start. We implement retention strategies that reduce churn and increase LTV.' },
-  { title: 'Product-Market Fit Messaging', description: 'Struggling to communicate value? We craft messaging that resonates with your ideal customer profile.' },
+  {
+    title: "Long Sales Cycles",
+    description:
+      "B2B SaaS deals can take months. We build nurture sequences that keep prospects engaged throughout the journey.",
+  },
+  {
+    title: "High CAC",
+    description:
+      "Customer acquisition costs eating into margins? We optimize channels and improve conversion rates to lower CAC.",
+  },
+  {
+    title: "Churn Reduction",
+    description:
+      "Acquiring customers is just the start. We implement retention strategies that reduce churn and increase LTV.",
+  },
+  {
+    title: "Product-Market Fit Messaging",
+    description:
+      "Struggling to communicate value? We craft messaging that resonates with your ideal customer profile.",
+  },
 ];
 
 const services = [
   {
-    title: 'SaaS SEO',
-    description: 'Rank for high-intent keywords that drive qualified trials and demos.',
-    icon: 'seo',
-    href: '/services/seo',
+    title: "SaaS SEO",
+    description: "Rank for high-intent keywords that drive qualified trials and demos.",
+    icon: "seo",
+    href: "/services/seo",
   },
   {
-    title: 'Demand Generation',
-    description: 'Multi-channel campaigns that fill your pipeline with qualified leads.',
-    icon: 'paid-media',
-    href: '/services/paid-media',
+    title: "Demand Generation",
+    description: "Multi-channel campaigns that fill your pipeline with qualified leads.",
+    icon: "paid-media",
+    href: "/services/paid-media",
   },
   {
-    title: 'Content Marketing',
-    description: 'Thought leadership content that builds trust and authority.',
-    icon: 'content-marketing',
-    href: '/services/content-marketing',
+    title: "Content Marketing",
+    description: "Thought leadership content that builds trust and authority.",
+    icon: "content-marketing",
+    href: "/services/content-marketing",
   },
   {
-    title: 'Marketing Automation',
-    description: 'Automated nurture sequences that convert trials to paid users.',
-    icon: 'email-automation',
-    href: '/services/email-automation',
+    title: "Marketing Automation",
+    description: "Automated nurture sequences that convert trials to paid users.",
+    icon: "email-automation",
+    href: "/services/email-automation",
   },
 ];
 
 const results = [
-  { metric: 'Trial Signups', value: '+280%', improvement: 'in 6 months' },
-  { metric: 'Demo Requests', value: '+156%', improvement: 'quarter over quarter' },
-  { metric: 'CAC Reduction', value: '-45%', improvement: 'year over year' },
-  { metric: 'ARR Growth', value: '+$2.4M', improvement: 'annual' },
+  { metric: "Trial Signups", value: "+280%", improvement: "in 6 months" },
+  { metric: "Demo Requests", value: "+156%", improvement: "quarter over quarter" },
+  { metric: "CAC Reduction", value: "-45%", improvement: "year over year" },
+  { metric: "ARR Growth", value: "+$2.4M", improvement: "annual" },
 ];
 ---
 
-<BaseLayout 
-  title="Marketing for SaaS Companies" 
+<BaseLayout
+  title="Marketing for SaaS Companies"
   description="Specialized digital marketing for B2B SaaS companies. Drive trials, demos, and revenue with strategies designed for subscription businesses."
 >
   <!-- Hero -->
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6"
+          >
             <span class="text-sm text-electric-400 font-medium">Industry Focus</span>
           </div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
             Marketing for <span class="text-electric-400 neon-text">SaaS Companies</span>
           </h1>
           <p class="text-lg text-gray-400 leading-relaxed mb-8">
-            Drive trials, demos, and revenue with marketing strategies built specifically for B2B SaaS. We understand your unique challenges: long sales cycles, high CAC, and the need to demonstrate ROI fast.
+            Drive trials, demos, and revenue with marketing strategies built specifically for B2B
+            SaaS. We understand your unique challenges: long sales cycles, high CAC, and the need to
+            demonstrate ROI fast.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <Button href="/contact" variant="primary">Get a SaaS Marketing Audit</Button>
             <Button href="/work" variant="secondary">View SaaS Case Studies</Button>
           </div>
         </div>
-        
+
         <div class="glass-card p-8">
           <h3 class="font-display text-xl font-semibold text-white mb-6">SaaS Results</h3>
           <div class="grid grid-cols-2 gap-6">
-            {results.map((result) => (
-              <div class="text-center">
-                <div class="text-3xl font-display font-bold text-electric-400 neon-text">{result.value}</div>
-                <div class="text-sm text-gray-500 mt-1">{result.metric}</div>
-                <div class="text-xs text-green-400 mt-1">{result.improvement}</div>
-              </div>
-            ))}
+            {
+              results.map((result) => (
+                <div class="text-center">
+                  <div class="text-3xl font-display font-bold text-electric-400 neon-text">
+                    {result.value}
+                  </div>
+                  <div class="text-sm text-gray-500 mt-1">{result.metric}</div>
+                  <div class="text-xs text-green-400 mt-1">{result.improvement}</div>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -97,21 +121,33 @@ const results = [
           We've worked with 50+ SaaS companies and understand the unique hurdles you face.
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        {challenges.map((challenge) => (
-          <div class="glass-card p-6 flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-electric-500/20 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
+        {
+          challenges.map((challenge) => (
+            <div class="glass-card p-6 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-electric-500/20 flex items-center justify-center flex-shrink-0">
+                <svg
+                  class="w-5 h-5 text-electric-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-white mb-2">{challenge.title}</h3>
+                <p class="text-sm text-gray-400">{challenge.description}</p>
+              </div>
             </div>
-            <div>
-              <h3 class="font-semibold text-white mb-2">{challenge.title}</h3>
-              <p class="text-sm text-gray-400">{challenge.description}</p>
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </section>
@@ -124,11 +160,9 @@ const results = [
           Services for <span class="text-electric-400">SaaS</span>
         </h2>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service) => (
-          <ServiceCard {...service} />
-        ))}
+        {services.map((service) => <ServiceCard {...service} />)}
       </div>
     </div>
   </section>
@@ -137,17 +171,16 @@ const results = [
   <section class="section">
     <div class="container-custom">
       <div class="glass-card p-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
           <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
             Ready to Accelerate Your SaaS Growth?
           </h2>
           <p class="text-gray-400 max-w-xl mx-auto mb-8">
-            Schedule a free SaaS marketing audit. We'll analyze your current efforts and identify quick wins for immediate impact.
+            Schedule a free SaaS marketing audit. We'll analyze your current efforts and identify
+            quick wins for immediate impact.
           </p>
-          <Button href="/contact" variant="primary" size="lg">
-            Get Your Free Audit
-          </Button>
+          <Button href="/contact" variant="primary" size="lg"> Get Your Free Audit </Button>
         </div>
       </div>
     </div>

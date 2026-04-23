@@ -88,8 +88,8 @@ TypeScript path aliases are configured in `tsconfig.json` for cleaner imports:
 Example usage:
 
 ```typescript
-import Button from '@components/Button.astro';
-import BaseLayout from '@layouts/BaseLayout.astro';
+import Button from "@components/Button.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
 ```
 
 ## Getting Started
@@ -158,15 +158,15 @@ Add new blog posts in `src/content/blog/` with frontmatter:
 title: "Post Title"
 description: "Post description"
 pubDate: 2024-01-15
-updatedDate: 2024-02-01  # Optional
+updatedDate: 2024-02-01 # Optional
 author: "Author Name"
-authorImage: "/path/to/author.jpg"  # Optional
-image: "/path/to/image.jpg"  # Optional
-imageAlt: "Image description"  # Optional
+authorImage: "/path/to/author.jpg" # Optional
+image: "/path/to/image.jpg" # Optional
+imageAlt: "Image description" # Optional
 category: "Category"
 tags: ["tag1", "tag2"]
-featured: false  # Optional, defaults to false
-readingTime: "5 min read"  # Optional
+featured: false # Optional, defaults to false
+readingTime: "5 min read" # Optional
 ---
 ```
 
@@ -183,14 +183,14 @@ solution: "The solution description"
 results:
   - metric: "Metric Name"
     value: "Value"
-    improvement: "Improvement"  # Optional
-testimonial:  # Optional
+    improvement: "Improvement" # Optional
+testimonial: # Optional
   quote: "Client testimonial"
   author: "Client Name"
   role: "Client Role"
-image: "/path/to/image.jpg"  # Optional
-imageAlt: "Image description"  # Optional
-featured: false  # Optional, defaults to false
+image: "/path/to/image.jpg" # Optional
+imageAlt: "Image description" # Optional
+featured: false # Optional, defaults to false
 publishedAt: 2024-01-15
 ---
 ```
@@ -200,20 +200,13 @@ publishedAt: 2024-01-15
 #### Button Component
 
 ```astro
-<Button href="/contact" variant="primary" size="lg">
-  Get Started
-</Button>
+<Button href="/contact" variant="primary" size="lg"> Get Started </Button>
 ```
 
 #### Service Card
 
 ```astro
-<ServiceCard
-  title="SEO"
-  description="Description"
-  icon="seo"
-  href="/services/seo"
-/>
+<ServiceCard title="SEO" description="Description" icon="seo" href="/services/seo" />
 ```
 
 #### Pricing Card
@@ -277,7 +270,7 @@ npm run build
 Update site URL in `astro.config.mjs`:
 
 ```javascript
-site: 'https://yourdomain.com'
+site: "https://yourdomain.com";
 ```
 
 ## Testing

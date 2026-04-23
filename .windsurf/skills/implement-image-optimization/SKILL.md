@@ -31,6 +31,7 @@ grep -r "<img" src/ --include="*.astro" --include="*.tsx"
 ```
 
 Common locations:
+
 - Component files in `src/components/`
 - Page files in `src/pages/`
 - Layout files in `src/layouts/`
@@ -40,31 +41,37 @@ Common locations:
 ### Basic Replacement Pattern
 
 **Before:**
+
 ```astro
 <img src="/images/logo.png" alt="Company Logo" />
 ```
 
 **After:**
+
 ```astro
 ---
-import { Image } from 'astro:assets';
-import logo from '/images/logo.png';
+import { Image } from "astro:assets";
+import logo from "/images/logo.png";
 ---
+
 <Image src={logo} alt="Company Logo" />
 ```
 
 ### For Remote Images
 
 **Before:**
+
 ```astro
 <img src="https://example.com/image.jpg" alt="Remote Image" />
 ```
 
 **After:**
+
 ```astro
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 ---
+
 <Image src="https://example.com/image.jpg" alt="Remote Image" />
 ```
 
@@ -73,6 +80,7 @@ import { Image } from 'astro:assets';
 ### Components with Images
 
 Check these components for img tags:
+
 - `AuthorBio.astro` - Author avatar
 - `ClientLogos.astro` - Client logos
 - `CaseStudyCard.astro` - Case study images
@@ -84,17 +92,11 @@ Check these components for img tags:
 
 ```astro
 ---
-import { Image } from 'astro:assets';
-import authorImage from '/images/author.jpg';
+import { Image } from "astro:assets";
+import authorImage from "/images/author.jpg";
 ---
 
-<Image 
-  src={authorImage} 
-  alt={authorName} 
-  width={200} 
-  height={200} 
-  class="rounded-full"
-/>
+<Image src={authorImage} alt={authorName} width={200} height={200} class="rounded-full" />
 ```
 
 ## Step 4: Update Page Files
@@ -102,6 +104,7 @@ import authorImage from '/images/author.jpg';
 ### Pages with Images
 
 Check these pages for img tags:
+
 - `index.astro` - Hero images, feature images
 - `about.astro` - Team photos, office images
 - `team.astro` - Team member photos
@@ -112,17 +115,11 @@ Check these pages for img tags:
 
 ```astro
 ---
-import { Image } from 'astro:assets';
-import heroImage from '/images/hero-bg.jpg';
+import { Image } from "astro:assets";
+import heroImage from "/images/hero-bg.jpg";
 ---
 
-<Image 
-  src={heroImage} 
-  alt="Hero background" 
-  width={1920} 
-  height={1080} 
-  class="w-full h-auto"
-/>
+<Image src={heroImage} alt="Hero background" width={1920} height={1080} class="w-full h-auto" />
 ```
 
 ## Step 5: Configure Image Options
@@ -139,10 +136,10 @@ import heroImage from '/images/hero-bg.jpg';
 ### Responsive Images
 
 ```astro
-<Image 
-  src={image} 
-  alt="Description" 
-  width={1920} 
+<Image
+  src={image}
+  alt="Description"
+  width={1920}
   height={1080}
   sizes="(max-width: 768px) 100vw, 50vw"
 />
@@ -155,6 +152,7 @@ import heroImage from '/images/hero-bg.jpg';
 For blog posts with frontmatter images:
 
 **Before:**
+
 ```yaml
 ---
 image: "/blog/post-image.jpg"
@@ -163,21 +161,15 @@ imageAlt: "Post description"
 ```
 
 **In the blog post template:**
+
 ```astro
 ---
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 const { image, imageAlt } = Astro.props;
 const postImage = image ? await import(image) : null;
 ---
 
-{postImage && (
-  <Image 
-    src={postImage.default} 
-    alt={imageAlt} 
-    width={1200} 
-    height={630} 
-  />
-)}
+{postImage && <Image src={postImage.default} alt={imageAlt} width={1200} height={630} />}
 ```
 
 ### Case Study Images
@@ -195,7 +187,7 @@ export default defineConfig({
   image: {
     // Default configuration
     service: {
-      entrypoint: 'astro/assets/sharp',
+      entrypoint: "astro/assets/sharp",
     },
   },
 });
@@ -234,6 +226,7 @@ npm run dev
 ### Module Not Found
 
 If you see "module not found" for images:
+
 - Ensure image paths are correct
 - Check that images are in `public/` or imported from `src/`
 - Verify file extensions are correct
@@ -241,6 +234,7 @@ If you see "module not found" for images:
 ### Sharp Installation Errors
 
 If Sharp fails to install:
+
 - Delete `node_modules` and `package-lock.json`
 - Run `npm install` again
 - Ensure you have build tools installed (on some systems)
@@ -248,6 +242,7 @@ If Sharp fails to install:
 ### Build Errors
 
 If build fails after Image component changes:
+
 - Check that all images have `width` and `height`
 - Verify all images have `alt` text
 - Ensure `import` paths are correct
@@ -256,6 +251,7 @@ If build fails after Image component changes:
 ## Performance Benefits
 
 After implementing Image optimization:
+
 - Images are automatically converted to WebP/AVIF
 - Images are resized to appropriate dimensions
 - Lazy loading is applied by default
@@ -266,6 +262,7 @@ After implementing Image optimization:
 ## Accessibility
 
 Ensure all images have:
+
 - Descriptive `alt` text
 - Empty `alt=""` for decorative images
 - Proper aspect ratios to prevent layout shift
@@ -274,6 +271,7 @@ Ensure all images have:
 ## Next Steps
 
 After implementation:
+
 1. Run Lighthouse audit to verify performance improvements
 2. Check Core Web Vitals (LCP, CLS)
 3. Test on mobile devices

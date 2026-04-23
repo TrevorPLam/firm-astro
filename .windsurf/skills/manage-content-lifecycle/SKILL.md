@@ -12,6 +12,7 @@ This skill guides you through managing the lifecycle of blog posts and case stud
 ### When to Update Content
 
 Update existing content when:
+
 - Information becomes outdated
 - New developments in the topic
 - Statistics or data need refreshing
@@ -70,6 +71,7 @@ tags: ["SEO", "Marketing"]
 ### When to Archive Content
 
 Archive content when:
+
 - Information is significantly outdated
 - Topic is no longer relevant
 - Content has been replaced by newer version
@@ -121,6 +123,7 @@ tags: ["SEO", "Marketing"]
 ### When to Migrate Content
 
 Migrate content when:
+
 - Moving from another platform
 - Restructuring content organization
 - Changing URL structure
@@ -170,6 +173,7 @@ Migrate content when:
 ### Featured Content Rotation
 
 Rotate featured content monthly:
+
 - Select 2-3 blog posts to feature
 - Select 2-3 case studies to feature
 - Update homepage and index pages
@@ -178,6 +182,7 @@ Rotate featured content monthly:
 ### Selection Criteria
 
 Choose featured content based on:
+
 - Recent publication (last 3-6 months)
 - High engagement metrics
 - Representative of services
@@ -207,6 +212,7 @@ Choose featured content based on:
 ### Review Checklist
 
 Review content quarterly for:
+
 - Accuracy of information
 - Broken links
 - Outdated statistics
@@ -239,6 +245,7 @@ Review content quarterly for:
 ### When to Delete Content
 
 Delete content only when:
+
 - Content is completely irrelevant
 - No replacement exists
 - Legal or compliance reasons
@@ -268,6 +275,7 @@ Delete content only when:
 ### Metrics to Track
 
 Track these metrics for content decisions:
+
 - Page views
 - Unique visitors
 - Time on page
@@ -289,6 +297,7 @@ Track these metrics for content decisions:
 ### SEO Updates
 
 Update SEO when:
+
 - Keywords change
 - Search intent shifts
 - Competition increases
@@ -319,6 +328,7 @@ Update SEO when:
 ### Recovery Process
 
 If content is lost or corrupted:
+
 1. Restore from version control
 2. Rebuild search index
 3. Test in development
@@ -367,6 +377,7 @@ grep -r "\[.*\](/" src/content/
 ## Best Practices
 
 ### Content Updates
+
 - Always add `updatedDate` when updating
 - Preserve original `pubDate`
 - Document changes in changelog
@@ -374,6 +385,7 @@ grep -r "\[.*\](/" src/content/
 - Monitor performance
 
 ### Content Archival
+
 - Never delete without archival
 - Add redirects for URL changes
 - Update internal links
@@ -381,6 +393,7 @@ grep -r "\[.*\](/" src/content/
 - Document archival reason
 
 ### Content Migration
+
 - Preserve original dates
 - Validate frontmatter
 - Test thoroughly

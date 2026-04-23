@@ -1,10 +1,10 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import CaseStudyFilter from '../../components/CaseStudyFilter';
-import ErrorBoundary from '../../components/ErrorBoundary';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudyFilter from "../../components/CaseStudyFilter";
+import ErrorBoundary from "../../components/ErrorBoundary";
+import { getCollection } from "astro:content";
 
-const caseStudies = await getCollection('caseStudies');
+const caseStudies = await getCollection("caseStudies");
 
 // Serialize case studies for client-side component
 const caseStudiesData = caseStudies.map((cs) => ({
@@ -19,20 +19,21 @@ const caseStudiesData = caseStudies.map((cs) => ({
 }));
 ---
 
-<BaseLayout 
-  title="Case Studies" 
+<BaseLayout
+  title="Case Studies"
   description="Real results from real clients. Discover how we've helped brands achieve extraordinary growth through data-driven marketing strategies."
 >
   <!-- Hero -->
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="max-w-3xl">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
           Our <span class="text-electric-400 neon-text">Work</span>
         </h1>
         <p class="text-lg text-gray-400 leading-relaxed">
-          Real results from real clients. Discover how we've helped brands achieve extraordinary growth through data-driven marketing strategies.
+          Real results from real clients. Discover how we've helped brands achieve extraordinary
+          growth through data-driven marketing strategies.
         </p>
       </div>
     </div>
@@ -41,23 +42,38 @@ const caseStudiesData = caseStudies.map((cs) => ({
   <!-- Case Studies Grid with Filter -->
   <section class="section">
     <div class="container-custom">
-      {caseStudiesData.length > 0 ? (
-        <ErrorBoundary>
-          <CaseStudyFilter caseStudies={caseStudiesData} client:load />
-        </ErrorBoundary>
-      ) : (
-        <div class="glass-card p-12 text-center">
-          <div class="w-16 h-16 rounded-full bg-electric-500/20 flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-            </svg>
+      {
+        caseStudiesData.length > 0 ? (
+          <ErrorBoundary>
+            <CaseStudyFilter caseStudies={caseStudiesData} client:load />
+          </ErrorBoundary>
+        ) : (
+          <div class="glass-card p-12 text-center">
+            <div class="w-16 h-16 rounded-full bg-electric-500/20 flex items-center justify-center mx-auto mb-6">
+              <svg
+                class="w-8 h-8 text-electric-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                />
+              </svg>
+            </div>
+            <h3 class="font-display text-xl font-semibold text-white mb-2">
+              Case Studies Coming Soon
+            </h3>
+            <p class="text-gray-400 max-w-md mx-auto">
+              We're preparing detailed case studies showcasing our work. Check back soon to see real
+              results from our clients.
+            </p>
           </div>
-          <h3 class="font-display text-xl font-semibold text-white mb-2">Case Studies Coming Soon</h3>
-          <p class="text-gray-400 max-w-md mx-auto">
-            We're preparing detailed case studies showcasing our work. Check back soon to see real results from our clients.
-          </p>
-        </div>
-      )}
+        )
+      }
     </div>
   </section>
 
@@ -65,15 +81,19 @@ const caseStudiesData = caseStudies.map((cs) => ({
   <section class="section">
     <div class="container-custom">
       <div class="glass-card p-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
           <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
             Want Similar Results for Your Business?
           </h2>
           <p class="text-gray-400 max-w-xl mx-auto mb-8">
-            Let's discuss how we can help you achieve your growth goals with data-driven marketing strategies.
+            Let's discuss how we can help you achieve your growth goals with data-driven marketing
+            strategies.
           </p>
-          <a href="/contact" class="btn-primary inline-flex items-center justify-center px-8 py-4 text-base">
+          <a
+            href="/contact"
+            class="btn-primary inline-flex items-center justify-center px-8 py-4 text-base"
+          >
             Start Your Success Story
           </a>
         </div>

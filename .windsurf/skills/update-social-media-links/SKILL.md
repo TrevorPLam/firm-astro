@@ -16,6 +16,7 @@ grep -r "twitter\|facebook\|linkedin\|instagram\|youtube" src/ --include="*.astr
 ```
 
 Common locations:
+
 - `src/components/Footer.astro` - Footer social links
 - `src/layouts/BaseLayout.astro` - Header social links
 - `src/pages/team/[slug].astro` - Team member social links
@@ -24,6 +25,7 @@ Common locations:
 ## Step 2: Gather Real Social Media URLs
 
 Collect the actual social media URLs for the business:
+
 - Twitter/X: https://twitter.com/yourhandle
 - Facebook: https://facebook.com/yourpage
 - LinkedIn: https://linkedin.com/company/yourcompany
@@ -35,6 +37,7 @@ If a platform is not used, remove the link entirely.
 ## Step 3: Update Footer.astro
 
 ### Before (Placeholder)
+
 ```astro
 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
   <TwitterIcon />
@@ -42,17 +45,24 @@ If a platform is not used, remove the link entirely.
 ```
 
 ### After (Real URL)
+
 ```astro
-<a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+<a
+  href="https://twitter.com/yourhandle"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Follow us on Twitter"
+>
   <TwitterIcon />
 </a>
 ```
 
 ### Remove Unused Platforms
+
 If a platform is not used, remove the entire link element:
+
 ```astro
-<!-- Remove this section if not using Facebook -->
-<!-- <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+<!-- Remove this section if not using Facebook --><!-- <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
   <FacebookIcon />
 </a> -->
 ```
@@ -64,10 +74,16 @@ Check for social media links in the header or navigation. Update with real URLs 
 ## Step 5: Update Team Member Pages
 
 ### For Individual Team Members
+
 If team members have personal social links, update them in `src/pages/team/[slug].astro`:
 
 ```astro
-<a href="https://linkedin.com/in/teammember" target="_blank" rel="noopener noreferrer" aria-label="View Team Member's LinkedIn profile">
+<a
+  href="https://linkedin.com/in/teammember"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="View Team Member's LinkedIn profile"
+>
   <LinkedInIcon />
 </a>
 ```
@@ -79,7 +95,9 @@ Check `src/pages/about.astro` for any social media links and update them.
 ## Accessibility Requirements
 
 ### ARIA Labels
+
 All social media links must have descriptive `aria-label` attributes:
+
 - "Follow us on Twitter"
 - "Visit our Facebook page"
 - "Connect on LinkedIn"
@@ -87,7 +105,9 @@ All social media links must have descriptive `aria-label` attributes:
 - "Watch our YouTube channel"
 
 ### Icon-Only Links
+
 For icon-only links (no text), `aria-label` is required:
+
 ```astro
 <a href="https://twitter.com/yourhandle" aria-label="Follow us on Twitter">
   <TwitterIcon />
@@ -95,7 +115,9 @@ For icon-only links (no text), `aria-label` is required:
 ```
 
 ### Text + Icon Links
+
 If the link has text, ensure the text is descriptive:
+
 ```astro
 <a href="https://twitter.com/yourhandle">
   <TwitterIcon />
@@ -106,7 +128,9 @@ If the link has text, ensure the text is descriptive:
 ## Security Requirements
 
 ### External Link Attributes
+
 All external social media links must have:
+
 - `target="_blank"` - Opens in new tab
 - `rel="noopener noreferrer"` - Security best practice
 
@@ -119,13 +143,17 @@ All external social media links must have:
 ## Consistency Check
 
 ### Same URLs Across All Pages
+
 Ensure the same social media URLs are used consistently:
+
 - Company Twitter handle should be the same everywhere
 - Company Facebook page should be the same everywhere
 - Company LinkedIn should be the same everywhere
 
 ### Verify Links Work
+
 After updating, test each link:
+
 - Click each social media link
 - Verify it opens the correct profile/page
 - Check for 404 errors
@@ -134,6 +162,7 @@ After updating, test each link:
 ## Common Patterns
 
 ### Social Link Component
+
 Consider creating a reusable `SocialLink.astro` component:
 
 ```astro
@@ -147,10 +176,10 @@ interface Props {
 const { href, platform, icon: Icon } = Astro.props;
 ---
 
-<a 
-  href={href} 
-  target="_blank" 
-  rel="noopener noreferrer" 
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
   aria-label={`Follow us on ${platform}`}
   class="social-link"
 >
@@ -159,6 +188,7 @@ const { href, platform, icon: Icon } = Astro.props;
 ```
 
 Usage:
+
 ```astro
 <SocialLink href="https://twitter.com/yourhandle" platform="Twitter" icon={TwitterIcon} />
 ```
@@ -166,19 +196,23 @@ Usage:
 ## Testing
 
 ### Manual Testing
+
 1. Click each social media link
 2. Verify it opens in a new tab
 3. Check that the correct profile/page loads
 4. Verify the profile/page is active and current
 
 ### Accessibility Testing
+
 1. Test with screen reader (NVDA, JAWS, VoiceOver)
 2. Verify aria-labels are announced
 3. Check keyboard navigation (Tab to each link)
 4. Verify focus indicators are visible
 
 ### Link Validation
+
 Use a link checker tool to verify:
+
 - All links return 200 status
 - No broken links
 - No redirects to wrong pages
@@ -186,6 +220,7 @@ Use a link checker tool to verify:
 ## Documentation
 
 After updating:
+
 1. Document the social media handles in README.md
 2. Update any marketing materials
 3. Inform team of the changes
@@ -196,13 +231,28 @@ After updating:
 ```astro
 <footer>
   <div class="social-links">
-    <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter">
+    <a
+      href="https://twitter.com/yourhandle"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow us on Twitter"
+    >
       <TwitterIcon />
     </a>
-    <a href="https://linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+    <a
+      href="https://linkedin.com/company/yourcompany"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Connect on LinkedIn"
+    >
       <LinkedInIcon />
     </a>
-    <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+    <a
+      href="https://instagram.com/yourhandle"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow us on Instagram"
+    >
       <InstagramIcon />
     </a>
   </div>
@@ -212,6 +262,7 @@ After updating:
 ## Next Steps
 
 After implementation:
+
 1. Test all links in development
 2. Deploy to production
 3. Verify links work in production

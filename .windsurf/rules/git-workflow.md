@@ -11,17 +11,20 @@ Follow these git workflow practices for this project:
 ## Branching Strategy
 
 ### Main Branch
+
 - `main` is the production branch
 - All features branch from `main`
 - Direct commits to `main` are discouraged (use PRs)
 
 ### Feature Branches
+
 - Create feature branches from `main`
 - Use descriptive branch names: `feature/add-blog-post`, `fix/contact-form`
 - Keep branches focused on a single feature or fix
 - Delete branches after merging
 
 ### Branch Naming
+
 - `feature/` - new features
 - `fix/` - bug fixes
 - `docs/` - documentation changes
@@ -32,7 +35,9 @@ Follow these git workflow practices for this project:
 ## Commit Conventions
 
 ### Conventional Commits
+
 Use Conventional Commits format:
+
 ```
 <type>[optional scope]: <description>
 
@@ -42,6 +47,7 @@ Use Conventional Commits format:
 ```
 
 ### Common Types
+
 - `feat` - new feature
 - `fix` - bug fix
 - `docs` - documentation changes
@@ -53,6 +59,7 @@ Use Conventional Commits format:
 - `ci` - CI/CD changes
 
 ### Examples
+
 ```
 feat(contact): add Calendly integration
 fix(seo): update canonical URLs on blog posts
@@ -63,11 +70,13 @@ chore(deps): upgrade Astro to 5.18.1
 ```
 
 ### 50/72 Rule
+
 - Keep subject line under 50 characters
 - Wrap body at 72 characters
 - Subject line should be imperative mood ("add" not "added")
 
 ### Commit Body
+
 - Explain why, not what (diff shows what)
 - Include context and alternatives considered
 - Reference related issues: `Fixes #123`
@@ -75,6 +84,7 @@ chore(deps): upgrade Astro to 5.18.1
 ## Pull Request Process
 
 ### PR Requirements
+
 - All PRs must pass CI/CD checks
 - Unit tests (Vitest) must pass
 - E2E tests (Playwright) must pass
@@ -82,7 +92,9 @@ chore(deps): upgrade Astro to 5.18.1
 - Code review required before merge
 
 ### PR Description
+
 Include in PR description:
+
 - Description of changes
 - Related issue number
 - Screenshots for UI changes
@@ -90,6 +102,7 @@ Include in PR description:
 - Breaking changes (if any)
 
 ### PR Approval
+
 - At least one approval required
 - Self-approval discouraged
 - Address all review comments before merge
@@ -97,12 +110,14 @@ Include in PR description:
 ## CI/CD Integration
 
 ### GitHub Actions Workflow
+
 - Triggers on push to `main` and pull requests
 - Runs build, test (Vitest), test-e2e (Playwright)
 - Deployment requires manual approval via "production" environment
 - Failed tests block deployment
 
 ### Deployment
+
 - Production deployment requires manual approval
 - Deploy to GitHub Pages
 - Cloudflare Workers deployed separately via wrangler
@@ -111,6 +126,7 @@ Include in PR description:
 ## Code Review Best Practices
 
 ### Review Focus
+
 - Code correctness and logic
 - Adherence to project conventions
 - Security considerations
@@ -118,6 +134,7 @@ Include in PR description:
 - Test coverage
 
 ### Review Etiquette
+
 - Be constructive and specific
 - Ask questions, don't just dictate
 - Explain reasoning for suggestions
@@ -126,6 +143,7 @@ Include in PR description:
 ## Common Git Commands
 
 ### Daily Workflow
+
 ```bash
 # Create feature branch
 git checkout -b feature/your-feature
@@ -139,6 +157,7 @@ git push origin feature/your-feature
 ```
 
 ### Syncing with Main
+
 ```bash
 # Update main
 git checkout main
@@ -150,6 +169,7 @@ git rebase main
 ```
 
 ### Handling Conflicts
+
 - Resolve conflicts carefully
 - Test after resolving
 - Continue rebase: `git rebase --continue`
@@ -158,7 +178,9 @@ git rebase main
 ## Git Ignore
 
 ### Files to Ignore
+
 Ensure `.gitignore` includes:
+
 ```
 node_modules/
 dist/
@@ -173,18 +195,21 @@ dist/
 ## Best Practices
 
 ### Commit Frequency
+
 - Commit often, commit small
 - Each commit should be logically complete
 - Don't commit broken code
 - Write meaningful commit messages
 
 ### History Cleanliness
+
 - Avoid squashing unless necessary
 - Keep history linear when possible
 - Use rebase for cleaning up before merge
 - Preserve important context in commits
 
 ### Collaboration
+
 - Communicate in PRs, not commits
 - Use draft PRs for work-in-progress
 - Request review when ready

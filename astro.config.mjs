@@ -1,12 +1,12 @@
-import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import react from '@astrojs/react';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
-import robotsTxt from 'astro-robots-txt';
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import robotsTxt from "astro-robots-txt";
 
 export default defineConfig({
-  site: 'https://yourdedicatedmarketer.com',
+  site: "https://yourdedicatedmarketer.com",
   integrations: [
     tailwind(),
     react(),
@@ -15,20 +15,20 @@ export default defineConfig({
     robotsTxt({
       policy: [
         {
-          userAgent: '*',
-          allow: '/',
-          disallow: ['/api/', '/admin/'],
+          userAgent: "*",
+          allow: "/",
+          disallow: ["/api/", "/admin/"],
         },
       ],
     }),
   ],
-  output: 'static',
+  output: "static",
   build: {
-    assets: '_assets',
+    assets: "_assets",
   },
   vite: {
     ssr: {
-      noExternal: ['@fontsource/inter', '@fontsource/space-grotesk'],
+      noExternal: ["@fontsource/inter", "@fontsource/space-grotesk"],
     },
   },
 });

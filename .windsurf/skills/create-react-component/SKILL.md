@@ -12,6 +12,7 @@ Create interactive React components in `src/components/` with `.tsx` extension.
 ## When to Use React
 
 Use React (.tsx) for:
+
 - Interactive forms (ContactForm)
 - Accordions and expandable content (FAQAccordion)
 - Filters and dynamic content (CaseStudyFilter)
@@ -20,6 +21,7 @@ Use React (.tsx) for:
 - User input handling
 
 Use Astro (.astro) for:
+
 - Static UI components (Button, Footer, Header)
 - Display cards (ServiceCard, TeamCard, PricingCard)
 - Layout components
@@ -28,20 +30,20 @@ Use Astro (.astro) for:
 ## Component Structure
 
 ```tsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 interface Props {
   title: string;
   description?: string;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   onAction?: () => void;
 }
 
-export default function ComponentName({ 
-  title, 
-  description = '', 
-  variant = 'primary',
-  onAction 
+export default function ComponentName({
+  title,
+  description = "",
+  variant = "primary",
+  onAction,
 }: Props) {
   const [state, setState] = useState(initialValue);
   const baseId = useId();
@@ -71,12 +73,14 @@ export default function ComponentName({
 ## TypeScript Best Practices
 
 ### Props Interface
+
 - Define interfaces for all props
 - Use optional properties with `?`
 - Provide default values in destructuring
 - Use discriminated unions for conditional props
 
 ### Type Safety
+
 - Avoid `any` type - use `unknown` when truly unknown
 - Use proper type annotations for functions
 - Type event handlers: `FormEvent`, `MouseEvent`, etc.
@@ -86,13 +90,15 @@ export default function ComponentName({
 
 ```tsx
 // Discriminated unions for conditional rendering
-type ButtonProps = {
-  variant: 'primary';
-  primaryAction: () => void;
-} | {
-  variant: 'secondary';
-  secondaryAction: () => void;
-};
+type ButtonProps =
+  | {
+      variant: "primary";
+      primaryAction: () => void;
+    }
+  | {
+      variant: "secondary";
+      secondaryAction: () => void;
+    };
 
 // Generic component
 function List<T>({ items, renderItem }: { items: T[]; renderItem: (item: T) => JSX.Element }) {
@@ -109,6 +115,7 @@ const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 ## Hooks Usage
 
 ### useState
+
 - Use for local component state
 - Initialize with proper type
 - Use functional updates for derived state
@@ -120,6 +127,7 @@ const [data, setData] = useState<DataItem[]>([]);
 ```
 
 ### useEffect
+
 - Use for side effects (API calls, subscriptions)
 - Always include cleanup for subscriptions
 - Specify all dependencies
@@ -132,7 +140,7 @@ useEffect(() => {
     setData(result);
   };
   fetchData();
-  
+
   return () => {
     // Cleanup
   };
@@ -140,6 +148,7 @@ useEffect(() => {
 ```
 
 ### useRef
+
 - Use for DOM references
 - Use for persisting values across renders
 - Access with `.current`
@@ -150,16 +159,18 @@ const previousValue = useRef(value);
 ```
 
 ### useId
+
 - Use for unique IDs (form labels, error messages)
 - Generates stable IDs across server/client
 - Accessible for ARIA attributes
 
 ```tsx
 const baseId = useId();
-<input id={`${baseId}-name`} aria-describedby={`${baseId}-error`} />
+<input id={`${baseId}-name`} aria-describedby={`${baseId}-error`} />;
 ```
 
 ### useCallback and useMemo
+
 - Use `useCallback` for functions passed to children
 - Use `useMemo` for expensive computations
 - Don't over-optimize prematurely
@@ -177,19 +188,20 @@ const expensiveValue = useMemo(() => {
 ## React 19 New Hooks
 
 ### useOptimistic
+
 Manage optimistic UI updates during async operations:
 
 ```tsx
-import { useOptimistic } from 'react';
+import { useOptimistic } from "react";
 
 function TodoList({ todos, addTodo }) {
-  const [optimisticTodos, addOptimisticTodo] = useOptimistic(
-    todos,
-    (state, newTodo) => [...state, { ...newTodo, sending: true }]
-  );
+  const [optimisticTodos, addOptimisticTodo] = useOptimistic(todos, (state, newTodo) => [
+    ...state,
+    { ...newTodo, sending: true },
+  ]);
 
   const handleSubmit = async (formData) => {
-    const newTodo = { id: Date.now(), text: formData.get('text') };
+    const newTodo = { id: Date.now(), text: formData.get("text") };
     addOptimisticTodo(newTodo);
     await addTodo(newTodo);
   };
@@ -198,9 +210,9 @@ function TodoList({ todos, addTodo }) {
     <form action={handleSubmit}>
       <input name="text" />
       <button type="submit">Add</button>
-      {optimisticTodos.map(todo => (
+      {optimisticTodos.map((todo) => (
         <div key={todo.id}>
-          {todo.text} {todo.sending && '(sending...)'}
+          {todo.text} {todo.sending && "(sending...)"}
         </div>
       ))}
     </form>
@@ -209,15 +221,16 @@ function TodoList({ todos, addTodo }) {
 ```
 
 ### useActionState
+
 Handle form state with Actions pattern:
 
 ```tsx
-import { useActionState } from 'react';
+import { useActionState } from "react";
 
 async function submitForm(prevState, formData) {
-  const email = formData.get('email');
+  const email = formData.get("email");
   // Process form submission
-  return { success: true, message: 'Form submitted!' };
+  return { success: true, message: "Form submitted!" };
 }
 
 function ContactForm() {
@@ -227,7 +240,7 @@ function ContactForm() {
     <form action={formAction}>
       <input name="email" type="email" required />
       <button type="submit" disabled={isPending}>
-        {isPending ? 'Submitting...' : 'Submit'}
+        {isPending ? "Submitting..." : "Submit"}
       </button>
       {state?.message && <p>{state.message}</p>}
     </form>
@@ -236,16 +249,17 @@ function ContactForm() {
 ```
 
 ### useFormStatus
+
 Track form submission status in nested components:
 
 ```tsx
-import { useFormStatus } from 'react';
+import { useFormStatus } from "react";
 
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <button type="submit" disabled={pending}>
-      {pending ? 'Submitting...' : 'Submit'}
+      {pending ? "Submitting..." : "Submit"}
     </button>
   );
 }
@@ -263,6 +277,7 @@ function ContactForm() {
 ## Form Patterns
 
 ### Controlled Components
+
 - Use controlled components with state
 - Implement proper validation
 - Show loading states during async operations
@@ -275,7 +290,7 @@ const [errors, setErrors] = useState<Partial<FormData>>({});
 
 const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
   const { name, value } = e.target;
-  setFormData(prev => ({ ...prev, [name]: value }));
+  setFormData((prev) => ({ ...prev, [name]: value }));
 };
 
 const handleSubmit = async (e: FormEvent) => {
@@ -292,6 +307,7 @@ const handleSubmit = async (e: FormEvent) => {
 ```
 
 ### Form Validation
+
 - Validate on change or blur
 - Show inline error messages
 - Use ARIA attributes for accessibility
@@ -306,17 +322,20 @@ const handleSubmit = async (e: FormEvent) => {
   onChange={handleChange}
   aria-invalid={!!errors.email}
   aria-describedby={`${baseId}-email-error`}
-/>
-{errors.email && (
-  <p id={`${baseId}-email-error`} className="error">
-    {errors.email}
-  </p>
-)}
+/>;
+{
+  errors.email && (
+    <p id={`${baseId}-email-error`} className="error">
+      {errors.email}
+    </p>
+  );
+}
 ```
 
 ## Accessibility
 
 ### ARIA Attributes
+
 - Use `aria-invalid` for form validation errors
 - Use `aria-describedby` for error messages
 - Use `aria-live` for dynamic content updates
@@ -324,12 +343,14 @@ const handleSubmit = async (e: FormEvent) => {
 - Use `aria-label` for icon-only buttons
 
 ### Keyboard Navigation
+
 - Ensure all interactive elements are keyboard accessible
 - Use proper focus indicators
 - Support Tab navigation order
 - Provide keyboard alternatives for mouse actions
 
 ### Semantic HTML
+
 - Use semantic elements (button, form, input)
 - Associate labels with form elements
 - Use proper heading hierarchy
@@ -338,16 +359,20 @@ const handleSubmit = async (e: FormEvent) => {
 ## Styling
 
 ### Tailwind CSS
+
 - Use Tailwind CSS classes
 - Maintain consistency with Astro components
 - Use dark mode styling with `dark:` prefix
 - Use electric blue accent colors
 
 ### Styling Pattern
+
 ```tsx
-<div className="dark:bg-dark-900 text-white">
+<div className="text-white dark:bg-dark-900">
   <div className="glass-card shadow-neon-md">
-    <Button variant="primary" size="lg">Action</Button>
+    <Button variant="primary" size="lg">
+      Action
+    </Button>
   </div>
 </div>
 ```
@@ -355,6 +380,7 @@ const handleSubmit = async (e: FormEvent) => {
 ## Performance
 
 ### Optimization
+
 - Keep component state minimal
 - Avoid unnecessary re-renders
 - Use `useCallback` and `useMemo` when needed
@@ -362,6 +388,7 @@ const handleSubmit = async (e: FormEvent) => {
 - Use React.memo for expensive components
 
 ### React.memo
+
 ```tsx
 export default React.memo(function ComponentName({ prop }: Props) {
   // Component logic
@@ -371,20 +398,22 @@ export default React.memo(function ComponentName({ prop }: Props) {
 ## Testing
 
 ### Unit Tests
+
 - Write tests for component logic
 - Test user interactions
 - Test edge cases
 - Mock external dependencies
 
 ### Example Test
-```tsx
-import { render, screen } from '@testing-library/react';
-import ComponentName from './ComponentName';
 
-describe('ComponentName', () => {
-  it('should render title', () => {
+```tsx
+import { render, screen } from "@testing-library/react";
+import ComponentName from "./ComponentName";
+
+describe("ComponentName", () => {
+  it("should render title", () => {
     render(<ComponentName title="Test" />);
-    expect(screen.getByText('Test')).toBeInTheDocument();
+    expect(screen.getByText("Test")).toBeInTheDocument();
   });
 });
 ```
@@ -398,40 +427,50 @@ describe('ComponentName', () => {
 ## Import Path Aliases
 
 Use path aliases instead of relative imports:
+
 ```tsx
-import Button from '@components/Button.astro';
-import { someFunction } from '@utils/helpers';
+import Button from "@components/Button.astro";
+import { someFunction } from "@utils/helpers";
 ```
 
 ## Common Patterns
 
 ### Event Delegation
+
 ```tsx
 const handleItemClick = (item: Item) => {
   setSelectedItem(item);
 };
 
-{items.map(item => (
-  <button key={item.id} onClick={() => handleItemClick(item)}>
-    {item.name}
-  </button>
-))}
+{
+  items.map((item) => (
+    <button key={item.id} onClick={() => handleItemClick(item)}>
+      {item.name}
+    </button>
+  ));
+}
 ```
 
 ### Conditional Rendering
+
 ```tsx
-{isLoading && <LoadingSpinner />}
-{error && <ErrorMessage message={error} />}
-{data && <DataList items={data} />}
+{
+  isLoading && <LoadingSpinner />;
+}
+{
+  error && <ErrorMessage message={error} />;
+}
+{
+  data && <DataList items={data} />;
+}
 ```
 
 ### List Rendering
+
 ```tsx
-{items.map(item => (
-  <div key={item.id}>
-    {item.name}
-  </div>
-))}
+{
+  items.map((item) => <div key={item.id}>{item.name}</div>);
+}
 ```
 
 ## After Creation

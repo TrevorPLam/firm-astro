@@ -160,6 +160,7 @@ This should verify that all files are properly formatted without making changes.
 ### 1. Install VS Code Extensions
 
 Install these extensions in VS Code:
+
 - ESLint
 - Prettier - Code formatter
 
@@ -180,13 +181,7 @@ Add to `.vscode/settings.json`:
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "astro"
-  ]
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "astro"]
 }
 ```
 
@@ -195,6 +190,7 @@ Add to `.vscode/settings.json`:
 ### TypeScript Errors in Astro Files
 
 If you see TypeScript errors in `.astro` files:
+
 - Ensure `@typescript-eslint/parser` is installed
 - Check that the parser override in `.eslintrc.json` is correct
 - Verify `tsconfig.json` includes Astro files
@@ -202,12 +198,14 @@ If you see TypeScript errors in `.astro` files:
 ### Prettier Conflicts with ESLint
 
 If Prettier and ESLint conflict:
+
 - Ensure `eslint-config-prettier` is last in the extends array
 - This disables ESLint rules that conflict with Prettier
 
 ### Astro Plugin Not Working
 
 If Astro-specific linting doesn't work:
+
 - Verify `eslint-plugin-astro` is installed
 - Check that the parser override for `.astro` files is correct
 - Ensure `astro-eslint-parser` is installed
@@ -217,6 +215,7 @@ If Astro-specific linting doesn't work:
 ### Lint Before Commit
 
 Add a pre-commit hook to run linting (optional but recommended):
+
 ```bash
 npm install --save-dev husky lint-staged
 npx husky install
@@ -224,6 +223,7 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
 Add to `package.json`:
+
 ```json
 {
   "lint-staged": {
@@ -235,6 +235,7 @@ Add to `package.json`:
 ### CI/CD Integration
 
 Add linting to GitHub Actions workflow in `.github/workflows/ci.yml`:
+
 ```yaml
 - name: Lint
   run: npm run lint
@@ -248,6 +249,7 @@ Add linting to GitHub Actions workflow in `.github/workflows/ci.yml`:
 ### Module Not Found Errors
 
 If you see "module not found" errors:
+
 - Run `npm install` to ensure all dependencies are installed
 - Check that package versions are compatible
 - Delete `node_modules` and `package-lock.json`, then run `npm install`
@@ -255,6 +257,7 @@ If you see "module not found" errors:
 ### Linting Takes Too Long
 
 If linting is slow:
+
 - Exclude large directories in `.eslintignore`
 - Use `--cache` flag with ESLint
 - Consider using `eslint-plugin-import` for better performance
@@ -262,6 +265,7 @@ If linting is slow:
 ## Next Steps
 
 After setup:
+
 1. Run `npm run lint:fix` to auto-fix existing issues
 2. Manually review and fix remaining issues
 3. Commit the configuration files

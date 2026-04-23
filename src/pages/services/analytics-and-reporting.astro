@@ -1,64 +1,88 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Button from '../../components/Button.astro';
-import ProcessStep from '../../components/ProcessStep.astro';
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import ProcessStep from "../../components/ProcessStep.astro";
 
 const benefits = [
-  'Make data-driven decisions',
-  'Track marketing ROI accurately',
-  'Identify growth opportunities',
-  'Optimize campaign performance',
-  'Unify data from multiple sources',
-  'Automate reporting workflows',
+  "Make data-driven decisions",
+  "Track marketing ROI accurately",
+  "Identify growth opportunities",
+  "Optimize campaign performance",
+  "Unify data from multiple sources",
+  "Automate reporting workflows",
 ];
 
 const capabilities = [
-  { name: 'Google Analytics 4', desc: 'Advanced tracking setup' },
-  { name: 'Custom Dashboards', desc: 'Real-time insights' },
-  { name: 'Attribution Modeling', desc: 'Multi-touch analysis' },
-  { name: 'Conversion Tracking', desc: 'Event & goal setup' },
-  { name: 'Data Visualization', desc: 'Clear reporting' },
-  { name: 'API Integrations', desc: 'Connect all sources' },
+  { name: "Google Analytics 4", desc: "Advanced tracking setup" },
+  { name: "Custom Dashboards", desc: "Real-time insights" },
+  { name: "Attribution Modeling", desc: "Multi-touch analysis" },
+  { name: "Conversion Tracking", desc: "Event & goal setup" },
+  { name: "Data Visualization", desc: "Clear reporting" },
+  { name: "API Integrations", desc: "Connect all sources" },
 ];
 
 const processSteps = [
-  { number: '01', title: 'Audit & Assessment', description: 'Review current tracking setup and identify gaps in data collection.' },
-  { number: '02', title: 'Implementation', description: 'Set up tracking codes, events, and conversion goals across platforms.' },
-  { number: '03', title: 'Dashboard Creation', description: 'Build custom dashboards tailored to your KPIs and reporting needs.' },
-  { number: '04', title: 'Ongoing Analysis', description: 'Regular reporting, insights, and recommendations for optimization.' },
+  {
+    number: "01",
+    title: "Audit & Assessment",
+    description: "Review current tracking setup and identify gaps in data collection.",
+  },
+  {
+    number: "02",
+    title: "Implementation",
+    description: "Set up tracking codes, events, and conversion goals across platforms.",
+  },
+  {
+    number: "03",
+    title: "Dashboard Creation",
+    description: "Build custom dashboards tailored to your KPIs and reporting needs.",
+  },
+  {
+    number: "04",
+    title: "Ongoing Analysis",
+    description: "Regular reporting, insights, and recommendations for optimization.",
+  },
 ];
 ---
 
-<BaseLayout title="Analytics & Reporting Services" description="Transform data into actionable insights with comprehensive analytics and custom dashboards. Track KPIs, measure success, and optimize performance.">
+<BaseLayout
+  title="Analytics & Reporting Services"
+  description="Transform data into actionable insights with comprehensive analytics and custom dashboards. Track KPIs, measure success, and optimize performance."
+>
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6">
+          <div
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-6"
+          >
             <span class="text-sm text-electric-400 font-medium">Data Analytics</span>
           </div>
           <h1 class="text-4xl md:text-5xl font-display font-bold mb-6">
             <span class="text-electric-400 neon-text">Analytics & Reporting</span>
           </h1>
           <p class="text-lg text-gray-400 leading-relaxed mb-8">
-            Transform data into actionable insights with comprehensive analytics and custom dashboards. Track KPIs, measure success, and optimize performance.
+            Transform data into actionable insights with comprehensive analytics and custom
+            dashboards. Track KPIs, measure success, and optimize performance.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
             <Button href="/contact" variant="primary">Get Started</Button>
             <Button href="/work" variant="secondary">View Case Studies</Button>
           </div>
         </div>
-        
+
         <div class="glass-card p-8">
           <h3 class="font-display text-xl font-semibold text-white mb-6">Capabilities</h3>
           <div class="grid grid-cols-2 gap-4">
-            {capabilities.map((cap) => (
-              <div class="p-4 rounded-lg bg-white/5 hover:bg-electric-500/10 transition-colors">
-                <h4 class="font-semibold text-white">{cap.name}</h4>
-                <p class="text-sm text-gray-400">{cap.desc}</p>
-              </div>
-            ))}
+            {
+              capabilities.map((cap) => (
+                <div class="p-4 rounded-lg bg-white/5 hover:bg-electric-500/10 transition-colors">
+                  <h4 class="font-semibold text-white">{cap.name}</h4>
+                  <p class="text-sm text-gray-400">{cap.desc}</p>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -69,19 +93,33 @@ const processSteps = [
     <div class="container-custom">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">Benefits of <span class="text-electric-400">Analytics</span></h2>
+          <h2 class="text-3xl md:text-4xl font-display font-bold mb-6">
+            Benefits of <span class="text-electric-400">Analytics</span>
+          </h2>
           <ul class="space-y-4">
-            {benefits.map((benefit) => (
-              <li class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span class="text-gray-300">{benefit}</span>
-              </li>
-            ))}
+            {
+              benefits.map((benefit) => (
+                <li class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  <span class="text-gray-300">{benefit}</span>
+                </li>
+              ))
+            }
           </ul>
         </div>
-        
+
         <div class="glass-card p-8">
           <h3 class="font-display text-xl font-semibold text-white mb-6">Quick Stats</h3>
           <div class="grid grid-cols-2 gap-6">
@@ -98,7 +136,9 @@ const processSteps = [
               <div class="text-sm text-gray-500 mt-1">Report Delivery</div>
             </div>
             <div class="text-center">
-              <div class="text-3xl font-display font-bold text-electric-400 neon-text">Real-time</div>
+              <div class="text-3xl font-display font-bold text-electric-400 neon-text">
+                Real-time
+              </div>
               <div class="text-sm text-gray-500 mt-1">Dashboards</div>
             </div>
           </div>
@@ -110,12 +150,21 @@ const processSteps = [
   <section class="section">
     <div class="container-custom">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Our Analytics <span class="text-electric-400">Process</span></h2>
+        <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
+          Our Analytics <span class="text-electric-400">Process</span>
+        </h2>
       </div>
       <div class="max-w-2xl mx-auto">
-        {processSteps.map((step, index) => (
-          <ProcessStep number={step.number} title={step.title} description={step.description} isLast={index === processSteps.length - 1} />
-        ))}
+        {
+          processSteps.map((step, index) => (
+            <ProcessStep
+              number={step.number}
+              title={step.title}
+              description={step.description}
+              isLast={index === processSteps.length - 1}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -123,10 +172,14 @@ const processSteps = [
   <section class="section">
     <div class="container-custom">
       <div class="glass-card p-12 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
-          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">Ready to Unlock Your Data?</h2>
-          <p class="text-gray-400 max-w-xl mx-auto mb-8">Let's discuss how analytics can transform your marketing decisions.</p>
+          <h2 class="text-2xl md:text-3xl font-display font-bold mb-4">
+            Ready to Unlock Your Data?
+          </h2>
+          <p class="text-gray-400 max-w-xl mx-auto mb-8">
+            Let's discuss how analytics can transform your marketing decisions.
+          </p>
           <Button href="/contact" variant="primary" size="lg">Get a Free Analytics Audit</Button>
         </div>
       </div>

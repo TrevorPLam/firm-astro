@@ -1,109 +1,148 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Button from '../components/Button.astro';
-import ServiceCard from '../components/ServiceCard.astro';
-import CaseStudyCard from '../components/CaseStudyCard.astro';
-import ProcessStep from '../components/ProcessStep.astro';
-import ClientLogos from '../components/ClientLogos.astro';
-import { getCollection } from 'astro:content';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import CaseStudyCard from "../components/CaseStudyCard.astro";
+import ProcessStep from "../components/ProcessStep.astro";
+import ClientLogos from "../components/ClientLogos.astro";
+import { getCollection } from "astro:content";
 
 // Get featured case studies
-const caseStudies = await getCollection('caseStudies');
-const featuredCaseStudies = caseStudies
-  .filter((cs) => cs.data.featured)
-  .slice(0, 3);
+const caseStudies = await getCollection("caseStudies");
+const featuredCaseStudies = caseStudies.filter((cs) => cs.data.featured).slice(0, 3);
 
 // Services data
 const services = [
   {
-    title: 'SEO',
-    description: 'Dominate search rankings with AI-powered optimization strategies that drive organic growth.',
-    icon: 'seo',
-    href: '/services/seo',
+    title: "SEO",
+    description:
+      "Dominate search rankings with AI-powered optimization strategies that drive organic growth.",
+    icon: "seo",
+    href: "/services/seo",
   },
   {
-    title: 'Paid Media',
-    description: 'Maximize ROI with data-driven paid advertising across Google, Meta, LinkedIn, and more.',
-    icon: 'paid-media',
-    href: '/services/paid-media',
+    title: "Paid Media",
+    description:
+      "Maximize ROI with data-driven paid advertising across Google, Meta, LinkedIn, and more.",
+    icon: "paid-media",
+    href: "/services/paid-media",
   },
   {
-    title: 'Content Marketing',
-    description: 'Build authority and engage your audience with strategic content that converts.',
-    icon: 'content-marketing',
-    href: '/services/content-marketing',
+    title: "Content Marketing",
+    description: "Build authority and engage your audience with strategic content that converts.",
+    icon: "content-marketing",
+    href: "/services/content-marketing",
   },
   {
-    title: 'Email Automation',
-    description: 'Nurture leads and drive conversions with intelligent email sequences and automation.',
-    icon: 'email-automation',
-    href: '/services/email-automation',
+    title: "Email Automation",
+    description:
+      "Nurture leads and drive conversions with intelligent email sequences and automation.",
+    icon: "email-automation",
+    href: "/services/email-automation",
   },
 ];
 
 // Process steps
 const processSteps = [
-  { number: '01', title: 'Discover', description: 'We dive deep into your business, market, and competitors to uncover growth opportunities.' },
-  { number: '02', title: 'Strategize', description: 'Our team crafts a custom, data-driven marketing strategy aligned with your goals.' },
-  { number: '03', title: 'Execute', description: 'We implement campaigns with precision, using cutting-edge tools and AI optimization.' },
-  { number: '04', title: 'Optimize', description: 'Continuous testing and refinement to maximize performance and ROI.' },
+  {
+    number: "01",
+    title: "Discover",
+    description:
+      "We dive deep into your business, market, and competitors to uncover growth opportunities.",
+  },
+  {
+    number: "02",
+    title: "Strategize",
+    description:
+      "Our team crafts a custom, data-driven marketing strategy aligned with your goals.",
+  },
+  {
+    number: "03",
+    title: "Execute",
+    description:
+      "We implement campaigns with precision, using cutting-edge tools and AI optimization.",
+  },
+  {
+    number: "04",
+    title: "Optimize",
+    description: "Continuous testing and refinement to maximize performance and ROI.",
+  },
 ];
 
 // Problems we solve
 const problems = [
-  { title: 'Low Organic Visibility', description: "Your website isn't ranking for key search terms, missing valuable traffic." },
-  { title: 'Inefficient Ad Spend', description: 'PPC campaigns drain budget without delivering measurable results.' },
-  { title: 'Poor Lead Quality', description: 'Marketing generates volume but leads don\'t convert to customers.' },
-  { title: 'Inconsistent Content', description: 'No clear content strategy or execution plan to build authority.' },
+  {
+    title: "Low Organic Visibility",
+    description: "Your website isn't ranking for key search terms, missing valuable traffic.",
+  },
+  {
+    title: "Inefficient Ad Spend",
+    description: "PPC campaigns drain budget without delivering measurable results.",
+  },
+  {
+    title: "Poor Lead Quality",
+    description: "Marketing generates volume but leads don't convert to customers.",
+  },
+  {
+    title: "Inconsistent Content",
+    description: "No clear content strategy or execution plan to build authority.",
+  },
 ];
 ---
 
 <BaseLayout title="Your Dedicated Marketer">
   <!-- Hero Section -->
   <section class="section relative overflow-hidden">
-    <div class="absolute inset-0 radial-glow" />
+    <div class="absolute inset-0 radial-glow"></div>
     <div class="container-custom relative">
       <div class="max-w-4xl mx-auto text-center">
-        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-8">
-          <span class="w-2 h-2 rounded-full bg-electric-400 animate-pulse" />
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-electric-500/10 border border-electric-500/20 mb-8"
+        >
+          <span class="w-2 h-2 rounded-full bg-electric-400 animate-pulse"></span>
           <span class="text-sm text-electric-400 font-medium">AI-Powered Marketing Solutions</span>
         </div>
-        
+
         <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold mb-6">
           <span class="text-white">Your Dedicated</span>
           <br />
           <span class="text-electric-400 neon-text">Marketer</span>
         </h1>
-        
+
         <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-          AI-Powered Growth for the Modern Brand. Transform your digital presence with data-driven strategies that deliver measurable results.
+          AI-Powered Growth for the Modern Brand. Transform your digital presence with data-driven
+          strategies that deliver measurable results.
         </p>
-        
+
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button href="/contact" variant="primary" size="lg">
-            Start Your Growth Journey
-          </Button>
-          <Button href="/work" variant="secondary" size="lg">
-            View Case Studies
-          </Button>
+          <Button href="/contact" variant="primary" size="lg"> Start Your Growth Journey </Button>
+          <Button href="/work" variant="secondary" size="lg"> View Case Studies </Button>
         </div>
-        
+
         <!-- Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/5">
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">150+</div>
+            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">
+              150+
+            </div>
             <div class="text-sm text-gray-500 mt-2">Clients Served</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">$50M+</div>
+            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">
+              $50M+
+            </div>
             <div class="text-sm text-gray-500 mt-2">Revenue Generated</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">340%</div>
+            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">
+              340%
+            </div>
             <div class="text-sm text-gray-500 mt-2">Avg. ROI</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">98%</div>
+            <div class="text-3xl md:text-4xl font-display font-bold text-electric-400 neon-text">
+              98%
+            </div>
             <div class="text-sm text-gray-500 mt-2">Client Retention</div>
           </div>
         </div>
@@ -130,18 +169,20 @@ const problems = [
           Comprehensive digital marketing solutions designed to accelerate your growth.
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {services.map((service) => (
-          <ServiceCard {...service} />
-        ))}
+        {services.map((service) => <ServiceCard {...service} />)}
       </div>
-      
+
       <div class="text-center mt-12">
         <Button href="/services" variant="ghost">
           View All Services
           <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </Button>
       </div>
@@ -157,32 +198,46 @@ const problems = [
             Problems We <span class="text-electric-400">Solve</span>
           </h2>
           <p class="text-gray-400 mb-8 leading-relaxed">
-            Every business faces unique marketing challenges. We identify the root causes and implement targeted solutions that drive real results.
+            Every business faces unique marketing challenges. We identify the root causes and
+            implement targeted solutions that drive real results.
           </p>
-          
+
           <div class="space-y-4">
-            {problems.map((problem) => (
-              <div class="glass-card p-4 flex items-start gap-4">
-                <div class="w-10 h-10 rounded-lg bg-electric-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-5 h-5 text-electric-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-1.964-1.333-2.732 0L3.732 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
+            {
+              problems.map((problem) => (
+                <div class="glass-card p-4 flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-electric-500/20 flex items-center justify-center flex-shrink-0">
+                    <svg
+                      class="w-5 h-5 text-electric-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-1.964-1.333-2.732 0L3.732 16c-.77 1.333.192 3 1.732 3z"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-white mb-1">{problem.title}</h3>
+                    <p class="text-sm text-gray-400">{problem.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 class="font-semibold text-white mb-1">{problem.title}</h3>
-                  <p class="text-sm text-gray-400">{problem.description}</p>
-                </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
         </div>
-        
+
         <div class="relative">
-          <div class="absolute inset-0 radial-glow opacity-50" />
+          <div class="absolute inset-0 radial-glow opacity-50"></div>
           <div class="glass-card p-8 relative">
             <h3 class="font-display text-xl font-semibold text-white mb-6">Ready to Transform?</h3>
             <p class="text-gray-400 mb-6">
-              Let's discuss how we can help overcome your marketing challenges and unlock new growth opportunities.
+              Let's discuss how we can help overcome your marketing challenges and unlock new growth
+              opportunities.
             </p>
             <Button href="/contact" variant="primary" class="w-full">
               Schedule a Free Consultation
@@ -202,33 +257,36 @@ const problems = [
             Featured <span class="text-electric-400">Case Studies</span>
           </h2>
           <p class="text-gray-400 max-w-xl">
-            Real results from real clients. Discover how we've helped brands achieve extraordinary growth.
+            Real results from real clients. Discover how we've helped brands achieve extraordinary
+            growth.
           </p>
         </div>
-        <Button href="/work" variant="ghost" class="mt-4 md:mt-0">
-          View All Work
-        </Button>
+        <Button href="/work" variant="ghost" class="mt-4 md:mt-0"> View All Work </Button>
       </div>
-      
-      {featuredCaseStudies.length > 0 ? (
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredCaseStudies.map((cs) => (
-            <CaseStudyCard
-              title={cs.data.title}
-              client={cs.data.client}
-              industry={cs.data.industry}
-              results={cs.data.results}
-              image={cs.data.image}
-              slug={cs.slug}
-              featured={cs.data.featured}
-            />
-          ))}
-        </div>
-      ) : (
-        <div class="glass-card p-12 text-center">
-          <p class="text-gray-400">Case studies coming soon. Check back for real results from our clients.</p>
-        </div>
-      )}
+
+      {
+        featuredCaseStudies.length > 0 ? (
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredCaseStudies.map((cs) => (
+              <CaseStudyCard
+                title={cs.data.title}
+                client={cs.data.client}
+                industry={cs.data.industry}
+                results={cs.data.results}
+                image={cs.data.image}
+                slug={cs.slug}
+                featured={cs.data.featured}
+              />
+            ))}
+          </div>
+        ) : (
+          <div class="glass-card p-12 text-center">
+            <p class="text-gray-400">
+              Case studies coming soon. Check back for real results from our clients.
+            </p>
+          </div>
+        )
+      }
     </div>
   </section>
 
@@ -243,16 +301,18 @@ const problems = [
           A proven methodology that delivers consistent, measurable results.
         </p>
       </div>
-      
+
       <div class="max-w-2xl mx-auto">
-        {processSteps.map((step, index) => (
-          <ProcessStep
-            number={step.number}
-            title={step.title}
-            description={step.description}
-            isLast={index === processSteps.length - 1}
-          />
-        ))}
+        {
+          processSteps.map((step, index) => (
+            <ProcessStep
+              number={step.number}
+              title={step.title}
+              description={step.description}
+              isLast={index === processSteps.length - 1}
+            />
+          ))
+        }
       </div>
     </div>
   </section>
@@ -261,21 +321,18 @@ const problems = [
   <section class="section">
     <div class="container-custom">
       <div class="glass-card p-12 md:p-16 text-center relative overflow-hidden">
-        <div class="absolute inset-0 radial-glow" />
+        <div class="absolute inset-0 radial-glow"></div>
         <div class="relative">
           <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">
             Ready to <span class="text-electric-400 neon-text">Accelerate Growth</span>?
           </h2>
           <p class="text-gray-400 max-w-xl mx-auto mb-8">
-            Join 150+ brands that have transformed their digital presence with our AI-powered marketing strategies.
+            Join 150+ brands that have transformed their digital presence with our AI-powered
+            marketing strategies.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" variant="primary" size="lg">
-              Get Started Today
-            </Button>
-            <Button href="/pricing" variant="secondary" size="lg">
-              View Pricing
-            </Button>
+            <Button href="/contact" variant="primary" size="lg"> Get Started Today </Button>
+            <Button href="/pricing" variant="secondary" size="lg"> View Pricing </Button>
           </div>
         </div>
       </div>

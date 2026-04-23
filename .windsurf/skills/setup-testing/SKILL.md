@@ -8,12 +8,14 @@ description: Guides setup of Vitest for unit testing and Playwright for E2E test
 ## 2026 Testing Stack
 
 ### Recommended Stack
+
 - **Vitest 4.0**: Unit testing with native browser support, redesigned public API
 - **Playwright**: E2E testing with AI automation
 - **Default**: Vitest for unit tests, Playwright for browser tests
 - **Note**: Jest 30 shipped June 2025 but Vitest is preferred for new projects
 
 ### Vitest 4.0 Features
+
 - Native browser support backed by Playwright and WebdriverIO
 - Redesigned public API
 - Inline workspace configuration
@@ -31,14 +33,14 @@ npm install -D vitest @vitest/ui @playwright/test
 Create `vitest.config.ts` in project root:
 
 ```typescript
-import { defineConfig } from 'vitest/config';
-import astro from 'astro/config/vitest';
+import { defineConfig } from "vitest/config";
+import astro from "astro/config/vitest";
 
 export default defineConfig({
   plugins: [astro()],
   test: {
     globals: true,
-    environment: 'node',
+    environment: "node",
   },
 });
 ```
@@ -48,27 +50,23 @@ export default defineConfig({
 Create `playwright.config.ts` in project root:
 
 ```typescript
-import { defineConfig } from '@playwright/test';
+import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  testDir: './src/__tests__/e2e',
+  testDir: "./src/__tests__/e2e",
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: "html",
   use: {
-    baseURL: 'http://localhost:4321',
-    trace: 'on-first-retry',
+    baseURL: "http://localhost:4321",
+    trace: "on-first-retry",
   },
-  projects: [
-    { name: 'chromium' },
-    { name: 'firefox' },
-    { name: 'webkit' },
-  ],
+  projects: [{ name: "chromium" }, { name: "firefox" }, { name: "webkit" }],
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:4321',
+    command: "npm run dev",
+    url: "http://localhost:4321",
     reuseExistingServer: !process.env.CI,
   },
 });
@@ -105,10 +103,10 @@ src/
 Create `src/__tests__/unit/example.test.ts`:
 
 ```typescript
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect } from "vitest";
 
-describe('Example test', () => {
-  it('should pass', () => {
+describe("Example test", () => {
+  it("should pass", () => {
     expect(true).toBe(true);
   });
 });
@@ -119,10 +117,10 @@ describe('Example test', () => {
 Create `src/__tests__/e2e/example.spec.ts`:
 
 ```typescript
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('homepage loads', async ({ page }) => {
-  await page.goto('/');
+test("homepage loads", async ({ page }) => {
+  await page.goto("/");
   await expect(page).toHaveTitle(/Your Dedicated Marketer/);
 });
 ```

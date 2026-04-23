@@ -10,6 +10,7 @@ globs: **/*.ts,**/*.tsx
 When writing or modifying TypeScript code:
 
 ## TypeScript 5.9 Compatibility
+
 This project uses TypeScript 5.9 (released August 2025). Leverage new features when appropriate.
 
 ## Strict Mode Compliance
@@ -17,18 +18,21 @@ This project uses TypeScript 5.9 (released August 2025). Leverage new features w
 This project uses TypeScript strict mode. Follow these principles:
 
 ### Type Safety
+
 - Never use `any` type - use `unknown` when type is truly unknown
 - Explicitly handle null and undefined with type guards
 - Use type narrowing patterns (if checks, type predicates)
 - Define interfaces for all props and state objects
 
 ### Type Annotations
+
 - Add type annotations to function parameters and return types
 - Use `interface` for object shapes, `type` for unions/intersections
 - Use generic types when appropriate for reusability
 - Avoid type assertions (`as`) - use type guards instead
 
 ### Null Handling
+
 ```typescript
 // Bad - unsafe
 function getName(user: User): string {
@@ -43,7 +47,7 @@ function getName(user: User): string | null {
 
 // Better - with type guard
 function getName(user: User | null): string {
-  if (!user) throw new Error('User not found');
+  if (!user) throw new Error("User not found");
   return user.name;
 }
 ```
@@ -51,7 +55,9 @@ function getName(user: User | null): string {
 ## TypeScript 5.9 New Features
 
 ### Prescriptive tsc --init Defaults
+
 TypeScript 5.9 generates more prescriptive tsconfig.json by default:
+
 - `moduleDetection: force` - treats all files as modules
 - `target: esnext` - uses latest ECMAScript features
 - `types: []` - limits automatic type loading
@@ -61,21 +67,24 @@ TypeScript 5.9 generates more prescriptive tsconfig.json by default:
 - `exactOptionalPropertyTypes: true` - stricter optional types
 
 ### import defer Support
+
 - Use `import defer` for deferred module loading
 - Module loads but execution deferred until first use
 - Useful for code splitting and lazy loading
 
 ```typescript
-import defer { heavyModule } from './heavy';
+import { heavyModule } from "./heavy";
 // heavyModule loads but doesn't execute until used
 ```
 
 ### --module node20 Support
+
 - Use `--module node20` for Node.js 20+ compatibility
 - Better ES module support in Node.js
 - Updated package.json exports resolution
 
 ### Performance Improvements
+
 - Cache instantiations on mappers
 - Avoid closure creation in file operations
 - Faster type checking for large projects
@@ -86,13 +95,14 @@ Always use configured path aliases instead of relative imports:
 
 ```typescript
 // Bad
-import Button from '../../../components/Button.astro';
+import Button from "../../../components/Button.astro";
 
 // Good
-import Button from '@components/Button.astro';
+import Button from "@components/Button.astro";
 ```
 
 Available aliases:
+
 - `@/*` → `src/*`
 - `@components/*` → `src/components/*`
 - `@layouts/*` → `src/layouts/*`
@@ -102,11 +112,13 @@ Available aliases:
 ## Type Definitions
 
 ### Environment Variables
+
 - Define all environment variables in `src/env.d.ts`
 - Use `VITE_` prefix for client-side variables
 - Type definitions prevent runtime errors
 
 ### Component Props
+
 - Use TypeScript interfaces for component props
 - Make optional props explicit with `?`
 - Provide default values for optional props
@@ -115,15 +127,16 @@ Available aliases:
 interface Props {
   title: string;
   description?: string;
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
 }
 
-const { title, description = '', variant = 'primary' } = Astro.props;
+const { title, description = "", variant = "primary" } = Astro.props;
 ```
 
 ## Utility Types
 
 Use TypeScript utility types for common patterns:
+
 - `Partial<T>` - make all properties optional
 - `Required<T>` - make all properties required
 - `Readonly<T>` - make properties read-only
@@ -143,7 +156,7 @@ try {
   if (error instanceof Error) {
     console.error(error.message);
   } else {
-    console.error('Unknown error:', error);
+    console.error("Unknown error:", error);
   }
 }
 ```
@@ -161,20 +174,21 @@ try {
 ## Common Patterns
 
 ### Type Guards
+
 ```typescript
 function isString(value: unknown): value is string {
-  return typeof value === 'string';
+  return typeof value === "string";
 }
 ```
 
 ### Discriminated Unions
+
 ```typescript
-type Result = 
-  | { success: true; data: Data }
-  | { success: false; error: Error };
+type Result = { success: true; data: Data } | { success: false; error: Error };
 ```
 
 ### Generic Functions
+
 ```typescript
 function identity<T>(value: T): T {
   return value;

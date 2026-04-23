@@ -20,6 +20,7 @@ This workflow guides you through publishing blog posts and case studies from dra
 ### Review Checklist
 
 Review the content for:
+
 - [ ] Spelling and grammar errors
 - [ ] Factual accuracy
 - [ ] Up-to-date information
@@ -36,6 +37,7 @@ Review the content for:
 Verify frontmatter includes all required fields:
 
 **Blog Posts:**
+
 - title
 - description
 - pubDate
@@ -44,6 +46,7 @@ Verify frontmatter includes all required fields:
 - tags
 
 **Case Studies:**
+
 - title
 - client
 - industry
@@ -68,6 +71,7 @@ Verify frontmatter includes all required fields:
 ### Meta Tags
 
 Add to page or ensure generated:
+
 - Open Graph tags
 - Twitter Card tags
 - Canonical URL
@@ -121,6 +125,7 @@ npm run generate-search-index
 ```
 
 This will:
+
 - Load all blog posts and case studies
 - Build MiniSearch index
 - Write to `public/search-index.json`
@@ -148,6 +153,7 @@ npm run build
 ### Verify Build Output
 
 Check that:
+
 - Build completes successfully
 - Content page is generated in `dist/`
 - No build errors or warnings
@@ -160,6 +166,7 @@ npm run dev
 ```
 
 Navigate to the content page and verify:
+
 - Page loads correctly
 - Content displays properly
 - Images load
@@ -177,6 +184,7 @@ npm run preview
 ```
 
 Test the production build locally:
+
 - Navigate to content page
 - Test all interactive elements
 - Verify mobile responsiveness
@@ -242,6 +250,7 @@ git commit -m "feat(content): publish blog post - SEO Strategies for 2024"
 ```
 
 Use conventional commit format:
+
 - `feat:` for new content
 - `fix:` for content corrections
 - `docs:` for documentation updates
@@ -257,6 +266,7 @@ git push origin feature/new-blog-post
 ```
 
 Or if working on main:
+
 ```bash
 git push origin main
 ```
@@ -268,6 +278,7 @@ git push origin main
 ### Trigger CI/CD
 
 Pushing to main will trigger GitHub Actions:
+
 - Build runs automatically
 - Tests run automatically
 - Deployment requires manual approval

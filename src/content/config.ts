@@ -1,14 +1,14 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z } from "astro:content";
 
 // Blog collection schema
 const blogCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
-    author: z.string().default('Your Dedicated Marketer'),
+    author: z.string().default("Your Dedicated Marketer"),
     authorImage: z.string().optional(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
@@ -21,7 +21,7 @@ const blogCollection = defineCollection({
 
 // Case Studies collection schema
 const caseStudiesCollection = defineCollection({
-  type: 'content',
+  type: "content",
   schema: z.object({
     title: z.string(),
     client: z.string(),
@@ -29,16 +29,20 @@ const caseStudiesCollection = defineCollection({
     services: z.array(z.string()),
     challenge: z.string(),
     solution: z.string(),
-    results: z.array(z.object({
-      metric: z.string(),
-      value: z.string(),
-      improvement: z.string().optional(),
-    })),
-    testimonial: z.object({
-      quote: z.string(),
-      author: z.string(),
-      role: z.string(),
-    }).optional(),
+    results: z.array(
+      z.object({
+        metric: z.string(),
+        value: z.string(),
+        improvement: z.string().optional(),
+      })
+    ),
+    testimonial: z
+      .object({
+        quote: z.string(),
+        author: z.string(),
+        role: z.string(),
+      })
+      .optional(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     featured: z.boolean().default(false),

@@ -38,6 +38,7 @@ publishedAt: 2024-01-15
 ## Industries
 
 Use existing industries:
+
 - E-commerce
 - SaaS
 - Healthcare
@@ -47,6 +48,7 @@ Use existing industries:
 ## Services
 
 Use existing service names:
+
 - SEO
 - Paid Media
 - Content Marketing
@@ -78,6 +80,7 @@ Use existing service names:
 ## Validation
 
 The case study will be validated against the Zod schema in `src/content/config.ts`:
+
 - title: string (required)
 - client: string (required)
 - industry: string (required)

@@ -40,6 +40,7 @@ git checkout -b feature/dependency-update
 ```
 
 Use descriptive branch name:
+
 - `feature/dependency-update-security`
 - `feature/dependency-update-react`
 - `feature/dependency-update-astro`
@@ -83,6 +84,7 @@ git diff package.json
 ```
 
 Review:
+
 - Version changes
 - New dependencies added
 - Dependencies removed
@@ -94,6 +96,7 @@ git diff package-lock.json
 ```
 
 Review:
+
 - Dependency tree changes
 - Sub-dependency updates
 
@@ -125,6 +128,7 @@ npm audit fix
 ```
 
 If audit fix doesn't work:
+
 ```bash
 npm audit fix --force
 ```
@@ -140,6 +144,7 @@ npm run astro check
 ```
 
 Or if using TypeScript directly:
+
 ```bash
 npx tsc --noEmit
 ```
@@ -197,6 +202,7 @@ npm run dev
 ### Manual Testing
 
 Test in development:
+
 - Navigate to homepage
 - Navigate to blog pages
 - Navigate to case studies
@@ -219,6 +225,7 @@ npm run preview
 ### Test Production Build
 
 Test the production build:
+
 - All pages load correctly
 - No console errors
 - Images load
@@ -233,6 +240,7 @@ Test the production build:
 ### Astro Version Compatibility
 
 Check if dependencies are compatible with Astro 5.18.1:
+
 - React 18.3.1 compatibility
 - Tailwind 3.4.17 compatibility
 - Integration compatibility
@@ -240,6 +248,7 @@ Check if dependencies are compatible with Astro 5.18.1:
 ### Breaking Changes
 
 Review changelogs for:
+
 - Major version updates
 - Breaking changes
 - Deprecated features
@@ -252,6 +261,7 @@ Review changelogs for:
 ### Update Documentation
 
 If dependencies changed significantly:
+
 - Update README.md
 - Update AGENTS.md
 - Update package.json comments
@@ -260,6 +270,7 @@ If dependencies changed significantly:
 ### Check for Deprecations
 
 Review deprecation warnings:
+
 - Update deprecated API usage
 - Replace deprecated dependencies
 - Update configuration if needed
@@ -281,11 +292,13 @@ git commit -m "chore(deps): update dependencies"
 ```
 
 Use conventional commit format:
+
 - `chore(deps)`: dependency updates
 - `fix(deps)`: dependency security fixes
 - `feat(deps)`: new dependencies
 
 Include details in commit body:
+
 - Packages updated
 - Version changes
 - Security fixes applied
@@ -305,6 +318,7 @@ git push origin feature/dependency-update
 ### PR Description
 
 Include in PR description:
+
 - Dependencies updated
 - Version changes
 - Security fixes applied
@@ -323,6 +337,7 @@ Request review from team members familiar with the codebase.
 ### Monitor GitHub Actions
 
 Check that:
+
 - Build passes
 - Tests pass
 - No security warnings
@@ -331,6 +346,7 @@ Check that:
 ### Address CI Failures
 
 If CI fails:
+
 - Review logs
 - Fix issues
 - Push fixes
@@ -343,12 +359,14 @@ If CI fails:
 ### Merge After Approval
 
 After PR approved and CI passes:
+
 - Merge PR to main
 - Delete feature branch
 
 ### Or Squash and Merge
 
 Use squash and merge for cleaner history:
+
 - Squash commits
 - Merge to main
 - Delete feature branch
@@ -360,6 +378,7 @@ Use squash and merge for cleaner history:
 ### Trigger Deployment
 
 Merge to main triggers GitHub Actions:
+
 - Build runs automatically
 - Tests run automatically
 - Deployment requires manual approval
@@ -411,6 +430,7 @@ git push origin main
 ### Document Issues
 
 Document:
+
 - What went wrong
 - Root cause
 - Fix applied

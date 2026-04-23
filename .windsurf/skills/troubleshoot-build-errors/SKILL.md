@@ -16,6 +16,7 @@ This skill guides you through troubleshooting build errors in the Astro marketin
 **Symptoms**: Build fails with module loading error
 
 **Solutions**:
+
 ```bash
 # Clear cache
 rm -rf node_modules .astro dist
@@ -30,6 +31,7 @@ npm run build
 **Symptoms**: Content collection not found during build
 
 **Solutions**:
+
 ```bash
 # Check content config
 cat src/content/config.ts
@@ -47,6 +49,7 @@ npm run astro check
 **Symptoms**: Frontmatter validation error
 
 **Solutions**:
+
 ```bash
 # Check specific file
 cat src/content/blog/problematic-post.mdx
@@ -65,6 +68,7 @@ npm run astro check
 **Symptoms**: TypeScript cannot find imported module
 
 **Solutions**:
+
 ```bash
 # Check tsconfig.json path aliases
 cat tsconfig.json
@@ -82,6 +86,7 @@ ls src/components/Button.astro
 **Symptoms**: TypeScript property not found on type
 
 **Solutions**:
+
 ```bash
 # Check type definitions
 cat src/env.d.ts
@@ -98,6 +103,7 @@ interface ImportMetaEnv {
 **Symptoms**: Strict TypeScript error with any type
 
 **Solutions**:
+
 ```typescript
 // Replace 'any' with proper type
 // Bad: const data: any = response.data;
@@ -111,6 +117,7 @@ interface ImportMetaEnv {
 **Symptoms**: Cannot find installed package
 
 **Solutions**:
+
 ```bash
 # Reinstall dependencies
 rm -rf node_modules package-lock.json
@@ -128,6 +135,7 @@ npm install missing-package
 **Symptoms**: Peer dependency version mismatch
 
 **Solutions**:
+
 ```bash
 # Check dependency versions
 npm list
@@ -144,6 +152,7 @@ npm install package@version
 **Symptoms**: CommonJS/ESM import error
 
 **Solutions**:
+
 ```bash
 # Add "type": "module" to package.json
 # Already present in this project
@@ -163,6 +172,7 @@ npm list
 **Symptoms**: astro.config.mjs validation error
 
 **Solutions**:
+
 ```bash
 # Check configuration
 cat astro.config.mjs
@@ -179,6 +189,7 @@ node -c astro.config.mjs
 **Symptoms**: Astro integration not found
 
 **Solutions**:
+
 ```bash
 # Install missing integration
 npm install @astrojs/react
@@ -197,6 +208,7 @@ npm list @astrojs/react
 **Symptoms**: Tailwind class not recognized
 
 **Solutions**:
+
 ```bash
 # Check Tailwind config
 cat tailwind.config.mjs
@@ -217,6 +229,7 @@ npm run build
 **Symptoms**: MDX file parsing error
 
 **Solutions**:
+
 ```bash
 # Check MDX syntax
 cat src/content/blog/problematic-post.mdx
@@ -233,6 +246,7 @@ npm run astro check
 **Symptoms**: Frontmatter doesn't match schema
 
 **Solutions**:
+
 ```bash
 # Check schema
 cat src/content/config.ts
@@ -252,6 +266,7 @@ cat src/content/blog/problematic-post.mdx
 **Symptoms**: Missing environment variable
 
 **Solutions**:
+
 ```bash
 # Check .env.example
 cat .env.example
@@ -271,6 +286,7 @@ npm run dev
 **Symptoms**: Environment variable validation error
 
 **Solutions**:
+
 ```bash
 # Check type definitions
 cat src/env.d.ts
@@ -355,6 +371,7 @@ astro build 2>&1 | grep -i error
 **Symptoms**: File path too long on Windows
 
 **Solutions**:
+
 ```bash
 # Use shorter directory names
 # Move project closer to root
@@ -366,6 +383,7 @@ astro build 2>&1 | grep -i error
 **Symptoms**: Permission error on Windows
 
 **Solutions**:
+
 ```bash
 # Run terminal as administrator
 # Check file permissions
@@ -379,6 +397,7 @@ astro build 2>&1 | grep -i error
 **Symptoms**: Command not found on macOS
 
 **Solutions**:
+
 ```bash
 # Check PATH
 echo $PATH
@@ -394,6 +413,7 @@ echo $PATH
 **Symptoms**: Permission error on Linux
 
 **Solutions**:
+
 ```bash
 # Fix npm permissions
 mkdir ~/.npm-global
@@ -507,13 +527,13 @@ npm audit
 
 ### Error Patterns
 
-| Error Pattern | Common Cause | Solution |
-|--------------|--------------|----------|
-| Module not found | Missing dependency | npm install package |
-| Cannot find module | Wrong import path | Check path alias |
-| Type error | TypeScript strict mode | Fix type annotations |
-| Build timeout | Large bundle | Optimize bundle size |
-| Out of memory | Memory limit | Increase Node memory |
+| Error Pattern      | Common Cause           | Solution             |
+| ------------------ | ---------------------- | -------------------- |
+| Module not found   | Missing dependency     | npm install package  |
+| Cannot find module | Wrong import path      | Check path alias     |
+| Type error         | TypeScript strict mode | Fix type annotations |
+| Build timeout      | Large bundle           | Optimize bundle size |
+| Out of memory      | Memory limit           | Increase Node memory |
 
 ## After Fixing Errors
 
