@@ -11,15 +11,31 @@ export default getViteConfig(
       include: ["src/**/*.{test,spec}.{ts,tsx}"],
       exclude: ["node_modules", "dist", ".astro", "src/test"],
       setupFiles: ["./src/__tests__/setup.ts"],
+      tags: [
+        {
+          name: "unit",
+          description: "Fast unit tests for individual components",
+        },
+        {
+          name: "integration",
+          description: "Integration tests for component interactions",
+          timeout: 10000,
+        },
+        {
+          name: "slow",
+          description: "Slow tests that require more time",
+          timeout: 30000,
+        },
+      ],
       coverage: {
         provider: "v8",
         reporter: ["text", "html", "json"],
         exclude: ["node_modules", "dist", ".astro", "src/test"],
         thresholds: {
-          lines: 70,
-          functions: 70,
-          branches: 70,
-          statements: 70,
+          lines: 80,
+          functions: 80,
+          branches: 75,
+          statements: 80,
         },
       },
     },
