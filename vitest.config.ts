@@ -15,6 +15,12 @@ export default getViteConfig(
         provider: "v8",
         reporter: ["text", "html", "json"],
         exclude: ["node_modules", "dist", ".astro", "src/test"],
+        thresholds: {
+          lines: 70,
+          functions: 70,
+          branches: 70,
+          statements: 70,
+        },
       },
     },
   },

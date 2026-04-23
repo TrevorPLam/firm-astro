@@ -1,5 +1,5 @@
-import { test as base } from '@playwright/test';
-import AxeBuilder from '@axe-core/playwright';
+import { test as base } from "@playwright/test";
+import AxeBuilder from "@axe-core/playwright";
 
 type A11yFixture = {
   makeAxeBuilder: () => AxeBuilder;
@@ -8,9 +8,9 @@ type A11yFixture = {
 export const test = base.extend<A11yFixture>({
   makeAxeBuilder: async ({ page }, use) => {
     const makeAxeBuilder = () =>
-      new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']);
+      new AxeBuilder({ page }).withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"]);
     await use(makeAxeBuilder);
   },
 });
 
-export { expect } from '@playwright/test';
+export { expect } from "@playwright/test";

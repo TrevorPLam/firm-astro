@@ -64,7 +64,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(1) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(1) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -105,7 +105,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(2) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(2) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -146,7 +146,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(3) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(3) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -187,7 +187,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(4) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(4) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -228,7 +228,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(5) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(5) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -269,7 +269,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(6) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(6) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -310,7 +310,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(7) > .text-2xl.group-hover\\:text-electric-400[data-astro-source-loc=\"20:119\"]",
++           ".w-32.h-16.hover\\:border-electric-500\\/30:nth-child(7) > .text-2xl.group-hover\\:text-electric-400.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -347,7 +347,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "p[data-astro-source-loc=\"169:52\"]",
++           ".section:nth-child(3) > .container-custom > .mb-12.text-center > .max-w-2xl.mx-auto",
 +         ],
 +       },
 +       Object {
@@ -370,7 +370,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/services/seo\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
-+                   ".p-6[href$=\"seo\"][data-astro-source-loc=\"22:69\"]",
++                   ".p-6.md\\:p-8[href$=\"seo\"]",
 +                 ],
 +               },
 +               Object {
@@ -388,7 +388,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-6[href$=\"seo\"][data-astro-source-loc=\"22:69\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
++           ".p-6.md\\:p-8[href$=\"seo\"] > .group-hover\\:neon-text.inline-flex.font-medium",
 +         ],
 +       },
 +       Object {
@@ -411,7 +411,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/services/paid-media\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
-+                   ".p-6[href$=\"paid-media\"][data-astro-source-loc=\"22:69\"]",
++                   ".p-6.md\\:p-8[href$=\"paid-media\"]",
 +                 ],
 +               },
 +               Object {
@@ -429,7 +429,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-6[href$=\"paid-media\"][data-astro-source-loc=\"22:69\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
++           ".p-6.md\\:p-8[href$=\"paid-media\"] > .group-hover\\:neon-text.inline-flex.font-medium",
 +         ],
 +       },
 +       Object {
@@ -452,7 +452,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/services/content-marketing\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
-+                   ".p-6[href$=\"content-marketing\"][data-astro-source-loc=\"22:69\"]",
++                   ".p-6.md\\:p-8[href$=\"content-marketing\"]",
 +                 ],
 +               },
 +               Object {
@@ -470,7 +470,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-6[href$=\"content-marketing\"][data-astro-source-loc=\"22:69\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
++           ".p-6.md\\:p-8[href$=\"content-marketing\"] > .group-hover\\:neon-text.inline-flex.font-medium",
 +         ],
 +       },
 +       Object {
@@ -493,7 +493,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/services/email-automation\" class=\"glass-card p-6 md:p-8 card-hover group block\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ServiceCard.astro\" data-astro-source-loc=\"22:69\">",
 +                 "target": Array [
-+                   ".p-6[href$=\"email-automation\"][data-astro-source-loc=\"22:69\"]",
++                   ".p-6.md\\:p-8[href$=\"email-automation\"]",
 +                 ],
 +               },
 +               Object {
@@ -511,7 +511,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-6[href$=\"email-automation\"][data-astro-source-loc=\"22:69\"] > .group-hover\\:neon-text.inline-flex[data-astro-source-loc=\"44:4\"]",
++           ".p-6.md\\:p-8[href$=\"email-automation\"] > .group-hover\\:neon-text.inline-flex.font-medium",
 +         ],
 +       },
 +       Object {
@@ -546,7 +546,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "div[data-astro-source-loc=\"178:38\"] > .hover\\:text-electric-300.px-6.py-3",
++           ".mt-12.text-center > .hover\\:text-electric-300.px-6.py-3",
 +         ],
 +       },
 +       Object {
@@ -569,7 +569,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -587,7 +587,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "span[data-astro-source-loc=\"199:57\"]",
++           ".lg\\:grid-cols-2 > div:nth-child(1) > h2 > .text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -610,7 +610,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -628,7 +628,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "p[data-astro-source-loc=\"201:57\"]",
++           ".mb-8.leading-relaxed",
 +         ],
 +       },
 +       Object {
@@ -651,13 +651,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(1)",
++                   ".p-4.items-start.gap-4:nth-child(1)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -675,7 +675,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(1) > div[data-astro-source-loc=\"225:24\"] > .mb-1[data-astro-source-loc=\"226:63\"]",
++           ".p-4.items-start.gap-4:nth-child(1) > div:nth-child(2) > .mb-1",
 +         ],
 +       },
 +       Object {
@@ -698,13 +698,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(1)",
++                   ".p-4.items-start.gap-4:nth-child(1)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -722,7 +722,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(1) > div[data-astro-source-loc=\"225:24\"] > p[data-astro-source-loc=\"227:54\"]",
++           ".p-4.items-start.gap-4:nth-child(1) > div:nth-child(2) > p",
 +         ],
 +       },
 +       Object {
@@ -745,13 +745,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(2)",
++                   ".p-4.items-start.gap-4:nth-child(2)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -769,7 +769,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(2) > div[data-astro-source-loc=\"225:24\"] > .mb-1[data-astro-source-loc=\"226:63\"]",
++           ".p-4.items-start.gap-4:nth-child(2) > div:nth-child(2) > .mb-1",
 +         ],
 +       },
 +       Object {
@@ -792,13 +792,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(2)",
++                   ".p-4.items-start.gap-4:nth-child(2)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -816,7 +816,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(2) > div[data-astro-source-loc=\"225:24\"] > p[data-astro-source-loc=\"227:54\"]",
++           ".p-4.items-start.gap-4:nth-child(2) > div:nth-child(2) > p",
 +         ],
 +       },
 +       Object {
@@ -839,13 +839,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(3)",
++                   ".p-4.items-start.gap-4:nth-child(3)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -863,7 +863,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(3) > div[data-astro-source-loc=\"225:24\"] > .mb-1[data-astro-source-loc=\"226:63\"]",
++           ".p-4.items-start.gap-4:nth-child(3) > div:nth-child(2) > .mb-1",
 +         ],
 +       },
 +       Object {
@@ -886,13 +886,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(3)",
++                   ".p-4.items-start.gap-4:nth-child(3)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -910,7 +910,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(3) > div[data-astro-source-loc=\"225:24\"] > p[data-astro-source-loc=\"227:54\"]",
++           ".p-4.items-start.gap-4:nth-child(3) > div:nth-child(2) > p",
 +         ],
 +       },
 +       Object {
@@ -933,13 +933,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(4)",
++                   ".p-4.items-start.gap-4:nth-child(4)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -957,7 +957,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(4) > div[data-astro-source-loc=\"225:24\"] > .mb-1[data-astro-source-loc=\"226:63\"]",
++           ".p-4.items-start.gap-4:nth-child(4) > div:nth-child(2) > .mb-1",
 +         ],
 +       },
 +       Object {
@@ -980,13 +980,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"glass-card p-4 flex items-start gap-4\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"209:68\">",
 +                 "target": Array [
-+                   ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(4)",
++                   ".p-4.items-start.gap-4:nth-child(4)",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"194:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"194:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -1004,7 +1004,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".p-4.items-start[data-astro-source-loc=\"209:68\"]:nth-child(4) > div[data-astro-source-loc=\"225:24\"] > p[data-astro-source-loc=\"227:54\"]",
++           ".p-4.items-start.gap-4:nth-child(4) > div:nth-child(2) > p",
 +         ],
 +       },
 +       Object {
@@ -1042,7 +1042,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "p[data-astro-source-loc=\"260:45\"]",
++           ".md\\:items-end > div > .max-w-xl",
 +         ],
 +       },
 +       Object {
@@ -1118,7 +1118,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .uppercase.tracking-wider[data-astro-source-loc=\"41:84\"]",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .uppercase.tracking-wider.text-xs",
 +         ],
 +       },
 +       Object {
@@ -1143,7 +1143,7 @@ Error: expect(received).toEqual(expected) // deep equality
 + Featured
 + </span>",
 +                 "target": Array [
-+                   "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .px-2.py-1.rounded",
++                   "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .px-2.py-1.rounded",
 +                 ],
 +               },
 +               Object {
@@ -1169,7 +1169,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .px-2.py-1.rounded",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .px-2.py-1.rounded",
 +         ],
 +       },
 +       Object {
@@ -1211,7 +1211,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(1) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(1) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1253,7 +1253,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(2) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(2) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1295,7 +1295,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(3) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(3) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1336,7 +1336,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .mt-6.pt-6[data-astro-source-loc=\"72:6\"] > .group-hover\\:neon-text.font-medium[data-astro-source-loc=\"74:10\"]",
++           "a[href$=\"ecommerce-revenue-growth\"] > .p-6.md\\:p-8 > .mt-6.pt-6.border-light-200 > .group-hover\\:neon-text.font-medium.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -1377,7 +1377,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .uppercase.tracking-wider[data-astro-source-loc=\"41:84\"]",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .uppercase.tracking-wider.text-xs",
 +         ],
 +       },
 +       Object {
@@ -1402,7 +1402,7 @@ Error: expect(received).toEqual(expected) // deep equality
 + Featured
 + </span>",
 +                 "target": Array [
-+                   "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .px-2.py-1.rounded",
++                   "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .px-2.py-1.rounded",
 +                 ],
 +               },
 +               Object {
@@ -1428,7 +1428,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .gap-3.mb-4[data-astro-source-loc=\"40:47\"] > .px-2.py-1.rounded",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .gap-3.mb-4.flex > .px-2.py-1.rounded",
 +         ],
 +       },
 +       Object {
@@ -1470,7 +1470,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(1) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(1) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1512,7 +1512,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(2) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(2) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1554,7 +1554,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .md\\:grid-cols-3.grid-cols-2[data-astro-source-loc=\"57:56\"] > .text-center[data-astro-source-loc=\"60:36\"]:nth-child(3) > .md\\:text-3xl.neon-text[data-astro-source-loc=\"61:98\"]",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .md\\:grid-cols-3.grid-cols-2.grid > .text-center:nth-child(3) > .md\\:text-3xl.neon-text.text-2xl",
 +         ],
 +       },
 +       Object {
@@ -1595,7 +1595,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8[data-astro-source-loc=\"39:27\"] > .mt-6.pt-6[data-astro-source-loc=\"72:6\"] > .group-hover\\:neon-text.font-medium[data-astro-source-loc=\"74:10\"]",
++           "a[href$=\"techflow-saas-growth\"] > .p-6.md\\:p-8 > .mt-6.pt-6.border-light-200 > .group-hover\\:neon-text.font-medium.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -1618,7 +1618,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1636,7 +1636,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "span[data-astro-source-loc=\"299:47\"]",
++           ".bg-dark-800\\/50.section:nth-child(6) > .container-custom > .mb-12.text-center > h2 > .text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -1659,7 +1659,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1679,7 +1679,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "p[data-astro-source-loc=\"301:52\"]",
++           ".bg-dark-800\\/50.section:nth-child(6) > .container-custom > .mb-12.text-center > .max-w-2xl.mx-auto",
 +         ],
 +       },
 +       Object {
@@ -1702,13 +1702,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"flex-shrink-0 w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center border border-electric-500/30\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ProcessStep.astro\" data-astro-source-loc=\"16:6\">",
 +                 "target": Array [
-+                   ".relative[data-astro-source-loc=\"12:23\"]:nth-child(1) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30",
++                   ".relative:nth-child(1) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1726,7 +1726,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(1) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400[data-astro-source-loc=\"17:62\"]",
++           ".relative:nth-child(1) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -1749,7 +1749,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1767,7 +1767,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(1) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .mb-2.text-lg[data-astro-source-loc=\"20:70\"]",
++           ".relative:nth-child(1) > .items-start.gap-4.flex > .pb-8.flex-1 > .mb-2.text-lg",
 +         ],
 +       },
 +       Object {
@@ -1790,7 +1790,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1808,7 +1808,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(1) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .leading-relaxed[data-astro-source-loc=\"21:56\"]",
++           ".relative:nth-child(1) > .items-start.gap-4.flex > .pb-8.flex-1 > .leading-relaxed",
 +         ],
 +       },
 +       Object {
@@ -1831,13 +1831,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"flex-shrink-0 w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center border border-electric-500/30\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ProcessStep.astro\" data-astro-source-loc=\"16:6\">",
 +                 "target": Array [
-+                   ".relative[data-astro-source-loc=\"12:23\"]:nth-child(2) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30",
++                   ".relative:nth-child(2) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1855,7 +1855,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(2) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400[data-astro-source-loc=\"17:62\"]",
++           ".relative:nth-child(2) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -1878,7 +1878,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1896,7 +1896,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(2) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .mb-2.text-lg[data-astro-source-loc=\"20:70\"]",
++           ".relative:nth-child(2) > .items-start.gap-4.flex > .pb-8.flex-1 > .mb-2.text-lg",
 +         ],
 +       },
 +       Object {
@@ -1919,7 +1919,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1937,7 +1937,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(2) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .leading-relaxed[data-astro-source-loc=\"21:56\"]",
++           ".relative:nth-child(2) > .items-start.gap-4.flex > .pb-8.flex-1 > .leading-relaxed",
 +         ],
 +       },
 +       Object {
@@ -1960,13 +1960,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"flex-shrink-0 w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center border border-electric-500/30\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ProcessStep.astro\" data-astro-source-loc=\"16:6\">",
 +                 "target": Array [
-+                   ".relative[data-astro-source-loc=\"12:23\"]:nth-child(3) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30",
++                   ".relative:nth-child(3) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -1984,7 +1984,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(3) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400[data-astro-source-loc=\"17:62\"]",
++           ".relative:nth-child(3) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -2007,7 +2007,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -2025,7 +2025,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(3) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .mb-2.text-lg[data-astro-source-loc=\"20:70\"]",
++           ".relative:nth-child(3) > .items-start.gap-4.flex > .pb-8.flex-1 > .mb-2.text-lg",
 +         ],
 +       },
 +       Object {
@@ -2048,7 +2048,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -2066,7 +2066,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(3) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .leading-relaxed[data-astro-source-loc=\"21:56\"]",
++           ".relative:nth-child(3) > .items-start.gap-4.flex > .pb-8.flex-1 > .leading-relaxed",
 +         ],
 +       },
 +       Object {
@@ -2089,13 +2089,13 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<div class=\"flex-shrink-0 w-12 h-12 rounded-xl bg-electric-500/20 flex items-center justify-center border border-electric-500/30\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/components/ProcessStep.astro\" data-astro-source-loc=\"16:6\">",
 +                 "target": Array [
-+                   ".relative[data-astro-source-loc=\"12:23\"]:nth-child(4) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30",
++                   ".relative:nth-child(4) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30",
 +                 ],
 +               },
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -2113,7 +2113,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(4) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400[data-astro-source-loc=\"17:62\"]",
++           ".relative:nth-child(4) > .items-start.gap-4.flex > .w-12.h-12.border-electric-500\\/30 > .font-bold.text-electric-400",
 +         ],
 +       },
 +       Object {
@@ -2136,7 +2136,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -2154,7 +2154,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(4) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .mb-2.text-lg[data-astro-source-loc=\"20:70\"]",
++           ".relative:nth-child(4) > .items-start.gap-4.flex > .pb-8.flex-1 > .mb-2.text-lg",
 +         ],
 +       },
 +       Object {
@@ -2177,7 +2177,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<section class=\"section bg-dark-800/50\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/index.astro\" data-astro-source-loc=\"295:43\">",
 +                 "target": Array [
-+                   "section[data-astro-source-loc=\"295:43\"]",
++                   ".bg-dark-800\\/50.section:nth-child(6)",
 +                 ],
 +               },
 +               Object {
@@ -2195,7 +2195,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".relative[data-astro-source-loc=\"12:23\"]:nth-child(4) > .items-start.gap-4[data-astro-source-loc=\"13:39\"] > .pb-8.flex-1[data-astro-source-loc=\"19:30\"] > .leading-relaxed[data-astro-source-loc=\"21:56\"]",
++           ".relative:nth-child(4) > .items-start.gap-4.flex > .pb-8.flex-1 > .leading-relaxed",
 +         ],
 +       },
 +     ],

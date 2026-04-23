@@ -193,9 +193,7 @@ describe("ContactForm component", () => {
     it("should show error message when fetch fails", async () => {
       // Arrange
       const user = userEvent.setup();
-      (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValue(
-        new Error("Network error")
-      );
+      (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValue(new Error("Network error"));
       render(<ContactForm />);
 
       // Act
@@ -210,9 +208,7 @@ describe("ContactForm component", () => {
 
       // Assert
       await waitFor(() => {
-        expect(
-          screen.getByText("Failed to submit form. Please try again.")
-        ).toBeInTheDocument();
+        expect(screen.getByText("Failed to submit form. Please try again.")).toBeInTheDocument();
       });
     });
 
@@ -238,9 +234,7 @@ describe("ContactForm component", () => {
 
       // Assert
       await waitFor(() => {
-        expect(
-          screen.getByText("Failed to submit form. Please try again.")
-        ).toBeInTheDocument();
+        expect(screen.getByText("Failed to submit form. Please try again.")).toBeInTheDocument();
       });
     });
 
@@ -265,18 +259,14 @@ describe("ContactForm component", () => {
 
       // Assert
       await waitFor(() => {
-        expect(
-          screen.getByText("Failed to submit form. Please try again.")
-        ).toBeInTheDocument();
+        expect(screen.getByText("Failed to submit form. Please try again.")).toBeInTheDocument();
       });
     });
 
     it("should display error message with ARIA attributes", async () => {
       // Arrange
       const user = userEvent.setup();
-      (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValue(
-        new Error("Network error")
-      );
+      (global.fetch as ReturnType<typeof vi.fn>).mockRejectedValue(new Error("Network error"));
       render(<ContactForm />);
 
       // Act
@@ -322,9 +312,7 @@ describe("ContactForm component", () => {
       await waitFor(() => {
         expect(screen.getByText("Message Sent!")).toBeInTheDocument();
         expect(
-          screen.getByText(
-            "Thank you for reaching out. We'll get back to you within 24 hours."
-          )
+          screen.getByText("Thank you for reaching out. We'll get back to you within 24 hours.")
         ).toBeInTheDocument();
       });
     });

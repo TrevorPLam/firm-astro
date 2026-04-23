@@ -46,7 +46,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/content-marketing-strategy-2024\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1)",
++                   ".card-hover.glass-card.group:nth-child(1)",
 +                 ],
 +               },
 +               Object {
@@ -64,7 +64,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1) > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           ".card-hover.glass-card.group:nth-child(1) > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -87,7 +87,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/content-marketing-strategy-2024\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1)",
++                   ".card-hover.glass-card.group:nth-child(1)",
 +                 ],
 +               },
 +               Object {
@@ -105,7 +105,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1) > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           ".card-hover.glass-card.group:nth-child(1) > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -128,7 +128,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/content-marketing-strategy-2024\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1)",
++                   ".card-hover.glass-card.group:nth-child(1)",
 +                 ],
 +               },
 +               Object {
@@ -146,7 +146,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(1) > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           ".card-hover.glass-card.group:nth-child(1) > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -169,7 +169,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/digital-marketing-kpis-guide\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2)",
++                   ".card-hover.glass-card.group:nth-child(2)",
 +                 ],
 +               },
 +               Object {
@@ -187,7 +187,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2) > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           ".card-hover.glass-card.group:nth-child(2) > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -210,7 +210,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/digital-marketing-kpis-guide\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2)",
++                   ".card-hover.glass-card.group:nth-child(2)",
 +                 ],
 +               },
 +               Object {
@@ -228,7 +228,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2) > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           ".card-hover.glass-card.group:nth-child(2) > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -251,7 +251,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/digital-marketing-kpis-guide\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2)",
++                   ".card-hover.glass-card.group:nth-child(2)",
 +                 ],
 +               },
 +               Object {
@@ -269,7 +269,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(2) > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           ".card-hover.glass-card.group:nth-child(2) > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -292,7 +292,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/social-media-search-optimization\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3)",
++                   ".card-hover.glass-card.group:nth-child(3)",
 +                 ],
 +               },
 +               Object {
@@ -310,7 +310,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3) > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           ".card-hover.glass-card.group:nth-child(3) > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -333,7 +333,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/social-media-search-optimization\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3)",
++                   ".card-hover.glass-card.group:nth-child(3)",
 +                 ],
 +               },
 +               Object {
@@ -351,7 +351,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3) > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           ".card-hover.glass-card.group:nth-child(3) > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -374,7 +374,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/social-media-search-optimization\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3)",
++                   ".card-hover.glass-card.group:nth-child(3)",
 +                 ],
 +               },
 +               Object {
@@ -392,7 +392,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(3) > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           ".card-hover.glass-card.group:nth-child(3) > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -415,7 +415,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/marketing-automation-best-practices\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4)",
++                   ".card-hover.glass-card.group:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -433,7 +433,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4) > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           ".card-hover.glass-card.group:nth-child(4) > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -456,7 +456,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/marketing-automation-best-practices\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4)",
++                   ".card-hover.glass-card.group:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -474,7 +474,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4) > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           ".card-hover.glass-card.group:nth-child(4) > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -497,7 +497,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/marketing-automation-best-practices\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4)",
++                   ".card-hover.glass-card.group:nth-child(4)",
 +                 ],
 +               },
 +               Object {
@@ -515,7 +515,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(4) > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           ".card-hover.glass-card.group:nth-child(4) > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -538,7 +538,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/ai-powered-seo-strategies\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5)",
++                   ".card-hover.glass-card.group:nth-child(5)",
 +                 ],
 +               },
 +               Object {
@@ -556,7 +556,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5) > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           ".card-hover.glass-card.group:nth-child(5) > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -579,7 +579,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/ai-powered-seo-strategies\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5)",
++                   ".card-hover.glass-card.group:nth-child(5)",
 +                 ],
 +               },
 +               Object {
@@ -597,7 +597,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5) > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           ".card-hover.glass-card.group:nth-child(5) > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -620,7 +620,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +               Object {
 +                 "html": "<a href=\"/blog/ai-powered-seo-strategies\" class=\"glass-card overflow-hidden card-hover group\" data-astro-source-file=\"C:/Users/trevo/Desktop/firm-astro/src/pages/blog/index.astro\" data-astro-source-loc=\"40:100\">",
 +                 "target": Array [
-+                   ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5)",
++                   ".card-hover.glass-card.group:nth-child(5)",
 +                 ],
 +               },
 +               Object {
@@ -638,7 +638,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           ".card-hover.glass-card[data-astro-source-loc=\"40:100\"]:nth-child(5) > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           ".card-hover.glass-card.group:nth-child(5) > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +       Object {
@@ -679,7 +679,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"paid-media-optimization\"] > .p-6[data-astro-source-loc=\"51:36\"] > .gap-3.mb-3[data-astro-source-loc=\"52:63\"] > .text-electric-400.text-xs[data-astro-source-loc=\"53:75\"]",
++           "a[href$=\"paid-media-optimization\"] > .p-6 > .gap-3.mb-3.items-center > .text-electric-400.text-xs.font-medium",
 +         ],
 +       },
 +       Object {
@@ -720,7 +720,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"paid-media-optimization\"] > .p-6[data-astro-source-loc=\"51:36\"] > h2",
++           "a[href$=\"paid-media-optimization\"] > .p-6 > h2",
 +         ],
 +       },
 +       Object {
@@ -761,7 +761,7 @@ Error: expect(received).toEqual(expected) // deep equality
 +         "impact": "serious",
 +         "none": Array [],
 +         "target": Array [
-+           "a[href$=\"paid-media-optimization\"] > .p-6[data-astro-source-loc=\"51:36\"] > .line-clamp-2.text-gray-400[data-astro-source-loc=\"67:72\"]",
++           "a[href$=\"paid-media-optimization\"] > .p-6 > .line-clamp-2.text-gray-400",
 +         ],
 +       },
 +     ],

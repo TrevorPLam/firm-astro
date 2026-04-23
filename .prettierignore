@@ -28,6 +28,9 @@ test-results/
 *.md
 .windsurf/
 
+# Layout files with inline scripts that Prettier can't parse
+src/layouts/BaseLayout.astro
+
 # Misc
 .DS_Store
 *.log
