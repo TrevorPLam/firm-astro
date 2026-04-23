@@ -11,6 +11,11 @@ export default getViteConfig(
       include: ["src/**/*.{test,spec}.{ts,tsx}"],
       exclude: ["node_modules", "dist", ".astro", "src/test"],
       setupFiles: ["./src/__tests__/setup.ts"],
+      coverage: {
+        provider: "v8",
+        reporter: ["text", "html", "json"],
+        exclude: ["node_modules", "dist", ".astro", "src/test"],
+      },
     },
   },
   {

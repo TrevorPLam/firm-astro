@@ -1245,12 +1245,40 @@ No existing CSP patterns.
 
 ## TASK-022: Install and configure Vitest coverage provider
 
-[ ] 🟡 Pending 🔴 High
+[x] ✅ Complete ✅ High
 
-- [ ] TASK-022-01: Install @vitest/coverage-v8 package in `package.json`
-- [ ] TASK-022-02: Configure coverage provider in `vitest.config.ts`
-- [ ] TASK-022-03: Add coverage script to `package.json`
-- [ ] TASK-022-04: Test coverage configuration with sample run
+- [x] TASK-022-01: Install @vitest/coverage-v8 package in `package.json`
+- [x] TASK-022-02: Configure coverage provider in `vitest.config.ts`
+- [x] TASK-022-03: Add coverage script to `package.json`
+- [x] TASK-022-04: Test coverage configuration with sample run
+
+### Completion Note
+
+**What was changed:**
+- Installed @vitest/coverage-v8 as devDependency (used --legacy-peer-deps due to pre-existing eslint peer dependency conflict)
+- Added coverage configuration to vitest.config.ts with V8 provider, text/html/json reporters
+- Added coverage.exclude array to exclude node_modules, dist, .astro, src/test
+- Added "test:coverage": "vitest run --coverage" script to package.json
+- Verified coverage runs successfully and generates HTML report in coverage/ directory
+
+**Key files touched:**
+- package.json (added @vitest/coverage-v8 devDependency and test:coverage script)
+- vitest.config.ts (added coverage configuration with V8 provider)
+- coverage/ directory (generated with index.html and supporting files)
+
+**Validation performed:**
+- npm run test:coverage executed successfully
+- Coverage report generated in coverage/ directory
+- HTML report (index.html) displays correctly with Statements, Branches, Functions, Lines metrics
+- Text reporter output shows coverage enabled with v8
+- JSON report (coverage-final.json) generated
+
+**Follow-up tasks discovered:**
+- None
+
+**Limitations encountered:**
+- Pre-existing eslint peer dependency conflict required --legacy-peer-deps flag during installation (noted in package.json _dependencyNotes)
+- Coverage shows 0% for all metrics because only trivial example test exists; this is expected and will improve as real component tests are added (TASK-023, TASK-024)
 
 ### Priority / Urgency
 
