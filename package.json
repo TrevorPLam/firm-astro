@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate-search-index": "node scripts/generate-search-index.mjs",
-    "test": "vitest",
+    "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
