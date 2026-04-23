@@ -141,4 +141,76 @@ describe("Button component", { tags: ["unit"] }, () => {
     // Assert
     expect(result).toContain("focus-ring");
   });
+
+  it("should render with type='button' by default", async () => {
+    // Arrange
+    const container = await AstroContainer.create();
+
+    // Act
+    const result = await container.renderToString(Button, {
+      slots: { default: "Button" },
+    });
+
+    // Assert
+    expect(result).toContain('type="button"');
+  });
+
+  it("should render with type='submit' when specified", async () => {
+    // Arrange
+    const container = await AstroContainer.create();
+
+    // Act
+    const result = await container.renderToString(Button, {
+      props: { type: "submit" },
+      slots: { default: "Submit" },
+    });
+
+    // Assert
+    expect(result).toContain('type="submit"');
+  });
+
+  it("should render with type='reset' when specified", async () => {
+    // Arrange
+    const container = await AstroContainer.create();
+
+    // Act
+    const result = await container.renderToString(Button, {
+      props: { type: "reset" },
+      slots: { default: "Reset" },
+    });
+
+    // Assert
+    expect(result).toContain('type="reset"');
+  });
+
+  it("should concatenate custom class with default classes", async () => {
+    // Arrange
+    const container = await AstroContainer.create();
+    const customClass = "custom-class";
+
+    // Act
+    const result = await container.renderToString(Button, {
+      props: { class: customClass },
+      slots: { default: "Custom" },
+    });
+
+    // Assert
+    expect(result).toContain(customClass);
+    expect(result).toContain("class=");
+  });
+
+  it("should ignore type prop when href is provided (renders as anchor)", async () => {
+    // Arrange
+    const container = await AstroContainer.create();
+
+    // Act
+    const result = await container.renderToString(Button, {
+      props: { href: "/about", type: "submit" },
+      slots: { default: "About" },
+    });
+
+    // Assert
+    expect(result).toContain("<a");
+    expect(result).not.toContain('type="submit"');
+  });
 });
