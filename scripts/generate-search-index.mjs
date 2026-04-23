@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
+import yaml from "js-yaml";
 
-// Simple frontmatter parser
+// Frontmatter parser using js-yaml
 function parseFrontmatter(content) {
   const frontmatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
   const match = content.match(frontmatterRegex);
@@ -12,33 +13,14 @@ function parseFrontmatter(content) {
 
   const frontmatterText = match[1];
   const body = match[2];
-  const data = {};
 
-  // Parse YAML-like frontmatter
-  const lines = frontmatterText.split("\n");
-  for (const line of lines) {
-    const colonIndex = line.indexOf(":");
-    if (colonIndex > 0) {
-      const key = line.slice(0, colonIndex).trim();
-      let value = line.slice(colonIndex + 1).trim();
-
-      // Handle arrays
-      if (value.startsWith("[") && value.endsWith("]")) {
-        value = value
-          .slice(1, -1)
-          .split(",")
-          .map((v) => v.trim().replace(/"/g, ""));
-      }
-      // Handle strings with quotes
-      else if (value.startsWith('"') && value.endsWith('"')) {
-        value = value.slice(1, -1);
-      }
-
-      data[key] = value;
-    }
+  try {
+    const data = yaml.load(frontmatterText);
+    return { data: data || {}, body };
+  } catch (error) {
+    console.error(`Error parsing YAML frontmatter: ${error.message}`);
+    return { data: {}, body };
   }
-
-  return { data, body };
 }
 
 // Read blog posts

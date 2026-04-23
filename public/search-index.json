@@ -5,7 +5,11 @@
     "title": "AI-Powered SEO Strategies for 2024",
     "description": "Discover how artificial intelligence is transforming SEO strategies and how you can leverage these tools to improve your search rankings.",
     "category": "SEO",
-    "tags": ["SEO", "AI", "Digital Marketing"],
+    "tags": [
+      "SEO",
+      "AI",
+      "Digital Marketing"
+    ],
     "url": "/blog/ai-powered-seo-strategies"
   },
   {
@@ -14,8 +18,26 @@
     "title": "Maximizing ROI: A Guide to Paid Media Optimization",
     "description": "Learn proven strategies for optimizing your paid media campaigns across Google, Meta, and LinkedIn to maximize return on ad spend.",
     "category": "Paid Media",
-    "tags": ["Paid Media", "PPC", "Google Ads", "Meta Ads"],
+    "tags": [
+      "Paid Media",
+      "PPC",
+      "Google Ads",
+      "Meta Ads"
+    ],
     "url": "/blog/paid-media-optimization"
+  },
+  {
+    "id": "case-dental-practice-patient-growth",
+    "type": "case",
+    "title": "BrightSmile Dental: 165% Increase in New Patient Appointments",
+    "client": "BrightSmile Dental",
+    "industry": "Healthcare",
+    "services": [
+      "SEO",
+      "Paid Media",
+      "Analytics"
+    ],
+    "url": "/work/dental-practice-patient-growth"
   },
   {
     "id": "case-ecommerce-revenue-growth",
@@ -23,8 +45,38 @@
     "title": "StyleHouse E-commerce: $2.4M Revenue Growth",
     "client": "StyleHouse",
     "industry": "E-commerce",
-    "services": ["Paid Media", "Email Automation", "Analytics"],
+    "services": [
+      "Paid Media",
+      "Email Automation",
+      "Analytics"
+    ],
     "url": "/work/ecommerce-revenue-growth"
+  },
+  {
+    "id": "case-fintech-app-user-acquisition",
+    "type": "case",
+    "title": "PayFlow Finance: 195% Increase in App Downloads",
+    "client": "PayFlow Finance",
+    "industry": "Technology",
+    "services": [
+      "Paid Media",
+      "Analytics",
+      "Content Marketing"
+    ],
+    "url": "/work/fintech-app-user-acquisition"
+  },
+  {
+    "id": "case-legal-consulting-lead-gen",
+    "type": "case",
+    "title": "Sterling Legal: 320% Increase in Qualified Leads",
+    "client": "Sterling Legal",
+    "industry": "Professional Services",
+    "services": [
+      "Content Marketing",
+      "Email Automation",
+      "SEO"
+    ],
+    "url": "/work/legal-consulting-lead-gen"
   },
   {
     "id": "case-techflow-saas-growth",
@@ -32,7 +84,11 @@
     "title": "TechFlow SaaS: 280% Increase in Trial Signups",
     "client": "TechFlow",
     "industry": "SaaS",
-    "services": ["SEO", "Paid Media", "Content Marketing"],
+    "services": [
+      "SEO",
+      "Paid Media",
+      "Content Marketing"
+    ],
     "url": "/work/techflow-saas-growth"
   }
 ]

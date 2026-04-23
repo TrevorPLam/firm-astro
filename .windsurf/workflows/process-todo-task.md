@@ -1,10 +1,10 @@
 ---
-description: Work through TODO.md tasks following the structured 10-step sequence with production-quality changes
+description: Work through a single TODO.md task following the structured 10-step sequence with production-quality changes, ending with a GitHub push
 ---
 
 # Process TODO Task Workflow
 
-This workflow guides you through working through `TODO.md` tasks following the structured sequence defined in `prompt.md`. Work on one task at a time with production-quality changes.
+This workflow guides you through completing **a single task** from `TODO.md` following the structured sequence defined in `prompt.md`. This workflow processes one task only, then pushes changes to GitHub. It does NOT automatically continue to the next task.
 
 ## Prerequisites
 
@@ -353,12 +353,6 @@ After completing the task, updating TODO.md, and updating documentation (if appl
 - Confirmation that changes were committed and pushed
 - Commit message used
 - Branch pushed to
-
----
-
-## Step 12: Move to Next Task
-
-Repeat the workflow for the **next `pending` task** in `TODO.md`.
 
 ---
 

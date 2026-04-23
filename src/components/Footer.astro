@@ -1,30 +1,5 @@
 ---
-const footerLinks = {
-  services: [
-    { href: "/services/seo", label: "SEO" },
-    { href: "/services/paid-media", label: "Paid Media" },
-    { href: "/services/content-marketing", label: "Content Marketing" },
-    { href: "/services/email-automation", label: "Email Automation" },
-    { href: "/services/analytics-and-reporting", label: "Analytics & Reporting" },
-  ],
-  company: [
-    { href: "/about", label: "About Us" },
-    { href: "/team", label: "Our Team" },
-    { href: "/work", label: "Case Studies" },
-    { href: "/blog", label: "Blog" },
-    { href: "/careers", label: "Careers" },
-  ],
-  resources: [
-    { href: "/pricing", label: "Pricing" },
-    { href: "/faq", label: "FAQ" },
-    { href: "/industries/saas", label: "Industries" },
-    { href: "/contact", label: "Contact" },
-  ],
-  legal: [
-    { href: "/privacy-policy", label: "Privacy Policy" },
-    { href: "/terms-of-service", label: "Terms of Service" },
-  ],
-};
+import { FOOTER_LINKS, SITE_NAME } from "../constants";
 
 const socialLinks = [
   { href: "https://twitter.com/yourdedicatedmarketer", label: "Twitter", icon: "twitter" },
@@ -47,7 +22,7 @@ const socialLinks = [
             <span class="text-white font-display font-bold text-xl">Y</span>
           </div>
           <span class="font-display font-bold text-lg text-light-900 dark:text-white">
-            Your Dedicated <span class="text-electric-400">Marketer</span>
+            Your Dedicated <span class="text-electric-500">Marketer</span>
           </span>
         </a>
         <p class="text-light-600 dark:text-gray-400 text-sm mb-6">
@@ -90,7 +65,7 @@ const socialLinks = [
         <h4 class="font-display font-semibold text-light-900 dark:text-white mb-4">Services</h4>
         <ul class="space-y-2">
           {
-            footerLinks.services.map((link) => (
+            FOOTER_LINKS.services.map((link) => (
               <li>
                 <a
                   href={link.href}
@@ -109,7 +84,7 @@ const socialLinks = [
         <h4 class="font-display font-semibold text-light-900 dark:text-white mb-4">Company</h4>
         <ul class="space-y-2">
           {
-            footerLinks.company.map((link) => (
+            FOOTER_LINKS.company.map((link) => (
               <li>
                 <a
                   href={link.href}
@@ -128,7 +103,7 @@ const socialLinks = [
         <h4 class="font-display font-semibold text-light-900 dark:text-white mb-4">Resources</h4>
         <ul class="space-y-2">
           {
-            footerLinks.resources.map((link) => (
+            FOOTER_LINKS.resources.map((link) => (
               <li>
                 <a
                   href={link.href}
@@ -147,7 +122,7 @@ const socialLinks = [
         <h4 class="font-display font-semibold text-light-900 dark:text-white mb-4">Legal</h4>
         <ul class="space-y-2">
           {
-            footerLinks.legal.map((link) => (
+            FOOTER_LINKS.legal.map((link) => (
               <li>
                 <a
                   href={link.href}
@@ -166,11 +141,11 @@ const socialLinks = [
     <div
       class="mt-12 pt-8 border-t border-light-200 dark:border-white/5 flex flex-col md:flex-row justify-between items-center gap-4"
     >
-      <p class="text-sm text-light-500 dark:text-gray-500">
-        © {new Date().getFullYear()} Your Dedicated Marketer. All rights reserved.
+      <p class="text-sm text-light-700 dark:text-gray-400">
+        © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
       </p>
-      <p class="text-sm text-light-500 dark:text-gray-500">
-        Built with <span class="text-electric-400">Astro</span> & <span class="text-electric-400"
+      <p class="text-sm text-light-700 dark:text-gray-400">
+        Built with <span class="text-electric-500">Astro</span> & <span class="text-electric-500"
           >Tailwind CSS</span
         >
       </p>

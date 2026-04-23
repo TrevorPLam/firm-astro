@@ -2,37 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import TeamCard from "../components/TeamCard.astro";
+import { team } from "../data/team";
+import { SITE_NAME } from "../constants";
 
-const team = [
-  {
-    name: "Alex Chen",
-    role: "Founder & CEO",
-    bio: "15+ years in digital marketing. Former Head of Growth at Fortune 500 companies.",
-    expertise: ["Strategy", "Growth", "AI"],
-    social: { twitter: "alexchen", linkedin: "alexchen" },
-  },
-  {
-    name: "Sarah Mitchell",
-    role: "Head of SEO",
-    bio: "SEO specialist with 10+ years experience. Helped 100+ brands achieve top rankings.",
-    expertise: ["SEO", "Content", "Analytics"],
-    social: { linkedin: "sarahmitchell" },
-  },
-  {
-    name: "Marcus Johnson",
-    role: "Head of Paid Media",
-    bio: "Managed $50M+ in ad spend. Expert in multi-channel campaign optimization.",
-    expertise: ["PPC", "Meta Ads", "Google Ads"],
-    social: { twitter: "marcusj" },
-  },
-  {
-    name: "Emily Rodriguez",
-    role: "Head of Content",
-    bio: "Content strategist and storyteller. Created 1000+ pieces of high-performing content.",
-    expertise: ["Content", "Copywriting", "Video"],
-    social: { linkedin: "emilyrodriguez" },
-  },
-];
+// Show first 4 team members on about page
+const featuredTeam = team.slice(0, 4);
 
 const awards = [
   "Google Partner",
@@ -59,7 +33,7 @@ const values = [
 
 <BaseLayout
   title="About Us"
-  description="Your Dedicated Marketer is a full-service digital marketing agency specializing in AI-powered growth strategies for modern brands."
+  description={`${SITE_NAME} is a full-service digital marketing agency specializing in AI-powered growth strategies for modern brands.`}
 >
   <!-- Hero -->
   <section class="section relative overflow-hidden">
@@ -146,7 +120,7 @@ const values = [
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {team.map((member) => <TeamCard {...member} />)}
+        {featuredTeam.map((member) => <TeamCard {...member} />)}
       </div>
 
       <div class="text-center mt-8">

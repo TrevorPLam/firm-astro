@@ -6,6 +6,7 @@ import CaseStudyCard from "../components/CaseStudyCard.astro";
 import ProcessStep from "../components/ProcessStep.astro";
 import ClientLogos from "../components/ClientLogos.astro";
 import { getCollection } from "astro:content";
+import { SITE_NAME } from "../constants";
 
 // Get featured case studies
 const caseStudies = await getCollection("caseStudies");
@@ -90,7 +91,7 @@ const problems = [
 ];
 ---
 
-<BaseLayout title="Your Dedicated Marketer">
+<BaseLayout title={SITE_NAME}>
   <!-- Hero Section -->
   <section class="section relative overflow-hidden">
     <div class="absolute inset-0 radial-glow"></div>

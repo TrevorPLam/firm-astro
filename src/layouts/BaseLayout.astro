@@ -2,6 +2,8 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import "../../sentry.client.config";
+import { SITE_NAME, DEFAULT_DESCRIPTION } from "../constants";
 
 interface Props {
   title: string;
@@ -15,7 +17,7 @@ interface Props {
 
 const {
   title,
-  description = "Your Dedicated Marketer: AI-Powered Growth for the Modern Brand. Expert digital marketing services including SEO, paid media, content marketing, and analytics.",
+  description = DEFAULT_DESCRIPTION,
   image = "/og-image.png",
   canonicalUrl = Astro.url.href,
   type = "website",
@@ -23,14 +25,13 @@ const {
   author,
 } = Astro.props;
 
-const siteName = "Your Dedicated Marketer";
-const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
+const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
 
 // JSON-LD structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": type === "article" ? "Article" : "Organization",
-  name: siteName,
+  name: SITE_NAME,
   url: Astro.site?.toString() || "https://yourdedicatedmarketer.com",
   logo: `${Astro.site?.toString() || ""}/logo.png`,
   description,
@@ -38,7 +39,7 @@ const jsonLd = {
     headline: title,
     author: {
       "@type": "Person",
-      name: author || "Your Dedicated Marketer",
+      name: author || SITE_NAME,
     },
     datePublished: publishedTime?.toISOString(),
     image: `${Astro.site?.toString() || ""}${image}`,
@@ -72,7 +73,7 @@ const jsonLd = {
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
-    <meta property="og:site_name" content={siteName} />
+    <meta property="og:site_name" content={SITE_NAME} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -91,6 +92,19 @@ const jsonLd = {
 
     <!-- JSON-LD -->
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Google Analytics 4 -->
+    {import.meta.env.VITE_GA_TRACKING_ID && import.meta.env.VITE_GA_TRACKING_ID !== 'G-XXXXXXXXXX' && (
+      <script is:inline>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', import.meta.env.VITE_GA_TRACKING_ID);
+      </script>
+    )}
+    {import.meta.env.VITE_GA_TRACKING_ID && import.meta.env.VITE_GA_TRACKING_ID !== 'G-XXXXXXXXXX' && (
+      <script async src={`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.VITE_GA_TRACKING_ID}`} is:inline></script>
+    )}
 
     <!-- Theme color for mobile browsers -->
     <meta name="theme-color" content="#000000" />
