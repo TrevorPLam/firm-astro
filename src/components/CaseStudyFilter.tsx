@@ -44,8 +44,9 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
       {/* Filters */}
       <div className="flex flex-wrap gap-4 mb-8">
         <div className="flex-1 min-w-[200px]">
-          <label className="block text-sm font-medium text-gray-300 mb-2">Industry</label>
+          <label htmlFor="industry-filter" className="block text-sm font-medium text-gray-300 mb-2">Industry</label>
           <select
+            id="industry-filter"
             value={selectedIndustry}
             onChange={(e) => setSelectedIndustry(e.target.value)}
             className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus-ring transition-colors appearance-none cursor-pointer select-arrow"
@@ -59,8 +60,9 @@ export default function CaseStudyFilter({ caseStudies }: CaseStudyFilterProps) {
         </div>
 
         <div className="flex-1 min-w-[200px]">
-          <label className="block text-sm font-medium text-gray-300 mb-2">Service</label>
+          <label htmlFor="service-filter" className="block text-sm font-medium text-gray-300 mb-2">Service</label>
           <select
+            id="service-filter"
             value={selectedService}
             onChange={(e) => setSelectedService(e.target.value)}
             className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus-ring transition-colors appearance-none cursor-pointer select-arrow"

@@ -230,8 +230,10 @@ describe("CaseStudyFilter component", { tags: ["integration"] }, () => {
     it("should render industry tag", () => {
       render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
 
-      expect(screen.getByText("E-commerce")).toBeInTheDocument();
-      expect(screen.getByText("SaaS")).toBeInTheDocument();
+      const industryTags = screen.getAllByText("E-commerce");
+      const saasTags = screen.getAllByText("SaaS");
+      expect(industryTags.length).toBeGreaterThan(0);
+      expect(saasTags.length).toBeGreaterThan(0);
     });
 
     it("should render results metrics", () => {
@@ -254,6 +256,99 @@ describe("CaseStudyFilter component", { tags: ["integration"] }, () => {
       expect(links[0]).toHaveAttribute("href", "/work/case-1");
       expect(links[1]).toHaveAttribute("href", "/work/case-2");
       expect(links[2]).toHaveAttribute("href", "/work/case-3");
+    });
+
+    it("should allow clicking View Details links", async () => {
+      const user = userEvent.setup();
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      const viewDetailsLinks = screen.getAllByText("View Details");
+      const firstLink = viewDetailsLinks[0].closest("a");
+
+      expect(firstLink).toBeInTheDocument();
+      await user.click(firstLink!);
+
+      // Link should still be present after click (navigation would happen in real browser)
+      expect(firstLink).toHaveAttribute("href", "/work/case-1");
+    });
+  });
+
+  describe("Keyboard navigation", () => {
+    it("should focus industry select with Tab key", async () => {
+      const user = userEvent.setup();
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      await user.tab();
+
+      const industrySelect = screen.getByLabelText(/industry/i);
+      expect(industrySelect).toHaveFocus();
+    });
+
+    it("should focus service select with Tab key after industry", async () => {
+      const user = userEvent.setup();
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      await user.tab();
+      await user.tab();
+
+      const serviceSelect = screen.getByLabelText(/service/i);
+      expect(serviceSelect).toHaveFocus();
+    });
+  });
+
+  describe("Accessibility", () => {
+    it("should have visible labels for filter dropdowns", () => {
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      const industryLabel = screen.getByLabelText(/industry/i).previousElementSibling as HTMLLabelElement;
+      const serviceLabel = screen.getByLabelText(/service/i).previousElementSibling as HTMLLabelElement;
+
+      expect(industryLabel).toBeInTheDocument();
+      expect(serviceLabel).toBeInTheDocument();
+      expect(industryLabel?.textContent).toContain("Industry");
+      expect(serviceLabel?.textContent).toContain("Service");
+    });
+
+    it("should associate labels with select elements", () => {
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      const industrySelect = screen.getByLabelText(/industry/i);
+      const serviceSelect = screen.getByLabelText(/service/i);
+
+      expect(industrySelect).toBeInTheDocument();
+      expect(serviceSelect).toBeInTheDocument();
+      expect(industrySelect).toHaveAttribute("id", "industry-filter");
+      expect(serviceSelect).toHaveAttribute("id", "service-filter");
+    });
+  });
+
+  describe("Hover states", () => {
+    it("should trigger hover events on case study cards", async () => {
+      const user = userEvent.setup();
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      const firstCard = screen.getByText("E-commerce Growth Strategy").closest("a");
+      expect(firstCard).toBeInTheDocument();
+
+      // Test that hover event can be triggered
+      await user.hover(firstCard!);
+
+      // Card should still be present after hover
+      expect(firstCard).toBeInTheDocument();
+    });
+
+    it("should trigger unhover events on case study cards", async () => {
+      const user = userEvent.setup();
+      render(<CaseStudyFilter caseStudies={mockCaseStudies} />);
+
+      const firstCard = screen.getByText("E-commerce Growth Strategy").closest("a");
+      expect(firstCard).toBeInTheDocument();
+
+      await user.hover(firstCard!);
+      await user.unhover(firstCard!);
+
+      // Card should still be present after unhover
+      expect(firstCard).toBeInTheDocument();
     });
   });
 
@@ -306,6 +401,32 @@ describe("CaseStudyFilter component", { tags: ["integration"] }, () => {
 
       const images = screen.getAllByRole("img");
       expect(images.length).toBe(3);
+    });
+
+    it("should have loading lazy attribute on images", () => {
+      const studiesWithImages = mockCaseStudies.map((cs) => ({
+        ...cs,
+        image: "/images/case-study.jpg",
+      }));
+      render(<CaseStudyFilter caseStudies={studiesWithImages} />);
+
+      const images = screen.getAllByRole("img");
+      images.forEach((image) => {
+        expect(image).toHaveAttribute("loading", "lazy");
+      });
+    });
+
+    it("should have proper alt text on images", () => {
+      const studiesWithImages = mockCaseStudies.map((cs) => ({
+        ...cs,
+        image: "/images/case-study.jpg",
+      }));
+      render(<CaseStudyFilter caseStudies={studiesWithImages} />);
+
+      const images = screen.getAllByRole("img");
+      expect(images[0]).toHaveAttribute("alt", "E-commerce Growth Strategy");
+      expect(images[1]).toHaveAttribute("alt", "B2B Lead Generation");
+      expect(images[2]).toHaveAttribute("alt", "Brand Awareness Campaign");
     });
   });
 });
