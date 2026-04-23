@@ -6,31 +6,43 @@ Only incomplete tasks are listed below, reprioritized logically with all origina
 
 ## TASK-007: Update social media links to real URLs
 
-[ ] 🔴 Blocked 🔴 High
+[x] Complete High
 
-- [ ] TASK-007-01: Update Twitter/X link in `src/components/Footer.astro` to real URL
-- [ ] TASK-007-02: Update LinkedIn link in `src/components/Footer.astro` to real URL
-- [ ] TASK-007-03: Update Instagram link in `src/components/Footer.astro` to real URL or remove if not used
-- [ ] TASK-007-04: Update social links in `src/layouts/BaseLayout.astro` JSON-LD to match
-- [ ] TASK-007-05: Update social links in team member data in `src/pages/about.astro` and `src/pages/team.astro`
+- [x] TASK-007-01: Update Twitter/X link in `src/components/Footer.astro` to real URL
+- [x] TASK-007-02: Update LinkedIn link in `src/components/Footer.astro` to real URL
+- [x] TASK-007-03: Update Instagram link in `src/components/Footer.astro` to real URL or remove if not used
+- [x] TASK-007-04: Update social links in `src/layouts/BaseLayout.astro` JSON-LD to match
+- [x] TASK-007-05: Update social links in team member data in `src/pages/about.astro` and `src/pages/team.astro`
 
-### Blocker Note
+### Completion Note
 
-**Status**: Blocked - Cannot proceed without real social media URLs.
+**What was changed:**
+- Updated Footer.astro social links from Twitter/LinkedIn/Instagram to Instagram/Threads/YouTube
+- All links now point to username YourDedicatedMarketer
+- Added Threads and YouTube SVG icons to Footer.astro
+- Removed old Twitter and LinkedIn icons
+- Updated BaseLayout.astro JSON-LD sameAs array to match new social links
+- Removed placeholder team member social handles from src/data/team.ts (no real personal accounts provided)
+- Made social property optional in TeamMember interface
 
-**Reason**: The task assumes real social media accounts exist or URLs are known, but the codebase currently contains placeholder URLs (`yourdedicatedmarketer`). Web search did not find a specific company called "Your Dedicated Marketer" with real social media accounts. This appears to be a demo/placeholder website.
+**Key files touched:**
+- src/components/Footer.astro (updated social links array, added Threads/YouTube icons, removed Twitter/LinkedIn icons)
+- src/layouts/BaseLayout.astro (updated JSON-LD sameAs array)
+- src/data/team.ts (removed placeholder social handles, made social property optional)
 
-**Required Information**: Please provide the real social media URLs for:
+**Validation performed:**
+- Build completed successfully with exit code 0
+- Verified all social links have target="_blank" and rel="noopener noreferrer" attributes
+- Verified ARIA labels are present for all social links
+- Links are consistent across Footer and BaseLayout JSON-LD
+- Team member social links removed (no real accounts provided)
 
-- Twitter/X
-- LinkedIn
-- Instagram (or confirm if this platform should be removed)
+**Limitations encountered:**
+- Chrome not installed locally, so browser testing not available
+- Manual link verification deferred to user (requires browser access)
 
-**Current State**:
-
-- Footer.astro: Contains placeholder URLs for Twitter, LinkedIn, and Instagram
-- BaseLayout.astro JSON-LD: Contains placeholder URLs for Twitter and LinkedIn (Instagram not included)
-- about.astro and team.astro: Team member social handles are usernames only (passed to TeamCard component)
+**Follow-up tasks discovered:**
+- None
 
 ### Priority / Urgency
 
