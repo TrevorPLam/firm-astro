@@ -440,6 +440,148 @@ describe("ContactForm component", { tags: ["integration"] }, () => {
       // Assert
       expect(serviceSelect).toHaveValue("SEO");
     });
+
+    it("should allow selecting all service options", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      // Act & Assert
+      const serviceSelect = screen.getByLabelText(/service/i);
+      const services = ["SEO", "Paid Media", "Content Marketing", "Email Automation", "Analytics & Reporting", "Full Service"];
+
+      for (const service of services) {
+        await user.selectOptions(serviceSelect, service);
+        expect(serviceSelect).toHaveValue(service);
+      }
+    });
+
+    it("should allow changing service selection", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      // Act
+      const serviceSelect = screen.getByLabelText(/service/i);
+      await user.selectOptions(serviceSelect, "SEO");
+      expect(serviceSelect).toHaveValue("SEO");
+
+      await user.selectOptions(serviceSelect, "Paid Media");
+
+      // Assert
+      expect(serviceSelect).toHaveValue("Paid Media");
+    });
+
+    it("should accept special characters in company field", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      // Act
+      const companyInput = screen.getByLabelText(/company/i);
+      await user.type(companyInput, "Test & Co. (LLC)");
+
+      // Assert
+      expect(companyInput).toHaveValue("Test & Co. (LLC)");
+    });
+
+    it("should not show validation error for empty company field", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert - company is optional, should not trigger validation error
+      const companyInput = screen.getByLabelText(/company/i);
+      expect(companyInput).not.toHaveAttribute("aria-invalid", "true");
+    });
+  });
+
+  describe("Form data structure", () => {
+    it("should send form data with correct structure", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true }),
+      } as Response);
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const companyInput = screen.getByLabelText(/company/i);
+      await user.type(companyInput, "Test Company");
+      const serviceSelect = screen.getByLabelText(/service/i);
+      await user.selectOptions(serviceSelect, "SEO");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: "John Doe",
+            email: "john@example.com",
+            company: "Test Company",
+            service: "SEO",
+            message: "Test message",
+          }),
+        })
+      );
+    });
+
+    it("should send form data with empty optional fields when not filled", async () => {
+      // Arrange
+      const user = userEvent.setup();
+      (global.fetch as ReturnType<typeof vi.fn>).mockResolvedValue({
+        ok: true,
+        json: async () => ({ success: true }),
+      } as Response);
+      render(<ContactForm />);
+
+      // Act
+      const nameInput = screen.getByLabelText(/name/i);
+      await user.type(nameInput, "John Doe");
+      const emailInput = screen.getByLabelText(/email/i);
+      await user.type(emailInput, "john@example.com");
+      const messageInput = screen.getByLabelText(/message/i);
+      await user.type(messageInput, "Test message");
+      const submitButton = screen.getByRole("button", { name: "Send Message" });
+      await user.click(submitButton);
+
+      // Assert
+      expect(global.fetch).toHaveBeenCalledWith(
+        expect.any(String),
+        expect.objectContaining({
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: "John Doe",
+            email: "john@example.com",
+            company: "",
+            service: "",
+            message: "Test message",
+          }),
+        })
+      );
+    });
   });
 
   describe("Environment variable handling", () => {
