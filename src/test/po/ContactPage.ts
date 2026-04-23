@@ -50,13 +50,6 @@ export class ContactPage {
   }
 
   /**
-   * Fill the phone field (optional)
-   */
-  async fillPhone(phone: string) {
-    await this.page.getByLabel(/phone/i).fill(phone);
-  }
-
-  /**
    * Submit the contact form
    */
   async submitForm() {
