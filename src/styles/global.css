@@ -51,7 +51,16 @@
 @layer components {
   /* Glassmorphism card */
   .glass-card {
-    @apply bg-light-100/50 dark:bg-white/5 backdrop-blur-md border border-light-200 dark:border-white/10 rounded-2xl;
+    @apply bg-white dark:bg-white/5 backdrop-blur-md border border-light-200 dark:border-white/10 rounded-2xl;
+  }
+
+  /* Reduced transparency for accessibility */
+  @media (prefers-reduced-transparency: reduce) {
+    .glass-card {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      @apply bg-white dark:bg-white/10;
+    }
   }
 
   /* Neon text glow */
