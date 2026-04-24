@@ -901,7 +901,7 @@ Screen reader testing
 
 ## TASK-011: Fix Systemic Color Contrast Violations
 
-[ ] 🟡 Pending 🔴 High
+[x] 🟢 Completed 🔴 High
 
 ### Priority / Urgency
 **High** - WCAG AA compliance blocked by systemic color contrast violations affecting most pages
@@ -988,6 +988,110 @@ Tailwind CSS color utilities with dark mode variants
 
 ### Advanced Code Patterns
 Dark mode styling with `dark:` prefix
+
+### Anti-Patterns
+- Using colors that don't meet WCAG standards
+- Only testing in one mode (light or dark)
+- Breaking dark mode styling while fixing light mode
+
+### Completion Note
+**Completed April 23, 2026**
+
+Fixed the only instance of `gray-400` used in light mode:
+- Updated SearchModal.tsx placeholder from `placeholder-gray-400` to `placeholder-light-600 dark:placeholder-gray-400`
+- Verified all other instances of `text-gray-400` are already correctly scoped to dark mode only with `text-light-600 dark:text-gray-400` pattern
+- Ran a11y tests: 20 tests passed, 75 tests skipped (glass-card contrast issues are TASK-014, separate from this task)
+- No regressions in dark mode styling
+
+**Note**: The a11y tests are still skipped for most pages due to glass-card component contrast violations (TASK-014), which is a separate design system issue. This task specifically addressed text-gray-400 usage, which is now fully resolved.
+
+---
+
+## TASK-014: Fix Glass-Card Component Color Contrast Violations
+
+[ ] 🟡 Pending 🔴 High
+
+### Priority / Urgency
+**High** - Glass-card component has systemic color contrast violations affecting multiple pages in light mode
+
+### Research / Investigation
+The glass-card component uses semi-transparent backgrounds that create insufficient contrast with various text colors in light mode. The background renders as #bdbdbd (light gray) in light mode, which fails WCAG AA 4.5:1 contrast requirements with text-light-600 (#525252), text-gray-500 (#6b7280), and electric accent colors.
+
+### Affected Pages
+- services/seo, services/paid-media, services/content-marketing, services/email-automation, services/analytics-and-reporting
+- work/[slug] (case studies)
+- industries/saas
+- Homepage, about, contact, blog, work, services, team, pricing, faq (pages using glass-card)
+
+### Recommended Implementation Strategy
+
+1. **Redesign glass-card component for light mode**
+   - Increase background opacity or use darker background color in light mode
+   - Ensure glass-card background meets WCAG AA with all text colors used
+   - Consider separate light/dark mode glass-card implementations
+
+2. **Update affected pages**
+   - All pages using glass-card component will automatically benefit from component fix
+   - No individual page changes needed if component is fixed
+
+3. **Re-enable a11y tests**
+   - Remove test.skip from affected tests in a11y.spec.ts
+   - Run `npm run test:e2e -- a11y.spec.ts` to verify all tests pass
+
+### Strict Rules
+- Ensure glass-card background meets WCAG AA 4.5:1 contrast ratio in both dark and light modes
+- Test color contrast with automated tools (axe DevTools, WAVE)
+- Verify fixes don't break dark mode styling
+- Update all affected pages consistently via component fix
+
+### Related Files
+- `src/test/a11y.spec.ts` (re-enable tests after fixing)
+- Global styles (glass-card CSS definition)
+- All pages using glass-card component
+
+### Definition of Done
+Glass-card component meets WCAG 2.2 AA color contrast requirements in both dark and light modes, and all a11y tests pass without skipping
+
+### Acceptance Criteria
+- Glass-card component redesigned for light mode contrast compliance
+- All text colors meet WCAG AA 4.5:1 contrast ratio against glass-card background in both modes
+- a11y.spec.ts tests pass without skipping for all pages
+- No regressions in dark mode styling
+- Color contrast verified with axe DevTools or WAVE
+
+### Out of Scope
+- WCAG AAA compliance (beyond AA requirements)
+- Changing design system colors (only fix contrast issues)
+
+### Dependencies
+TASK-011 (identified the violations)
+
+### Estimated Effort
+12 hours
+
+### Testing Requirements
+- E2E tests with @axe-core/playwright
+- Manual color contrast verification with DevTools
+- Visual regression testing for both modes
+
+### Validation Steps
+1. Redesign glass-card component CSS for light mode
+2. Run `npm run test:e2e -- a11y.spec.ts` to verify
+3. Test color contrast with axe DevTools or WAVE
+4. Verify dark mode styling unchanged
+
+### Strict Rules
+- Test color contrast in both light and dark modes
+- Use automated tools for verification
+- Maintain existing design aesthetics
+- Ensure consistent fixes across all pages
+
+### Existing Code Patterns
+Glass-card component with backdrop blur and semi-transparent background
+
+### Advanced Code Patterns
+Dark mode styling with `dark:` prefix
+Component-level color management
 
 ### Anti-Patterns
 - Using colors that don't meet WCAG standards

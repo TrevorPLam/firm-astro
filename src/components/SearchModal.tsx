@@ -209,7 +209,7 @@ export default function SearchModal() {
         {/* Header */}
         <div className="flex items-center gap-3 p-4 border-b border-white/10">
           <svg
-            className="w-5 h-5 text-gray-400"
+            className="w-5 h-5 text-light-600 dark:text-gray-300"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -227,10 +227,10 @@ export default function SearchModal() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search blog posts and case studies..."
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none focus-ring"
+            className="flex-1 bg-transparent text-white placeholder-light-600 dark:placeholder-gray-400 outline-none focus-ring"
             id="search-title"
           />
-          <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs text-gray-400 bg-white/5 rounded">
+          <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-xs text-light-600 dark:text-gray-300 bg-white/5 rounded">
             <span className="text-xs">ESC</span>
           </kbd>
         </div>
@@ -238,11 +238,11 @@ export default function SearchModal() {
         {/* Results */}
         <div ref={resultsRef} className="max-h-96 overflow-y-auto">
           {isLoading && (
-            <div className="p-8 text-center text-gray-400">Loading search index...</div>
+            <div className="p-8 text-center text-light-600 dark:text-gray-300">Loading search index...</div>
           )}
 
           {!isLoading && query.length < 2 && (
-            <div className="p-8 text-center text-gray-400">
+            <div className="p-8 text-center text-light-600 dark:text-gray-300">
               <p className="text-sm">Type at least 2 characters to search</p>
               <p className="text-xs mt-2 text-gray-500">
                 Press <kbd className="px-1 py-0.5 bg-white/5 rounded">↑</kbd>{" "}
@@ -253,7 +253,7 @@ export default function SearchModal() {
           )}
 
           {!isLoading && query.length >= 2 && results.length === 0 && (
-            <div className="p-8 text-center text-gray-400">
+            <div className="p-8 text-center text-light-600 dark:text-gray-300">
               <p className="text-sm">No results found for "{query}"</p>
               <p className="text-xs mt-2 text-gray-500">
                 Try different keywords or check your spelling
@@ -289,12 +289,12 @@ export default function SearchModal() {
                       </div>
                       <h3 className="font-medium text-white truncate">{result.title}</h3>
                       {result.description && (
-                        <p className="text-sm text-gray-400 mt-1 line-clamp-2">
+                        <p className="text-sm text-light-600 dark:text-gray-300 mt-1 line-clamp-2">
                           {result.description}
                         </p>
                       )}
                       {result.client && (
-                        <p className="text-sm text-gray-400 mt-1">Client: {result.client}</p>
+                        <p className="text-sm text-light-600 dark:text-gray-300 mt-1">Client: {result.client}</p>
                       )}
                     </div>
                   </div>
